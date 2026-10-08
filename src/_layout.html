@@ -9,17 +9,14 @@
   <meta name="color-scheme" content="light dark">
   <meta name="theme-color" content="#f7f6f2" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#121417" media="(prefers-color-scheme: dark)">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232d6a5f'/%3E%3Ccircle cx='11' cy='13' r='3' fill='%23fff'/%3E%3Ccircle cx='21' cy='13' r='3' fill='%23fff'/%3E%3Cpath d='M10 21q6 5 12 0' stroke='%23fff' stroke-width='2.4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232d6a5f'/%3E%3Cpath d='M9 11h14M9 16h14M9 21h9' stroke='%23fff' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="{{root}}assets/style.css">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="wrap header-inner">
-      <a class="brand" href="{{root}}index.html" aria-label="{{BRAND}} apps home">
-        <span class="brand-mark" aria-hidden="true"></span>
-        <span>{{BRAND}}</span>
-      </a>
+      <a class="brand" href="{{SECTION_HREF}}">{{SECTION}}</a>
       <nav aria-label="{{SECTION}}">
         <ul class="nav">
           {{NAV}}
@@ -34,15 +31,13 @@
 
   <footer class="site-footer">
     <div class="wrap">
-      <p>Questions? Email <a href="mailto:{{EMAIL}}">{{EMAIL}}</a>. We read every message.</p>
+      <p>Questions? Email <a href="mailto:{{SUPPORT_EMAIL}}">{{SUPPORT_EMAIL}}</a>. We read every message.</p>
       <p class="footer-links">
         <a href="{{root}}index.html">All apps</a>
-        <a href="{{root}}privacy.html">{{BRAND}} Privacy</a>
-        <a href="{{root}}terms.html">{{BRAND}} Terms</a>
         <a href="{{root}}swipeclean/index.html">{{SWIPECLEAN_NAME}}</a>
         <a href="{{root}}quitline/index.html">{{QUITLINE_NAME}}</a>
       </p>
-      <p class="fine">&copy; {{YEAR}} {{BRAND}}. Apple, iPhone, iCloud and App Store are trademarks of Apple Inc.</p>
+      <p class="fine">Apple, iPhone, iCloud and App Store are trademarks of Apple Inc.</p>
     </div>
   </footer>
 </body>

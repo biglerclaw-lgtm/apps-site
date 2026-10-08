@@ -1,13 +1,17 @@
-# TixPanda apps site
+# Apps site
 
-Privacy policies, terms and support pages for TixPanda's iOS apps, served by GitHub Pages at
+Privacy policies, terms and support pages for two iOS apps, served by GitHub Pages at
 https://biglerclaw-lgtm.github.io/apps-site/
 
 ## Editing
 
 - Page sources live in `src/` (shared bits in `src/_partials/`, page shell in `src/_layout.html`).
-- Names, support email and dates live in `site.json`.
+- App names, the support email and dates live in `site.json`.
 - Rebuild after any change: `python build.py` (no dependencies), then commit the generated `.html` files.
+
+## Before submission
+
+`SUPPORT_EMAIL` in `site.json` is the placeholder `SUPPORT_EMAIL_TBD`. Set the real address, rebuild, commit and push.
 
 ## Renaming an app (e.g. SwipeClean before launch)
 

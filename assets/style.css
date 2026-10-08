@@ -1,4 +1,4 @@
-/* TixPanda apps site: one stylesheet, mobile first, light/dark via prefers-color-scheme. */
+/* Apps site: one stylesheet, mobile first, light/dark via prefers-color-scheme. */
 :root {
   --bg: #f7f6f2;
   --surface: #ffffff;
@@ -63,9 +63,6 @@ a:hover { text-decoration-thickness: 2px; }
 .site-header { border-bottom: 1px solid var(--line); background: var(--surface); }
 .header-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 16px; padding-top: 12px; padding-bottom: 12px; }
 .brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1.05rem; color: var(--text); text-decoration: none; min-height: 44px; }
-.brand-mark { width: 28px; height: 28px; border-radius: 8px; background: var(--accent); position: relative; flex: none; }
-.brand-mark::before, .brand-mark::after { content: ""; position: absolute; top: 9px; width: 6px; height: 6px; border-radius: 50%; background: var(--surface); }
-.brand-mark::before { left: 7px; } .brand-mark::after { right: 7px; }
 .nav { list-style: none; display: flex; flex-wrap: wrap; gap: 4px; margin: 0; padding: 0; }
 .nav a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 12px; border-radius: 999px; color: var(--muted); text-decoration: none; font-weight: 500; }
 .nav a:hover { color: var(--text); background: var(--surface-2); }

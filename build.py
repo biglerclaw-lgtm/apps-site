@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Build the static site.
 
-Edit pages in src/ and names/dates/email in site.json, then run:  python build.py
+Edit pages in src/ and app names/dates/support email in site.json, then run:  python build.py
 Generated .html files are written next to this script (the GitHub Pages root).
 
 Template syntax (no dependencies):
@@ -80,7 +80,7 @@ def nav_html(app, rel, env):
     if app:
         base = ""  # app pages live in the app folder
         items = [
-            ("index.html", env["APP"]),
+            ("index.html", "Overview"),
             ("privacy.html", "Privacy"),
             ("terms.html", "Terms"),
             ("support.html", "Support"),
@@ -110,7 +110,7 @@ def main():
         env = dict(site)
         env["root"] = "../" * depth
         app = meta.get("app", "")
-        env["APP"] = site[APPS[app]["name_key"]] if app else site["BRAND"]
+        env["APP"] = site[APPS[app]["name_key"]] if app else "Apps"
         env["APP_SLUG"] = app
         env["APP_Q"] = quote(env["APP"])  # URL-encoded name for mailto subjects
         env["APP_URL"] = site["SITE_URL"] + (f"{app}/" if app else "")
@@ -118,7 +118,7 @@ def main():
         env["title"] = fill(meta.get("title", ""), env, rel)
         env["description"] = fill(meta.get("description", ""), env, rel)
         env["NAV"] = nav_html(app, rel, env)
-        env["SECTION"] = env["APP"] if app else site["BRAND"] + " Apps"
+        env["SECTION"] = env["APP"]
         env["SECTION_HREF"] = "index.html"
         env["BODY"] = fill(expand_partials(body), env, rel)
         html = fill(expand_partials(layout), env, rel)
