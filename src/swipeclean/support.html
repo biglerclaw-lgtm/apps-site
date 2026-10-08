@@ -1,0 +1,97 @@
+<!--
+title: {{APP}} Support | {{BRAND}}
+description: Help with {{APP}}: photo permissions, Recently Deleted, iCloud Photos, restoring purchases, cancelling a trial and contacting support.
+app: swipeclean
+-->
+<h1>{{APP}} Support</h1>
+<p class="lede">Answers to common questions. Still stuck? Email <a href="mailto:{{EMAIL}}?subject={{APP_Q}}%20support">{{EMAIL}}</a> and a human will reply, usually within 2 business days.</p>
+
+<div class="callout">
+  <p><strong>When you email us</strong>, please include your iPhone model, iOS version ({{APP}} shows its version in Settings) and what happened. Never send passwords or payment details. We can't see your photos or your Apple ID.</p>
+</div>
+
+<h2 id="photos-access">Photo access</h2>
+<details id="permission">
+  <summary>Why does {{APP}} need access to my photos?</summary>
+  <div>
+    <p>To show your photos as cards, measure their size, find duplicates, similar and blurry shots, and, only when you confirm, delete them or add them to albums. Everything runs on your iPhone; nothing is uploaded. "Full Access" lets {{APP}} see your whole library; read the <a href="privacy.html#photos">privacy policy</a> for details.</p>
+  </div>
+</details>
+<details id="denied">
+  <summary>I tapped "Don't Allow". How do I turn access on?</summary>
+  <div>
+    <p>Open <span class="path"><code>Settings &gt; Privacy &amp; Security &gt; Photos &gt; {{APP}}</code></span> and choose <strong>Full Access</strong> (or <strong>Limited Access</strong> and pick photos). {{APP}} also has an "Open Settings" button on its no-access screen.</p>
+  </div>
+</details>
+<details id="limited">
+  <summary>What does Limited Access mean?</summary>
+  <div>
+    <p>With Limited Access, {{APP}} only sees the photos you picked. Decks, counts and smart groups cover just those items. To add more, use "Choose more photos" in the app, or switch to Full Access in Settings.</p>
+  </div>
+</details>
+
+<h2 id="storage">Deleting and storage</h2>
+<details id="recently-deleted">
+  <summary>I deleted photos but my iPhone storage didn't change. Why?</summary>
+  <div>
+    <p>When you confirm a delete, iOS moves the items to the Photos app's <strong>Recently Deleted</strong> album, not straight to the bin. They stay there <strong>for up to 30 days</strong> so you can recover mistakes, and they still use storage during that time. iOS frees the space automatically when each item's 30 days are up.</p>
+    <p>To free the space now:</p>
+    <ol>
+      <li>Open the <strong>Photos</strong> app (or tap "Open Photos" in {{APP}}).</li>
+      <li>Go to <strong>Collections &gt; Utilities &gt; Recently Deleted</strong> (on older iOS: Albums &gt; Recently Deleted) and unlock with Face ID if asked.</li>
+      <li>Tap <strong>Select</strong>, then <strong>Delete All</strong>.</li>
+    </ol>
+    <p>Deleting from Recently Deleted is permanent. {{APP}}'s Insights screen shows how much is waiting in Recently Deleted versus truly freed; tap "I emptied it" after you empty it to update the totals. iPhone Storage in Settings can take a few minutes to recalculate.</p>
+  </div>
+</details>
+<details id="recover">
+  <summary>I deleted something by mistake. Can I get it back?</summary>
+  <div>
+    <p>Yes, within 30 days. Before you confirm, everything you swipe to delete waits in {{APP}}'s Review tray, where you can restore any item. After you confirm, open Photos &gt; Recently Deleted, select the item and tap <strong>Recover</strong>. {{APP}} notices recovered items and returns them to your decks.</p>
+  </div>
+</details>
+<details id="icloud-photos">
+  <summary>I use iCloud Photos. What happens when I delete?</summary>
+  <div>
+    <p>With iCloud Photos on, your library is the same on all your devices, so <strong>deleting a photo on your iPhone also deletes it from iCloud, your other devices and any Shared Library</strong> (after the 30-day Recently Deleted period). {{APP}} reminds you before you confirm.</p>
+    <p>If "Optimize iPhone Storage" is on, some originals are only in iCloud. Opening them makes iOS download them from your iCloud, which can take a moment and uses data; a progress ring shows on the card. You can turn off these downloads in {{APP}} Settings (cards then use the smaller preview). {{APP}} shows whether each item is on your iPhone or in iCloud, and its Insights split freed space into "on this iPhone" and "iCloud", because deleting iCloud-only items frees iCloud storage rather than iPhone storage.</p>
+  </div>
+</details>
+<details id="allowance">
+  <summary>What is the free delete allowance?</summary>
+  <div>
+    <p>Swiping, sorting and finding duplicates are free. Free users can also delete up to the free allowance shown in the app (1 GB or 500 items in total, whichever comes first). Items beyond that stay safely in your tray until you upgrade, and you can delete as many as fit in what's left for free. Pro removes the limit and the ads.</p>
+  </div>
+</details>
+<details id="similar">
+  <summary>How does {{APP}} find duplicates, similar and blurry photos?</summary>
+  <div>
+    <p>It uses Apple's on-device Vision framework to compare photos and measure sharpness. Nothing is sent anywhere. The first scan of a large library can take a while and continues where it left off; you can pause it any time. Favorites and photos you've already kept are protected and never pre-selected for deletion.</p>
+  </div>
+</details>
+
+<h2 id="purchases-h">Purchases and subscriptions</h2>
+{{> purchases-faq}}
+
+<h2 id="data">Your data</h2>
+<details id="delete-data">
+  <summary>How do I delete my {{APP}} data?</summary>
+  <div>
+    <p>{{APP}} has no account and keeps no data on any server, so there is nothing for us to delete on our side.</p>
+    <ul>
+      <li>To start over: {{APP}} Settings &gt; <strong>Review everything again</strong> (clears decisions not yet committed; your photos are untouched).</li>
+      <li>To remove everything: delete the {{APP}} app (touch and hold its icon &gt; Remove App &gt; Delete App). This removes all its data from your iPhone. It does not delete any photos and does not cancel a subscription.</li>
+    </ul>
+    <p>A two-number free-allowance counter stays in the iPhone Keychain so the free allowance can't be reset by reinstalling; it contains no personal information. Data collected by ad partners is covered in the <a href="privacy.html#delete">privacy policy</a>.</p>
+  </div>
+</details>
+<details id="offline">
+  <summary>Does {{APP}} upload my photos or need the internet?</summary>
+  <div>
+    <p>No uploads, ever. {{APP}} works offline. It goes online only for App Store purchases, ads in the free version, iCloud Photos downloads (optional) and Apple Maps place names (off by default). Check it yourself in <span class="path"><code>Settings &gt; Privacy &amp; Security &gt; App Privacy Report</code></span>.</p>
+  </div>
+</details>
+
+<h2 id="contact">Contact us</h2>
+<p>Email <a href="mailto:{{EMAIL}}?subject={{APP_Q}}%20support">{{EMAIL}}</a>. We read every message and usually reply within 2 business days. For a refund, go to <a href="https://reportaproblem.apple.com/">reportaproblem.apple.com</a> (Apple handles all payments).</p>
+<p class="fine">See also: <a href="privacy.html">Privacy Policy</a> &middot; <a href="terms.html">Terms of Use</a></p>

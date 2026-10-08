@@ -1,0 +1,25 @@
+# TixPanda apps site
+
+Privacy policies, terms and support pages for TixPanda's iOS apps, served by GitHub Pages at
+https://biglerclaw-lgtm.github.io/apps-site/
+
+## Editing
+
+- Page sources live in `src/` (shared bits in `src/_partials/`, page shell in `src/_layout.html`).
+- Names, support email and dates live in `site.json`.
+- Rebuild after any change: `python build.py` (no dependencies), then commit the generated `.html` files.
+
+## Renaming an app (e.g. SwipeClean before launch)
+
+Change `SWIPECLEAN_NAME` in `site.json`, run `python build.py`, commit and push. Every page uses that one value.
+The URL path `/swipeclean/` stays the same so links already in the app keep working.
+
+## URLs for App Store Connect
+
+| App | Privacy Policy URL | Support URL | Terms (EULA) |
+|---|---|---|---|
+| SwipeClean | https://biglerclaw-lgtm.github.io/apps-site/swipeclean/privacy.html | https://biglerclaw-lgtm.github.io/apps-site/swipeclean/support.html | https://biglerclaw-lgtm.github.io/apps-site/swipeclean/terms.html |
+| Quitline | https://biglerclaw-lgtm.github.io/apps-site/quitline/privacy.html | https://biglerclaw-lgtm.github.io/apps-site/quitline/support.html | https://biglerclaw-lgtm.github.io/apps-site/quitline/terms.html |
+
+When a policy changes: update the text, add a changelog row, bump `EFFECTIVE_DATE` in `site.json` if needed, and keep the
+App Store privacy label in sync.

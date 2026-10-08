@@ -1,0 +1,128 @@
+<!--
+title: {{APP}} Privacy Policy | {{BRAND}}
+description: How {{APP}} handles your photos and data: on-device processing, no account, Apple purchases, and ads in the free version.
+app: swipeclean
+APP_AD_PROMISE: Ad SDKs never get access to your photos, videos, albums, swipe decisions or cleanup statistics. Those stay on your iPhone and are never shared with ad partners, and they are not used to choose which ads you see.
+-->
+<h1>{{APP}} Privacy Policy</h1>
+<p class="meta">Effective {{EFFECTIVE_DATE}} &middot; Last updated {{EFFECTIVE_DATE}}</p>
+
+<div class="callout">
+  <p><strong>The short version.</strong> {{APP}} looks at your photo library <em>on your iPhone</em> and never uploads your photos. There is no account and {{BRAND}} runs no server for the app. Purchases go through Apple. The free version shows ads, and the ad companies collect some device data to show them; you control tracking with Apple's prompt and the in-app privacy choices, and Pro removes ads entirely.</p>
+</div>
+
+<nav class="toc" aria-labelledby="toc-h">
+  <h2 id="toc-h">On this page</h2>
+  <ol>
+    <li><a href="#who">Who we are</a></li>
+    <li><a href="#photos">Your photos</a></li>
+    <li><a href="#on-device">Data stored on your device</a></li>
+    <li><a href="#icloud">iCloud Photos</a></li>
+    <li><a href="#network">Network connections</a></li>
+    <li><a href="#notifications">Notifications and widgets</a></li>
+    <li><a href="#purchases">Purchases</a></li>
+    <li><a href="#ads">Advertising</a></li>
+    <li><a href="#not">What we never do</a></li>
+    <li><a href="#retention">Data retention</a></li>
+    <li><a href="#delete">Deleting your data</a></li>
+    <li><a href="#rights">Your privacy rights</a></li>
+    <li><a href="#children">Children</a></li>
+    <li><a href="#security">Security</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#changes">Changes and changelog</a></li>
+  </ol>
+</nav>
+
+<h2 id="who">Who we are</h2>
+<p>{{APP}} is made by {{BRAND}} ("we", "us"). This policy covers the {{APP}} iPhone app, its widgets and Shortcuts. If you have a question, email <a href="mailto:{{EMAIL}}">{{EMAIL}}</a>.</p>
+
+<h2 id="photos">Your photos</h2>
+<p>With your permission (Apple's Photos access prompt), {{APP}} reads your photo library so it can:</p>
+<ul>
+  <li>show your photos and videos as cards to keep, delete, favorite, skip or sort into albums;</li>
+  <li>measure file sizes, and find screenshots, large videos, Live Photos, bursts, duplicates, similar shots and blurry photos;</li>
+  <li>when <strong>you</strong> confirm, delete items, mark favorites or add items to albums in the Photos app.</li>
+</ul>
+<p><strong>All of this happens on your iPhone.</strong> Image analysis (finding similar or blurry photos) uses Apple's on-device frameworks. Your photos, videos, their contents and their metadata (dates, locations, faces) are never uploaded to {{BRAND}} or anyone else, and are never given to ad SDKs.</p>
+<p>If you choose <em>Limited Access</em>, {{APP}} only sees the photos you select. You can change access at any time in <span class="path"><code>Settings &gt; Privacy &amp; Security &gt; Photos &gt; {{APP}}</code></span>.</p>
+<p>When you delete items, iOS shows its own confirmation, then moves them to the Photos app's <strong>Recently Deleted</strong> album, where they stay for up to 30 days before iOS removes them for good. {{APP}} never deletes anything without that confirmation.</p>
+
+<h2 id="on-device">Data stored on your device</h2>
+<p>To remember your progress, {{APP}} saves the following in its private storage on your iPhone:</p>
+<ul>
+  <li>your decisions (kept, staged for deletion, favorited, sorted), keyed by the Photos item's on-device identifier, with its size and date;</li>
+  <li>daily activity, goals, streaks and cleaned-space totals;</li>
+  <li>an image-analysis cache (numeric "fingerprints" and sharpness scores, not copies of your photos);</li>
+  <li>settings such as your daily goal, reminder time and pinned albums;</li>
+  <li>a small summary for widgets (for example "3.4 GB cleaned" and your streak), never photos or identifiers;</li>
+  <li>two numbers in your iPhone's Keychain recording how much you have deleted under the free allowance, so the allowance stays fair after a reinstall. This stays on your device (and in your own encrypted backups) and is not synced to iCloud Keychain.</li>
+</ul>
+<p>This data never leaves your device except inside your own iPhone backups (iCloud Backup or a computer backup), which Apple and you control. {{BRAND}} cannot access it.</p>
+
+<h2 id="icloud">iCloud Photos</h2>
+<p>{{APP}} has no iCloud sync of its own. If you use iCloud Photos with "Optimize iPhone Storage", some originals live in your iCloud. When you view such an item, <strong>iOS</strong> downloads it from <em>your</em> iCloud account to your iPhone, as the Photos app does. You can turn these downloads off in {{APP}}'s Settings. {{BRAND}} never sees this traffic or your iCloud account.</p>
+<p>With iCloud Photos on, deleting a photo also removes it from your other devices and any Shared Library. {{APP}} reminds you of this before you confirm.</p>
+
+<h2 id="network">Network connections</h2>
+<p>{{APP}} itself operates no server. The app connects to the internet only for:</p>
+<ul>
+  <li><strong>Apple's App Store</strong>: loading prices, purchases, restores and subscription status.</li>
+  <li><strong>iCloud Photos downloads</strong>, made by iOS as described above (optional).</li>
+  <li><strong>Apple Maps place names</strong> (off by default). City names come from a list built into the app. If you turn on "Place names from Apple Maps" in {{APP}}'s Privacy settings, photo coordinates are sent to Apple to look up a place name. Apple's handling is covered by Apple's Privacy Policy.</li>
+  <li><strong>Ads</strong> in the free version (see <a href="#ads">Advertising</a>). These requests contain device data, not your photos.</li>
+</ul>
+<p>You can check this yourself with iOS's App Privacy Report (<span class="path"><code>Settings &gt; Privacy &amp; Security &gt; App Privacy Report</code></span>).</p>
+
+<h2 id="notifications">Notifications and widgets</h2>
+<p>Reminders (daily tidy, trial-end reminder) are local notifications scheduled on your iPhone; they are not sent through any server. Widgets and Live Activities show totals such as space cleaned and your streak, read from your device.</p>
+
+{{> purchases-privacy}}
+
+{{> ads}}
+
+<h2 id="not">What we never do</h2>
+<ul>
+  <li>No account, sign-in or email address needed.</li>
+  <li>No uploading, scanning or "AI analysis" of your photos in the cloud.</li>
+  <li>No analytics or crash-reporting SDKs of our own. (Ad SDKs may report their own diagnostics, as described above.)</li>
+  <li>We do not sell your photos or app data, and we never use them for advertising.</li>
+</ul>
+
+<h2 id="retention">Data retention</h2>
+<ul>
+  <li><strong>On-device app data</strong> is kept until you reset it or delete the app (see below). {{BRAND}} keeps no copy.</li>
+  <li><strong>Deleted photos</strong> stay in the Photos app's Recently Deleted album for up to 30 days, or until you empty it.</li>
+  <li><strong>Ad data</strong> is retained by AppLovin, Google and other ad partners according to their own policies linked above.</li>
+  <li><strong>Purchase records</strong> are kept by Apple under Apple's policies.</li>
+  <li><strong>Support emails</strong> you send us are kept only as long as needed to help you and keep a record of the conversation, then deleted, normally within 24 months. Ask us to delete them sooner at any time.</li>
+</ul>
+
+<h2 id="delete">Deleting your data</h2>
+<ul>
+  <li><strong>Reset your progress</strong>: {{APP}} Settings &gt; "Review everything again" clears decisions that haven't been committed.</li>
+  <li><strong>Delete everything</strong>: delete the {{APP}} app. iOS removes its data, widgets and reminders. Only the two-number free-allowance counter in the Keychain remains on the device; it contains no photos or personal details.</li>
+  <li><strong>Ad data</strong>: use the choices in <a href="#ads-choices">Your ad choices</a>, or contact the ad partner directly. You can also email us and we will help you reach them.</li>
+</ul>
+
+{{> rights}}
+
+<h2 id="children">Children</h2>
+<p>{{APP}} is rated 4+ on the App Store because it has no objectionable content, but it is a general-audience utility and is <strong>not directed at children under 13</strong>. We do not knowingly collect personal information from children under 13 (or the equivalent minimum age in your country). If you believe a child has provided personal information to us, for example by email, contact us and we will delete it. Parents can prevent in-app purchases with Screen Time and Ask to Buy, and can turn off tracking in <span class="path"><code>Settings &gt; Privacy &amp; Security &gt; Tracking</code></span>.</p>
+
+<h2 id="security">Security</h2>
+<p>Your app data is protected by iOS app sandboxing and Data Protection encryption on your device. Because we don't operate a server or collect your data, there is no {{BRAND}} database of your information that could be breached. No method of storage is perfect, so keep your device passcode and Apple ID secure.</p>
+
+<h2 id="contact">Contact</h2>
+<p>Email <a href="mailto:{{EMAIL}}">{{EMAIL}}</a> for questions, privacy requests or complaints. If you email us, we receive your email address and whatever you write, and use it only to reply. We aim to answer within 7 days, and privacy requests within the time the law requires (30 days under GDPR, 45 days under CCPA).</p>
+
+<h2 id="changes">Changes and changelog</h2>
+<p>If we change how {{APP}} handles data, we will update this page and the date at the top before the change takes effect, and for significant changes we will tell you in the app. The App Store privacy label is kept in line with this page.</p>
+<div class="table-wrap">
+<table class="stack">
+  <thead><tr><th scope="col">Date</th><th scope="col">Change</th></tr></thead>
+  <tbody>
+    <tr><td data-label="Date">{{EFFECTIVE_DATE}}</td><td data-label="Change">First published version. Covers on-device photo processing, StoreKit purchases (Pro subscription with free trial, and lifetime), and ads in the free version through AppLovin MAX with mediated networks such as Google AdMob.</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="fine">See also: <a href="terms.html">{{APP}} Terms of Use</a> &middot; <a href="support.html">{{APP}} Support</a> &middot; <a href="{{root}}privacy.html">{{BRAND}} Privacy Overview</a></p>

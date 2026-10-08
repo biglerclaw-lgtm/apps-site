@@ -1,0 +1,35 @@
+<h2 id="ads">Advertising in the free version</h2>
+<p>The free version of {{APP}} shows ads. Buying {{APP}} Pro (a subscription or the lifetime purchase) removes all ads, and the ad SDK then stops requesting ads.</p>
+<p>Ads are delivered by <strong>AppLovin MAX</strong>, an ad mediation SDK built into the app. MAX may fill an ad slot from AppLovin itself or from other ad networks it mediates, such as <strong>Google AdMob</strong>. These companies, not {{BRAND}}, receive and process the data described below. {{BRAND}} does not receive it in a form that identifies you; we only see aggregated reports such as how many ads were shown and how much they earned.</p>
+
+<h3 id="ads-data">What the ad SDKs may collect</h3>
+<div class="table-wrap">
+<table class="stack">
+  <thead><tr><th scope="col">Data</th><th scope="col">When</th><th scope="col">Used for</th></tr></thead>
+  <tbody>
+    <tr><td data-label="Data">Advertising identifier (IDFA)</td><td data-label="When"><strong>Only if you tap "Allow" on Apple's App Tracking Transparency prompt.</strong> If you choose "Ask App Not to Track", iOS gives the SDK an all-zeros identifier instead.</td><td data-label="Used for">Personalized ads, measuring ads across apps (tracking)</td></tr>
+    <tr><td data-label="Data">Identifier for Vendor (IDFV) and SDK-generated IDs</td><td data-label="When">Whenever an ad is requested</td><td data-label="Used for">Frequency capping, fraud prevention, reporting; not linked across companies' apps without your permission</td></tr>
+    <tr><td data-label="Data">IP address and approximate (coarse) location derived from it</td><td data-label="When">Whenever an ad is requested</td><td data-label="Used for">Delivering ads, picking the right language/region, legal compliance (for example, privacy rules by region), fraud prevention</td></tr>
+    <tr><td data-label="Data">Device and app information: device model, iOS version, language, time zone, screen size, network type, carrier, app name and version</td><td data-label="When">Whenever an ad is requested</td><td data-label="Used for">Showing ads that fit your device, troubleshooting, fraud prevention</td></tr>
+    <tr><td data-label="Data">Ad interaction data: which ads were shown, taps, video completions, rewarded-ad completions</td><td data-label="When">When you see or interact with an ad</td><td data-label="Used for">Ad delivery, measurement, billing between ad companies, rewarding you for a rewarded ad</td></tr>
+    <tr><td data-label="Data">Ad SDK diagnostics (crash and performance data about the ad SDK)</td><td data-label="When">If the ad SDK has a problem</td><td data-label="Used for">Keeping the ad SDK working</td></tr>
+  </tbody>
+</table>
+</div>
+<p>{{APP_AD_PROMISE}}</p>
+<p>The app does not request precise location for ads and does not give ad SDKs access to your contacts, camera, microphone or Health data.</p>
+
+<h3 id="ads-choices">Your ad choices</h3>
+<ul>
+  <li><strong>App Tracking Transparency (all users).</strong> The first time ads might be personalized, the app explains why and then shows Apple's prompt. Choose "Ask App Not to Track" and the ad SDKs cannot use your IDFA or track you across other companies' apps and websites; you will still see ads, but they are non-personalized or based on the content of the app. You can change this at any time in iOS <span class="path"><code>Settings &gt; Privacy &amp; Security &gt; Tracking</code></span> (per app, or turn off "Allow Apps to Request to Track" for every app).</li>
+  <li><strong>In-app consent manager (EEA, UK, Switzerland and US states with privacy laws).</strong> Where the law requires it, a consent screen (Google's User Messaging Platform, shown through AppLovin MAX) asks before any data is used for personalized ads, and lets you accept, reject or pick partners and purposes. You can reopen it at any time from <span class="path"><code>{{APP}} Settings &gt; Ad Privacy Choices</code></span> to change or withdraw your consent, or to opt out of the "sale" or "sharing" of personal information for targeted advertising.</li>
+  <li><strong>Remove ads entirely</strong> by buying {{APP}} Pro. A subscription or lifetime purchase turns off all ads.</li>
+  <li><strong>Limit ad personalization at the partner.</strong> Google: <a href="https://myadcenter.google.com/">My Ad Center</a>.</li>
+</ul>
+
+<h3 id="ads-partners">Ad partners and their privacy policies</h3>
+<ul>
+  <li>AppLovin (MAX mediation and AppLovin ads): <a href="https://www.applovin.com/privacy/">applovin.com/privacy</a></li>
+  <li>Google AdMob: <a href="https://policies.google.com/privacy">Google Privacy Policy</a> and <a href="https://policies.google.com/technologies/partner-sites">How Google uses information from apps that use its services</a></li>
+</ul>
+<p>We may add or remove mediated ad networks over time. When we add one, we will list it here and update the changelog at the bottom of this page. The full, current list of partners and purposes is also shown in the consent screen where that screen applies.</p>
