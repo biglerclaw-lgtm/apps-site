@@ -144,3 +144,5 @@ details > div { padding: 0 16px 6px; }
   body { background: #fff; color: #000; }
   details { border: 0; } details > div { display: block; }
 }
+
+a[href^="tel:"] { white-space: nowrap; }
