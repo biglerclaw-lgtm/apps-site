@@ -1,6 +1,6 @@
 # Apps site
 
-Privacy policies, terms and support pages for two iOS apps, served by GitHub Pages at
+Privacy policies, terms and support pages for four iOS apps (Prunely, Quitline, Lumenwise, Paperlark), served by GitHub Pages at
 https://biglerclaw-lgtm.github.io/apps-site/
 
 ## Editing
@@ -24,6 +24,10 @@ The URL path `/swipeclean/` stays the same so links already in the app keep work
 |---|---|---|---|
 | Prunely (path /swipeclean/) | https://biglerclaw-lgtm.github.io/apps-site/swipeclean/privacy.html | https://biglerclaw-lgtm.github.io/apps-site/swipeclean/support.html | https://biglerclaw-lgtm.github.io/apps-site/swipeclean/terms.html |
 | Quitline | https://biglerclaw-lgtm.github.io/apps-site/quitline/privacy.html | https://biglerclaw-lgtm.github.io/apps-site/quitline/support.html | https://biglerclaw-lgtm.github.io/apps-site/quitline/terms.html |
+| Lumenwise | https://biglerclaw-lgtm.github.io/apps-site/lumenwise/privacy.html | https://biglerclaw-lgtm.github.io/apps-site/lumenwise/support.html | https://biglerclaw-lgtm.github.io/apps-site/lumenwise/terms.html |
+| Paperlark | https://biglerclaw-lgtm.github.io/apps-site/paperlark/privacy.html | https://biglerclaw-lgtm.github.io/apps-site/paperlark/support.html | https://biglerclaw-lgtm.github.io/apps-site/paperlark/terms.html |
+
+Lumenwise and Paperlark policies and terms are effective 2026-10-09; they override `EFFECTIVE_DATE` in their page front matter.
 
 When a policy changes: update the text, add a changelog row, bump `EFFECTIVE_DATE` in `site.json` if needed, and keep the
 App Store privacy label in sync.

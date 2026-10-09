@@ -1,0 +1,107 @@
+<!--
+title: {{APP}} Support
+description: Help with {{APP}}: scanning, text recognition, redaction, Spotlight, app lock, your data, restoring purchases, cancelling a free trial and contacting support.
+app: paperlark
+-->
+<h1>{{APP}} Support</h1>
+<p class="lede">Answers to common questions. Still stuck? Email <a href="mailto:{{SUPPORT_EMAIL}}?subject={{APP_Q}}%20support">{{SUPPORT_EMAIL}}</a> and a human will reply, usually within 2 business days. Please never send us your documents or ID numbers.</p>
+
+<h2 id="scanning">Scanning and documents</h2>
+<details id="free">
+  <summary>What's free, and what does Pro add?</summary>
+  <div>
+    <p>Scanning, text recognition, search and export are free, with no watermark and no page limit. The free version shows ads and includes up to 3 folders and 1 saved signature. {{APP}} Pro removes ads and unlocks extras such as unlimited folders and signatures, smart redaction and receipt exports. The Pro screen in the app lists everything included.</p>
+  </div>
+</details>
+<details id="ocr">
+  <summary>Text wasn't recognized correctly. What can I do?</summary>
+  <div>
+    <p>Text recognition runs on your iPhone with Apple's Vision framework. It works best with flat pages, good even light and the whole page in the frame. Rescan the page or retake it from the document's page grid. Handwriting and unusual fonts may not be recognized perfectly, so check important numbers yourself.</p>
+  </div>
+</details>
+<details id="ai">
+  <summary>Does the AI summary send my document anywhere?</summary>
+  <div>
+    <p>No. Summaries and "ask this document" run entirely on your iPhone, using Apple's on-device Foundation Models on iOS 26 devices with Apple Intelligence, and a simpler key-sentence method on other devices. They work in Airplane Mode. Nothing is uploaded to us or to any AI service. Summaries can miss things, so check the original for anything important.</p>
+  </div>
+</details>
+<details id="open-in">
+  <summary>How do I open a PDF from Mail or Files in {{APP}}?</summary>
+  <div>
+    <p>Tap the PDF or image, tap the share button and choose {{APP}}. {{APP}} makes its own copy, so you can sign, redact or file it without changing the original.</p>
+  </div>
+</details>
+<details id="redact">
+  <summary>How does redaction work? Is it safe?</summary>
+  <div>
+    <p>Smart redaction finds emails, phone numbers, addresses, card numbers, account numbers, Social Security numbers and dates, and you can add or remove boxes by hand. When you share the safe copy, the black boxes are burned into the page images and the hidden text is removed from the PDF's text layer, so it can't be uncovered or copied. Detection is automatic and can miss things, so <strong>always check the preview before you share</strong>. Your original document is kept unchanged in {{APP}}.</p>
+  </div>
+</details>
+<details id="password">
+  <summary>Can I password-protect a PDF?</summary>
+  <div>
+    <p>Yes. Choose a password when you export. {{APP}} uses Apple's standard PDF encryption. We can't recover a forgotten PDF password, so store it somewhere safe.</p>
+  </div>
+</details>
+<details id="sign">
+  <summary>Are my saved signatures private?</summary>
+  <div>
+    <p>Yes. Signatures and initials you save are stored as drawings in {{APP}}'s private database on your iPhone. They are never uploaded and never shared with ad partners. Delete a saved signature from the signature library at any time.</p>
+  </div>
+</details>
+
+<h2 id="data">Your data and privacy</h2>
+<details id="where">
+  <summary>Where are my documents stored? Can the developer see them?</summary>
+  <div>
+    <p>On your iPhone, in {{APP}}'s private storage with iOS's strongest file protection. There is no account and no server of ours, so we can't see your documents. Ads in the free version never receive them. Full details: <a href="privacy.html">privacy policy</a>.</p>
+  </div>
+</details>
+<details id="new-iphone">
+  <summary>Does {{APP}} sync with iCloud? How do I move to a new iPhone?</summary>
+  <div>
+    <p>This version doesn't sync between devices. Your documents move to a new iPhone with an iCloud Backup, a computer backup or Apple's Quick Start transfer. You can also export PDFs and save them to Files at any time.</p>
+  </div>
+</details>
+<details id="spotlight">
+  <summary>Why do my documents show up in iPhone search? How do I stop it?</summary>
+  <div>
+    <p>{{APP}} adds each document's title, type and recognized text to the Spotlight index on your iPhone so you can find it from iPhone search. The index stays on your device. To turn it off, go to <span class="path"><code>{{APP}} Settings &gt; Privacy</code></span> and turn off <strong>Find documents in Spotlight</strong>; {{APP}} removes its entries.</p>
+  </div>
+</details>
+<details id="lock">
+  <summary>How do I lock {{APP}} with Face ID?</summary>
+  <div>
+    <p>Turn on the lock in {{APP}} Settings. If Face ID doesn't work, iOS lets you use your iPhone passcode. {{APP}} never receives your face data.</p>
+  </div>
+</details>
+<details id="widgets">
+  <summary>Can I hide document names on widgets?</summary>
+  <div>
+    <p>Yes. Turn off <strong>Show titles on widgets</strong> in {{APP}} Settings and widgets show "Document" instead of the title. Widgets never show page images or document text.</p>
+  </div>
+</details>
+<details id="reminders">
+  <summary>How do due-date reminders work?</summary>
+  <div>
+    <p>When {{APP}} finds a due date on a bill or form, you can turn on a reminder for that document. It arrives at 9:00 the day before the due date and is scheduled on your iPhone, not sent from a server. Check the due date yourself: automatically found dates can be wrong.</p>
+  </div>
+</details>
+<details id="delete-data">
+  <summary>How do I delete my data?</summary>
+  <div>
+    <ul>
+      <li>One document: delete it from the library. Its files, Spotlight entries and reminders go with it.</li>
+      <li>Everything: <span class="path"><code>{{APP}} Settings &gt; Delete everything</code></span> wipes all documents, files, signatures, Spotlight entries and notifications. It can't be undone, so export anything you want to keep first.</li>
+      <li>Deleting the app also removes its data (but does not cancel a subscription). Copies you saved to Files or Photos stay where you put them.</li>
+    </ul>
+  </div>
+</details>
+
+<h2 id="purchases-h">Purchases and subscriptions</h2>
+<p>{{APP}} Pro is available as a yearly subscription (with a 7-day free trial for eligible new subscribers) or a one-time lifetime purchase that works with Family Sharing. Prices are shown in the app in your currency before you buy.</p>
+{{> purchases-faq}}
+
+<h2 id="contact">Contact us</h2>
+<p>Email <a href="mailto:{{SUPPORT_EMAIL}}?subject={{APP_Q}}%20support">{{SUPPORT_EMAIL}}</a>. Please include your iPhone model and iOS version, and describe the problem without attaching the document itself. We usually reply within 2 business days.</p>
+<p class="fine">See also: <a href="privacy.html">Privacy Policy</a> &middot; <a href="terms.html">Terms of Use</a></p>

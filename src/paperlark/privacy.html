@@ -1,0 +1,157 @@
+<!--
+title: {{APP}} Privacy Policy
+description: How {{APP}} handles your documents: scans, recognized text and signatures stay on your device, AI runs on your iPhone, no account, Apple purchases, and ads in the free version.
+app: paperlark
+EFFECTIVE_DATE: October 9, 2026
+EFFECTIVE_ISO: 2026-10-09
+APP_AD_PROMISE: Ad SDKs never get access to your scanned pages, their recognized text, document names, folders, tags, extracted details (such as vendors, amounts and due dates), summaries or signatures. Your documents stay on your iPhone, are never shared with ad partners, and are never used to choose which ads you see. As with any app that shows ads, an ad request does tell the ad network which app it came from ({{APP}}).
+-->
+<h1>{{APP}} Privacy Policy</h1>
+<p class="meta">Effective {{EFFECTIVE_DATE}} &middot; Last updated {{EFFECTIVE_DATE}}</p>
+
+<div class="callout">
+  <p><strong>The short version.</strong> Your scans, the text recognized in them and your signatures are stored <em>on your iPhone</em>. Text recognition, auto-filing, redaction and AI summaries all run on the device, and nothing is uploaded to us or to any AI service. There is no account and we run no server. Purchases go through Apple. The free version shows ads; the ad companies collect some device data to show them, never your documents, and Pro removes ads entirely.</p>
+</div>
+
+<nav class="toc" aria-labelledby="toc-h">
+  <h2 id="toc-h">On this page</h2>
+  <ol>
+    <li><a href="#who">Who we are</a></li>
+    <li><a href="#on-device">Your documents stay on your device</a></li>
+    <li><a href="#processing">Processing on your iPhone</a></li>
+    <li><a href="#sharing">Sharing and exporting</a></li>
+    <li><a href="#spotlight">Spotlight search</a></li>
+    <li><a href="#widgets">Widgets</a></li>
+    <li><a href="#notifications">Notifications</a></li>
+    <li><a href="#permissions">Permissions</a></li>
+    <li><a href="#files">Files app and opening documents</a></li>
+    <li><a href="#network">Network connections</a></li>
+    <li><a href="#purchases">Purchases</a></li>
+    <li><a href="#ads">Advertising</a></li>
+    <li><a href="#sensitive">Sensitive documents</a></li>
+    <li><a href="#not">What we never do</a></li>
+    <li><a href="#retention">Data retention</a></li>
+    <li><a href="#delete">Deleting your data</a></li>
+    <li><a href="#rights">Your privacy rights</a></li>
+    <li><a href="#children">Children</a></li>
+    <li><a href="#security">Security</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#changes">Changes and changelog</a></li>
+  </ol>
+</nav>
+
+<h2 id="who">Who we are</h2>
+<p>{{APP}} is made by an independent developer ("we", "us"). This policy covers the {{APP}} iPhone app, its widgets, its Control Center control and its Siri and Shortcuts actions. Questions: <a href="mailto:{{SUPPORT_EMAIL}}">{{SUPPORT_EMAIL}}</a>.</p>
+
+<h2 id="on-device">Your documents stay on your device</h2>
+<ul>
+  <li><strong>Page images.</strong> Each scanned page is saved as a JPEG (the original and the cleaned-up version) in the app's private storage on your iPhone, protected with iOS's strongest file protection ("complete protection"), which keeps the files encrypted while your iPhone is locked.</li>
+  <li><strong>Everything else</strong> is kept in a local database inside the app: document names and details, the text recognized in your scans, folders and tags, details the app pulls out (such as vendor, dates, amounts and due dates), cached summaries, and signatures and initials you save (stored as drawings).</li>
+  <li>Your settings (such as app lock and Spotlight preferences) are stored on the device too.</li>
+</ul>
+<p><strong>There is no iCloud sync in this version</strong>, and this data is not kept in the area shared with widgets. We have no server for it and cannot see it. Like any app's data, it is included in your own device backups (iCloud Backup or a computer backup), which Apple and you control.</p>
+
+<h2 id="processing">Processing on your iPhone</h2>
+<ul>
+  <li><strong>Text recognition (OCR)</strong>, including reading barcodes and QR codes, uses Apple's Vision framework on your device.</li>
+  <li><strong>Sorting, naming and filing</strong> use on-device keyword rules and Apple's data detectors, and, on iOS 26 devices with Apple Intelligence, Apple's on-device Foundation Models.</li>
+  <li><strong>AI summary and "ask this document"</strong> run entirely on your iPhone: with Apple's on-device Foundation Models where available, or a simpler method that picks out key sentences otherwise. They work in Airplane Mode.</li>
+  <li><strong>Smart redaction</strong> finds emails, phone numbers, addresses, card numbers, account numbers, Social Security numbers and dates on your device. When you share a redacted copy, black boxes are burned into the page images and the hidden text is removed from the PDF's text layer, so it can't be copied or searched.</li>
+</ul>
+<p><strong>Nothing is uploaded to us or to any AI service.</strong></p>
+
+<h2 id="sharing">Sharing and exporting</h2>
+<p>A document leaves {{APP}} only when you export it: through the iOS share sheet, Save to Files or Save to Photos. Once you share a document, the app or person you send it to handles it under their own privacy practices. You can protect an exported PDF with a password; {{APP}} uses Apple's standard PDF encryption for this, only when you ask.</p>
+
+<h2 id="spotlight">Spotlight search</h2>
+<p>So your documents appear when you search on your iPhone, {{APP}} adds each document's title, type and recognized text (up to 20,000 characters per document) to the <strong>on-device</strong> Spotlight index. This index stays on your iPhone. To turn it off, go to <span class="path"><code>{{APP}} Settings &gt; Privacy</code></span> and turn off <strong>Find documents in Spotlight</strong>; {{APP}} then removes its entries.</p>
+
+<h2 id="widgets">Widgets</h2>
+<p>Widgets read a small summary that {{APP}} copies into a storage area shared only with its own widgets (an App Group): your document count, up to 4 recent documents and up to 4 documents with a due date coming up, each with its title, type icon, page count, dates and due date. If you turn off <strong>Show titles on widgets</strong>, each title is replaced with "Document". Widgets never see your page images or recognized text.</p>
+
+<h2 id="notifications">Notifications</h2>
+<p>Notifications are scheduled locally on your iPhone; no notification server is used. {{APP}} can remind you 48 hours before a free trial turns into a paid subscription, and, if you turn it on for a document, at 9:00 the day before its due date. {{APP}} asks for notification permission only after you start a trial or turn on a due-date reminder.</p>
+
+<h2 id="permissions">Permissions</h2>
+<ul>
+  <li><strong>Camera</strong>: to scan documents. Camera images are processed on your iPhone and saved only in the app.</li>
+  <li><strong>Face ID</strong> (optional app lock): handled entirely by iOS, which also offers your passcode as a fallback. {{APP}} only learns whether unlocking succeeded and never receives biometric data.</li>
+  <li><strong>Photos (add only)</strong>: to save page images to your library. Importing from Photos uses Apple's photo picker, so {{APP}} only gets the photos you pick and cannot read the rest of your library.</li>
+  <li><strong>Notifications</strong>: see <a href="#notifications">Notifications</a>.</li>
+  <li><strong>App Tracking Transparency</strong>: asked only in the free version when ads are switched on, after a short explanation in the app, and never while you are scanning, editing or signing. See <a href="#ads">Advertising</a>.</li>
+</ul>
+<p>{{APP}} does not ask for your location, contacts, microphone or calendar.</p>
+
+<h2 id="files">Files app and opening documents</h2>
+<p>PDFs you choose to save to {{APP}}'s folder are visible in the Files app under "On My iPhone". You can also open PDFs and images in {{APP}} from Files, Mail and other apps; {{APP}} copies the file it is given and does not access anything else.</p>
+
+<h2 id="network">Network connections</h2>
+<p>{{APP}} makes no network connections of its own other than Apple's App Store (prices, purchases, restores and subscription status) and, in the free version, the ad SDKs. Scanning, text recognition, search, summaries, redaction and signing work offline. You can check this yourself in iOS's App Privacy Report (<span class="path"><code>Settings &gt; Privacy &amp; Security &gt; App Privacy Report</code></span>).</p>
+
+{{> purchases-privacy}}
+<p>{{APP}} Pro is offered as a yearly subscription with a 7-day free trial for eligible new subscribers, and as a one-time lifetime purchase that supports Family Sharing. You can cancel from <span class="path"><code>{{APP}} Settings &gt; Manage subscription</code></span> (which opens Apple's screen) and restore purchases at any time.</p>
+
+{{> ads}}
+<h3 id="ads-dns">"Do not sell or share my personal information"</h3>
+<p>{{APP}} Settings &gt; Ad Privacy Choices also has a <strong>"Do not sell or share my personal information"</strong> switch. When it is on, {{APP}} tells AppLovin, and through it the networks it mediates, not to sell or share your personal information for targeted advertising, as US state privacy laws allow. Your choice is stored on your device.</p>
+<h3 id="ads-when">When ads start, and where they appear</h3>
+<ul>
+  <li><strong>No ad SDK starts until you have seen the tracking explanation</strong> and, where they apply, Apple's tracking prompt and the consent screen. Google's ad measurement is also set to wait until then.</li>
+  <li>The ad SDKs use your IDFA only if you choose "Allow" on Apple's tracking prompt; otherwise they use the identifier for vendor (IDFV) and ads are non-personalized.</li>
+  <li><strong>Banner ads appear only on the documents library list.</strong> There is at most one full-screen ad per session, only after an export or share is completed, and never after your first export. Watching a rewarded ad (for example, for a one-time Pro export) is always your choice.</li>
+  <li><strong>Ads never appear</strong> in the camera and scanning screens, the editor, signing, redaction, the document assistant, onboarding or the Pro screen.</li>
+  <li><strong>With Pro</strong> (subscription or lifetime), the ad SDK is never started.</li>
+  <li><strong>If ads are not switched on.</strong> Ads run only in versions of the app where ad accounts are configured. In a version without them, no ad SDK starts, no tracking prompt is shown and no data goes to any third party, and the App Store privacy label for that version says so.</li>
+</ul>
+<p>We ask our ad partners to block ads for gambling, dating and mature content where their controls allow it. If you see an inappropriate ad in {{APP}}, please tell us at <a href="mailto:{{SUPPORT_EMAIL}}">{{SUPPORT_EMAIL}}</a>.</p>
+
+<h2 id="sensitive">Sensitive documents</h2>
+<p>People scan IDs, bank statements, medical letters and tax forms. That is why {{APP}} keeps them on your iPhone: their images, text and details are never sent to us, never shared with ad partners or anyone else, and never used for advertising, profiling or research. If you use Spotlight, remember that text from your documents can appear in iPhone search results; you can turn that off at any time (see <a href="#spotlight">Spotlight search</a>). Use the app lock and redaction for extra protection, and check a redacted copy before you share it.</p>
+
+<h2 id="not">What we never do</h2>
+<ul>
+  <li>No account, sign-in or email address needed.</li>
+  <li>No server holding your documents, no cloud AI or OCR service, and no analytics or crash-reporting SDKs of our own. (Ad SDKs may report their own diagnostics, as described above.)</li>
+  <li>We never sell your data and never use your documents for advertising.</li>
+  <li>This version of {{APP}} does not use iCloud sync.</li>
+</ul>
+
+<h2 id="retention">Data retention</h2>
+<ul>
+  <li><strong>Documents and their data</strong> are kept on your iPhone until you delete them. We keep no copy.</li>
+  <li><strong>Ad data</strong> is retained by AppLovin, Google and other ad partners according to their policies linked above.</li>
+  <li><strong>Purchase records</strong> are kept by Apple under Apple's policies.</li>
+  <li><strong>Support emails</strong> are kept only as long as needed to help you and keep a record of the conversation, then deleted, normally within 24 months. Ask us to delete them sooner at any time.</li>
+</ul>
+
+<h2 id="delete">Deleting your data</h2>
+<ul>
+  <li><strong>Delete a document</strong>: removes its page files, its Spotlight entries and any reminders for it.</li>
+  <li><strong>Delete everything</strong>: <span class="path"><code>{{APP}} Settings &gt; Delete everything</code></span> wipes all documents, files, saved signatures, Spotlight entries and scheduled notifications. It can't be undone.</li>
+  <li><strong>Deleting the app</strong> removes all its data. It does not cancel a subscription.</li>
+  <li><strong>Exported copies</strong> you saved to Files or Photos or sent to others are outside {{APP}}; delete them where you saved them.</li>
+  <li><strong>Ad data</strong>: use <a href="#ads-choices">your ad choices</a> or contact the ad partner; email us and we'll help.</li>
+</ul>
+
+{{> rights}}
+
+<h2 id="children">Children</h2>
+<p>{{APP}} is <strong>not directed at children</strong>. We do not knowingly collect personal information from children under 13 (or the minimum age in your country). If you believe a child has provided personal information to us, for example by email, contact us and we will delete it.</p>
+
+<h2 id="security">Security</h2>
+<p>Your documents are protected by iOS app sandboxing and complete file protection, and you can add a Face ID lock in {{APP}}. Because we don't operate a server, there is no developer-held database of your documents that could be breached. Keep your device passcode, your Apple ID and any exported files secure.</p>
+
+<h2 id="contact">Contact</h2>
+<p>Email <a href="mailto:{{SUPPORT_EMAIL}}">{{SUPPORT_EMAIL}}</a> for questions, privacy requests or complaints. If you email us, we receive your email address and whatever you write, and use it only to reply. <strong>Please never send us your documents or ID numbers.</strong> We aim to answer within 7 days, and privacy requests within the time the law requires (30 days under GDPR, 45 days under CCPA).</p>
+
+<h2 id="changes">Changes and changelog</h2>
+<p>If we change how {{APP}} handles data, for example if we add iCloud sync, we will update this page and the date at the top before the change takes effect, and for significant changes we will tell you in the app. The App Store privacy label is kept in line with this page.</p>
+<div class="table-wrap">
+<table class="stack">
+  <thead><tr><th scope="col">Date</th><th scope="col">Change</th></tr></thead>
+  <tbody>
+    <tr><td data-label="Date">{{EFFECTIVE_DATE}}</td><td data-label="Change">First published version. Covers on-device storage (no iCloud sync), on-device text recognition, AI and redaction, the on-device Spotlight index, widgets, local notifications, StoreKit purchases (yearly subscription with a 7-day free trial, and lifetime), and ads in the free version through AppLovin MAX with Google AdMob mediated.</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="fine">See also: <a href="terms.html">{{APP}} Terms of Use</a> &middot; <a href="support.html">{{APP}} Support</a></p>

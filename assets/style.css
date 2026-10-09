@@ -121,6 +121,8 @@ th { background: var(--surface-2); font-weight: 600; }
 .app-icon { width: 48px; height: 48px; border-radius: 12px; display: grid; place-items: center; font-weight: 700; font-size: 1.3rem; color: #fff; margin-bottom: 12px; }
 .app-icon.sc { background: linear-gradient(135deg, #3b7ddd, #6a4fd6); }
 .app-icon.ql { background: linear-gradient(135deg, #2f8f7c, #e0795b); }
+.app-icon.lw { background: linear-gradient(135deg, #b8862b, #7a3f6e); }
+.app-icon.pl { background: linear-gradient(135deg, #2b6cb0, #2f9e8f); }
 
 /* FAQ */
 details { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); margin: 0 0 10px; }
