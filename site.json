@@ -4,6 +4,7 @@
   "EFFECTIVE_DATE": "October 8, 2026",
   "EFFECTIVE_ISO": "2026-10-08",
   "YEAR": "2026",
+  "ADS_CONSENT_ITEM": "<li><strong>In-app consent manager (EEA, UK, Switzerland and US states with privacy laws).</strong> Where the law requires it, a consent screen (Google's User Messaging Platform, shown through AppLovin MAX) asks before any data is used for personalized ads, and lets you accept, reject or pick partners and purposes. You can reopen it at any time from <span class=\"path\"><code>{{APP}} Settings &gt; Ad Privacy Choices</code></span> to change or withdraw your consent, or to opt out of the \"sale\" or \"sharing\" of personal information for targeted advertising.</li>",
 
   "SWIPECLEAN_NAME": "Prunely",
   "QUITLINE_NAME": "Quitline",

@@ -5,6 +5,8 @@ app: paperlark
 EFFECTIVE_DATE: October 9, 2026
 EFFECTIVE_ISO: 2026-10-09
 APP_AD_PROMISE: Ad SDKs never get access to your scanned pages, their recognized text, document names, folders, tags, extracted details (such as vendors, amounts and due dates), summaries or signatures. Your documents stay on your iPhone, are never shared with ad partners, and are never used to choose which ads you see. As with any app that shows ads, an ad request does tell the ad network which app it came from ({{APP}}).
+ADS_CONSENT_ITEM: <li><strong>In-app consent screen (EEA, UK and Switzerland).</strong> In the EEA, the UK and Switzerland, the consent screen opens before ads and can be reopened from Settings &gt; Ad Privacy Choices. It is Google's User Messaging Platform, shown through AppLovin MAX; it asks before any data is used for personalized ads and lets you accept, reject or pick partners and purposes, and change or withdraw your consent later.</li>
+  <li><strong>US: Do not sell or share.</strong> In US states with privacy laws, use the <strong>Do not sell or share</strong> switch in Settings &gt; Ad Privacy Choices.</li>
 -->
 <h1>{{APP}} Privacy Policy</h1>
 <p class="meta">Effective {{EFFECTIVE_DATE}} &middot; Last updated {{EFFECTIVE_DATE}}</p>
@@ -41,11 +43,11 @@ APP_AD_PROMISE: Ad SDKs never get access to your scanned pages, their recognized
 </nav>
 
 <h2 id="who">Who we are</h2>
-<p>{{APP}} is made by an independent developer ("we", "us"). This policy covers the {{APP}} iPhone app, its widgets, its Control Center control and its Siri and Shortcuts actions. Questions: <a href="mailto:{{SUPPORT_EMAIL}}">{{SUPPORT_EMAIL}}</a>.</p>
+<p>{{APP}} is made by an independent developer ("we", "us"). This policy covers the {{APP}} iPhone app, its widgets, its Control Center control and its Siri and Shortcuts actions. Questions: {{SUPPORT_LINK}}.</p>
 
 <h2 id="on-device">Your documents stay on your device</h2>
 <ul>
-  <li><strong>Page images.</strong> Each scanned page is saved as a JPEG (the original and the cleaned-up version) in the app's private storage on your iPhone, protected with iOS's strongest file protection ("complete protection"), which keeps the files encrypted while your iPhone is locked.</li>
+  <li><strong>Page images.</strong> Each scanned page is saved as a JPEG (the original and the cleaned-up version) in the app's private storage on your iPhone, <strong>encrypted at rest with iOS data protection; after a restart the files can't be read until you first unlock your iPhone</strong>.</li>
   <li><strong>Everything else</strong> is kept in a local database inside the app: document names and details, the text recognized in your scans, folders and tags, details the app pulls out (such as vendor, dates, amounts and due dates), cached summaries, and signatures and initials you save (stored as drawings).</li>
   <li>Your settings (such as app lock and Spotlight preferences) are stored on the device too.</li>
 </ul>
@@ -64,13 +66,13 @@ APP_AD_PROMISE: Ad SDKs never get access to your scanned pages, their recognized
 <p>A document leaves {{APP}} only when you export it: through the iOS share sheet, Save to Files or Save to Photos. Once you share a document, the app or person you send it to handles it under their own privacy practices. You can protect an exported PDF with a password; {{APP}} uses Apple's standard PDF encryption for this, only when you ask.</p>
 
 <h2 id="spotlight">Spotlight search</h2>
-<p>So your documents appear when you search on your iPhone, {{APP}} adds each document's title, type and recognized text (up to 20,000 characters per document) to the <strong>on-device</strong> Spotlight index. This index stays on your iPhone. To turn it off, go to <span class="path"><code>{{APP}} Settings &gt; Privacy</code></span> and turn off <strong>Find documents in Spotlight</strong>; {{APP}} then removes its entries.</p>
+<p>So your documents appear when you search on your iPhone, {{APP}} adds each document's title, type and recognized text (up to 20,000 characters per document) to the <strong>on-device</strong> Spotlight index. This index stays on your iPhone. To turn it off, go to <span class="path"><code>{{APP}} Settings &gt; Privacy</code></span> and turn off <strong>Find documents in Spotlight</strong>; {{APP}} then removes its entries. While App Lock is on, iPhone search only shows each document's type, never its name or text.</p>
 
 <h2 id="widgets">Widgets</h2>
-<p>Widgets read a small summary that {{APP}} copies into a storage area shared only with its own widgets (an App Group): your document count, up to 4 recent documents and up to 4 documents with a due date coming up, each with its title, type icon, page count, dates and due date. If you turn off <strong>Show titles on widgets</strong>, each title is replaced with "Document". Widgets never see your page images or recognized text.</p>
+<p>Widgets read a small summary that {{APP}} copies into a storage area shared only with its own widgets (an App Group): your document count, up to 4 recent documents and up to 4 documents with a due date coming up, each with its title, type icon, page count, dates, due date and, for bills and receipts, the amount. If you turn off <strong>Show titles on widgets</strong>, each title is replaced with the document's type (for example "Bill") and no amount is shown. While App Lock is on, widgets show each document's type instead of its title. Widgets never see your page images or recognized text.</p>
 
 <h2 id="notifications">Notifications</h2>
-<p>Notifications are scheduled locally on your iPhone; no notification server is used. {{APP}} can remind you 48 hours before a free trial turns into a paid subscription, and, if you turn it on for a document, at 9:00 the day before its due date. {{APP}} asks for notification permission only after you start a trial or turn on a due-date reminder.</p>
+<p>Notifications are scheduled locally on your iPhone; no notification server is used. {{APP}} can remind you 48 hours before a free trial turns into a paid subscription, and of due dates at 9:00 the day before. Bills and invoices with a due date get a reminder the day before by default; switch it off in Settings &gt; Reminders or on the document. You can also turn a reminder on for any other document. With App Lock on, the notification only says 'A bill is due tomorrow.'</p>
 
 <h2 id="permissions">Permissions</h2>
 <ul>
@@ -83,7 +85,7 @@ APP_AD_PROMISE: Ad SDKs never get access to your scanned pages, their recognized
 <p>{{APP}} does not ask for your location, contacts, microphone or calendar.</p>
 
 <h2 id="files">Files app and opening documents</h2>
-<p>PDFs you choose to save to {{APP}}'s folder are visible in the Files app under "On My iPhone". You can also open PDFs and images in {{APP}} from Files, Mail and other apps; {{APP}} copies the file it is given and does not access anything else.</p>
+<p>{{APP}} doesn't keep a folder in On My iPhone; use Save to Files to put a copy anywhere you like. You can also open PDFs and images in {{APP}} from Files, Mail and other apps; {{APP}} copies the file it is given and does not access anything else.</p>
 
 <h2 id="network">Network connections</h2>
 <p>{{APP}} makes no network connections of its own other than Apple's App Store (prices, purchases, restores and subscription status) and, in the free version, the ad SDKs. Scanning, text recognition, search, summaries, redaction and signing work offline. You can check this yourself in iOS's App Privacy Report (<span class="path"><code>Settings &gt; Privacy &amp; Security &gt; App Privacy Report</code></span>).</p>
@@ -96,14 +98,14 @@ APP_AD_PROMISE: Ad SDKs never get access to your scanned pages, their recognized
 <p>{{APP}} Settings &gt; Ad Privacy Choices also has a <strong>"Do not sell or share my personal information"</strong> switch. When it is on, {{APP}} tells AppLovin, and through it the networks it mediates, not to sell or share your personal information for targeted advertising, as US state privacy laws allow. Your choice is stored on your device.</p>
 <h3 id="ads-when">When ads start, and where they appear</h3>
 <ul>
-  <li><strong>No ad SDK starts until you have seen the tracking explanation</strong> and, where they apply, Apple's tracking prompt and the consent screen. Google's ad measurement is also set to wait until then.</li>
+  <li><strong>No ad is requested until you have seen the tracking explanation</strong> and, where they apply, Apple's tracking prompt and the consent screen. The ad SDK itself may start just before the consent screen, because that screen is part of it. Google's ad measurement waits until then.</li>
   <li>The ad SDKs use your IDFA only if you choose "Allow" on Apple's tracking prompt; otherwise they use the identifier for vendor (IDFV) and ads are non-personalized.</li>
   <li><strong>Banner ads appear only on the documents library list.</strong> There is at most one full-screen ad per session, only after an export or share is completed, and never after your first export. Watching a rewarded ad (for example, for a one-time Pro export) is always your choice.</li>
   <li><strong>Ads never appear</strong> in the camera and scanning screens, the editor, signing, redaction, the document assistant, onboarding or the Pro screen.</li>
-  <li><strong>With Pro</strong> (subscription or lifetime), the ad SDK is never started.</li>
+  <li><strong>With Pro</strong> (subscription or lifetime), no ads are requested. If you buy Pro while ads are running, the ad SDK stops requesting ads at once.</li>
   <li><strong>If ads are not switched on.</strong> Ads run only in versions of the app where ad accounts are configured. In a version without them, no ad SDK starts, no tracking prompt is shown and no data goes to any third party, and the App Store privacy label for that version says so.</li>
 </ul>
-<p>We ask our ad partners to block ads for gambling, dating and mature content where their controls allow it. If you see an inappropriate ad in {{APP}}, please tell us at <a href="mailto:{{SUPPORT_EMAIL}}">{{SUPPORT_EMAIL}}</a>.</p>
+<p>We ask our ad partners to block ads for gambling, dating and mature content where their controls allow it. If you see an inappropriate ad in {{APP}}, please tell us at {{SUPPORT_LINK}}.</p>
 
 <h2 id="sensitive">Sensitive documents</h2>
 <p>People scan IDs, bank statements, medical letters and tax forms. That is why {{APP}} keeps them on your iPhone: their images, text and details are never sent to us, never shared with ad partners or anyone else, and never used for advertising, profiling or research. If you use Spotlight, remember that text from your documents can appear in iPhone search results; you can turn that off at any time (see <a href="#spotlight">Spotlight search</a>). Use the app lock and redaction for extra protection, and check a redacted copy before you share it.</p>
@@ -139,10 +141,10 @@ APP_AD_PROMISE: Ad SDKs never get access to your scanned pages, their recognized
 <p>{{APP}} is <strong>not directed at children</strong>. We do not knowingly collect personal information from children under 13 (or the minimum age in your country). If you believe a child has provided personal information to us, for example by email, contact us and we will delete it.</p>
 
 <h2 id="security">Security</h2>
-<p>Your documents are protected by iOS app sandboxing and complete file protection, and you can add a Face ID lock in {{APP}}. Because we don't operate a server, there is no developer-held database of your documents that could be breached. Keep your device passcode, your Apple ID and any exported files secure.</p>
+<p>Your documents are protected by iOS app sandboxing and are encrypted at rest with iOS data protection (after a restart the files can't be read until you first unlock your iPhone), and you can add a Face ID lock in {{APP}}. Because we don't operate a server, there is no developer-held database of your documents that could be breached. Keep your device passcode, your Apple ID and any exported files secure.</p>
 
 <h2 id="contact">Contact</h2>
-<p>Email <a href="mailto:{{SUPPORT_EMAIL}}">{{SUPPORT_EMAIL}}</a> for questions, privacy requests or complaints. If you email us, we receive your email address and whatever you write, and use it only to reply. <strong>Please never send us your documents or ID numbers.</strong> We aim to answer within 7 days, and privacy requests within the time the law requires (30 days under GDPR, 45 days under CCPA).</p>
+<p>Email {{SUPPORT_LINK}} for questions, privacy requests or complaints. If you email us, we receive your email address and whatever you write, and use it only to reply. <strong>Please never send us your documents or ID numbers.</strong> We aim to answer within 7 days, and privacy requests within the time the law requires (30 days under GDPR, 45 days under CCPA).</p>
 
 <h2 id="changes">Changes and changelog</h2>
 <p>If we change how {{APP}} handles data, for example if we add iCloud sync, we will update this page and the date at the top before the change takes effect, and for significant changes we will tell you in the app. The App Store privacy label is kept in line with this page.</p>
@@ -151,6 +153,7 @@ APP_AD_PROMISE: Ad SDKs never get access to your scanned pages, their recognized
   <thead><tr><th scope="col">Date</th><th scope="col">Change</th></tr></thead>
   <tbody>
     <tr><td data-label="Date">{{EFFECTIVE_DATE}}</td><td data-label="Change">First published version. Covers on-device storage (no iCloud sync), on-device text recognition, AI and redaction, the on-device Spotlight index, widgets, local notifications, StoreKit purchases (yearly subscription with a 7-day free trial, and lifetime), and ads in the free version through AppLovin MAX with Google AdMob mediated.</td></tr>
+    <tr><td data-label="Date">{{EFFECTIVE_DATE}}</td><td data-label="Change">Corrected to match version 1.0: widget contents and App Lock behavior, when ads are requested, Pro and ads, Spotlight with App Lock, no Files app folder, how page images are encrypted, default bill reminders, and the consent screen (EEA, UK and Switzerland) with a separate US "Do not sell or share" switch.</td></tr>
   </tbody>
 </table>
 </div>

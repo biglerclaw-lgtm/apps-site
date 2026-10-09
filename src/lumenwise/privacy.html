@@ -5,6 +5,8 @@ app: lumenwise
 EFFECTIVE_DATE: October 9, 2026
 EFFECTIVE_ISO: 2026-10-09
 APP_AD_PROMISE: Ad SDKs never get access to what you read or search for, your highlights, notes, bookmarks, reading plans, prayers, the questions you ask or the answers you get, or the faith tradition you choose. That information stays on your iPhone, is never shared with ad partners or anyone else, and is never used to choose which ads you see. As with any app that shows ads, an ad request does tell the ad network which app it came from ({{APP}}).
+ADS_CONSENT_ITEM: <li><strong>In-app consent manager (EEA, UK and Switzerland).</strong> Where the law requires it, a consent screen (Google's User Messaging Platform, shown through AppLovin MAX) asks before any data is used for personalized ads, and lets you accept, reject or pick partners and purposes. You can reopen it at any time from <span class="path"><code>{{APP}} Settings &gt; Ad Privacy Choices</code></span> to change or withdraw your consent.</li>
+  <li><strong>US: Do not sell or share.</strong> Settings &gt; Ad Privacy Choices has a 'Do not sell or share my personal information' switch; it applies before ads start.</li>
 -->
 <h1>{{APP}} Privacy Policy</h1>
 <p class="meta">Effective {{EFFECTIVE_DATE}} &middot; Last updated {{EFFECTIVE_DATE}}</p>
@@ -39,7 +41,7 @@ APP_AD_PROMISE: Ad SDKs never get access to what you read or search for, your hi
 </nav>
 
 <h2 id="who">Who we are</h2>
-<p>{{APP}} is made by an independent developer ("we", "us"). This policy covers the {{APP}} iPhone app, its widgets and its Siri and Shortcuts actions. {{APP}} is not affiliated with any church, denomination or Bible publisher. Questions: <a href="mailto:{{SUPPORT_EMAIL}}">{{SUPPORT_EMAIL}}</a>.</p>
+<p>{{APP}} is made by an independent developer ("we", "us"). This policy covers the {{APP}} iPhone app, its widgets and its Siri and Shortcuts actions. {{APP}} is not affiliated with any church, denomination or Bible publisher. Questions: {{SUPPORT_LINK}}.</p>
 
 <h2 id="on-device">Your data stays on your device</h2>
 <p>What you create in {{APP}} is stored in a database in the app's own private storage on your iPhone:</p>
@@ -86,8 +88,8 @@ APP_AD_PROMISE: Ad SDKs never get access to what you read or search for, your hi
 <ul>
   <li><strong>Notifications</strong>: a daily reading reminder, prayer check-back reminders with "Answered" and "Still praying" buttons, and a reminder 48 hours before a free trial turns into a paid subscription. All are scheduled locally on your iPhone; no notification server is used.</li>
   <li><strong>Face ID, Touch ID or passcode</strong> to lock the prayer journal. This is handled entirely by iOS. {{APP}} only learns whether unlocking succeeded and never receives biometric data.</li>
-  <li><strong>Photos (add only)</strong>: to save verse-card images to your library. {{APP}} cannot see or read your photos.</li>
-  <li><strong>App Tracking Transparency</strong>: asked only in the free version when ads are switched on, after a short explanation in the app. See <a href="#ads">Advertising</a>.</li>
+  <li><strong>Photos.</strong> To save verse cards to your library (add-only). If you pick a photo as a verse-card background, {{APP}} reads that one photo on your iPhone, uses it only to draw the card and never uploads it.</li>
+  <li><strong>App Tracking Transparency</strong>: asked only in the free version, after a short explanation in the app. See <a href="#ads">Advertising</a>.</li>
   <li><strong>Background audio</strong>: lets read-aloud keep playing when you lock your phone. Read-aloud uses Apple's on-device speech voices; the text is not sent anywhere.</li>
 </ul>
 <p>{{APP}} does not ask for your location, contacts, camera, microphone or Health data.</p>
@@ -108,9 +110,8 @@ APP_AD_PROMISE: Ad SDKs never get access to what you read or search for, your hi
   <li><strong>Banner ads appear only on the Plans list and in Search results.</strong> There is at most one full-screen ad per session, and only after you complete a plan day. Watching a rewarded ad (for example, for extra Ask questions or to try a reading plan) is always your choice.</li>
   <li><strong>Ads never appear</strong> in the Bible reader text, the prayer journal, Ask, onboarding, the Pro screen, Today or verse cards.</li>
   <li><strong>With Pro</strong> (subscription or lifetime), the ad SDK is never started: no tracking prompt, no consent screen and no ads.</li>
-  <li><strong>If ads are not switched on.</strong> Ads run only in versions of the app where ad accounts are configured. In a version without them, no ad SDK starts, no tracking prompt is shown and no data goes to any third party, and the App Store privacy label for that version says "Data Not Collected".</li>
 </ul>
-<p>We ask our ad partners to block ads for gambling, dating and mature content where their controls allow it. If you see an inappropriate ad in {{APP}}, please tell us at <a href="mailto:{{SUPPORT_EMAIL}}">{{SUPPORT_EMAIL}}</a>.</p>
+<p>We ask our ad partners to block ads for gambling, dating, alcohol and mature content where their controls allow it. If you see an inappropriate ad in {{APP}}, please tell us at {{SUPPORT_LINK}}.</p>
 
 <h2 id="faith">Religious beliefs and sensitive information</h2>
 <p>What you read, highlight, pray about and ask can reveal religious or philosophical beliefs, which many privacy laws treat as sensitive. That is why it never leaves your control: it stays on your iPhone, it is not sent to us, it is not shared with ad partners or anyone else, and it is not used for advertising, profiling or research. The faith tradition you pick for Ask only changes how answers are worded on your device.</p>
@@ -149,7 +150,7 @@ APP_AD_PROMISE: Ad SDKs never get access to what you read or search for, your hi
 <p>Your data is protected by iOS app sandboxing and Data Protection encryption, and you can lock the prayer journal with Face ID, Touch ID or your passcode. Because we don't operate a server, there is no developer-held database of your notes, prayers or questions that could be breached. Keep your device passcode, your Apple ID and any exported files secure.</p>
 
 <h2 id="contact">Contact</h2>
-<p>Email <a href="mailto:{{SUPPORT_EMAIL}}">{{SUPPORT_EMAIL}}</a> for questions, privacy requests or complaints. If you email us, we receive your email address and whatever you write, and use it only to reply; please don't include prayer details or other personal information we don't need. We aim to answer within 7 days, and privacy requests within the time the law requires (30 days under GDPR, 45 days under CCPA).</p>
+<p>Email {{SUPPORT_LINK}} for questions, privacy requests or complaints. If you email us, we receive your email address and whatever you write, and use it only to reply; please don't include prayer details or other personal information we don't need. We aim to answer within 7 days, and privacy requests within the time the law requires (30 days under GDPR, 45 days under CCPA).</p>
 
 <h2 id="changes">Changes and changelog</h2>
 <p>If we change how {{APP}} handles data, for example if we add iCloud sync, we will update this page and the date at the top before the change takes effect, and for significant changes we will tell you in the app. The App Store privacy label is kept in line with this page.</p>
@@ -158,6 +159,7 @@ APP_AD_PROMISE: Ad SDKs never get access to what you read or search for, your hi
   <thead><tr><th scope="col">Date</th><th scope="col">Change</th></tr></thead>
   <tbody>
     <tr><td data-label="Date">{{EFFECTIVE_DATE}}</td><td data-label="Change">First published version. Covers on-device storage (no iCloud sync), on-device AI for Ask, built-in public-domain Bible texts, widgets and Siri, StoreKit purchases (Pro Yearly with a 7-day free trial, and Pro Lifetime), and ads in the free version through AppLovin MAX with Google AdMob mediated.</td></tr>
+    <tr><td data-label="Date">{{EFFECTIVE_DATE}}</td><td data-label="Change">Corrected to match version 1.0: every version shows ads in the free tier (removed the "If ads are not switched on" item); the consent screen covers the EEA, UK and Switzerland, with a separate US "Do not sell or share" switch; a photo you pick as a verse-card background is read on your iPhone only; alcohol added to blocked ad categories.</td></tr>
   </tbody>
 </table>
 </div>

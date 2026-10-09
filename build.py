@@ -101,6 +101,24 @@ def nav_html(app, rel, env):
     return "\n          ".join(out)
 
 
+def support_links(env, app):
+    """Contact markup. While SUPPORT_EMAIL is a placeholder (no "@"), it is shown as plain text and
+    buttons point at the support page: never a mailto: link to a non-address (App Review 1.5).
+
+      {{SUPPORT_LINK}}       the address, linked with mailto: once it is real
+      {{SUPPORT_LINK_SUBJ}}  same, with "<App> support" as the mail subject
+      {{SUPPORT_HREF}}       href for a contact button: mailto (real) or the support page (placeholder)
+    """
+    email = env["SUPPORT_EMAIL"]
+    if "@" in email:
+        env["SUPPORT_LINK"] = f'<a href="mailto:{email}">{email}</a>'
+        env["SUPPORT_LINK_SUBJ"] = f'<a href="mailto:{email}?subject={env["APP_Q"]}%20support">{email}</a>'
+        env["SUPPORT_HREF"] = f'mailto:{email}?subject={env["APP_Q"]}%20support'
+    else:
+        env["SUPPORT_LINK"] = env["SUPPORT_LINK_SUBJ"] = f'<span class="email">{email}</span>'
+        env["SUPPORT_HREF"] = "support.html#contact" if app else "#contact"
+
+
 def main():
     site = json.loads((HERE / "site.json").read_text(encoding="utf-8"))
     layout = (SRC / "_layout.html").read_text(encoding="utf-8")
@@ -116,6 +134,7 @@ def main():
         env["APP_SLUG"] = app
         env["APP_Q"] = quote(env["APP"])  # URL-encoded name for mailto subjects
         env["APP_URL"] = site["SITE_URL"] + (f"{app}/" if app else "")
+        support_links(env, app)
         env.update({k: v for k, v in meta.items() if k not in ("app",)})
         env["title"] = fill(meta.get("title", ""), env, rel)
         env["description"] = fill(meta.get("description", ""), env, rel)

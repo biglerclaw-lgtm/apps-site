@@ -12,6 +12,12 @@ https://biglerclaw-lgtm.github.io/apps-site/
 ## Before submission
 
 `SUPPORT_EMAIL` in `site.json` is the placeholder `SUPPORT_EMAIL_TBD`. Set the real address, rebuild, commit and push.
+While it has no `@`, `build.py` renders it as plain text and contact buttons link to the app's `support.html#contact`;
+never a `mailto:` link (App Review 1.5). Pages use `{{SUPPORT_LINK}}`, `{{SUPPORT_LINK_SUBJ}}` and `{{SUPPORT_HREF}}`, which become
+real `mailto:` links once the address is set.
+
+The ads partial's consent-manager item is `ADS_CONSENT_ITEM` (default in `site.json`; Lumenwise and Paperlark override it in
+their privacy page front matter because their consent form covers only the EEA, UK and Switzerland).
 
 ## Renaming an app (e.g. SwipeClean -> Prunely, done 2026-10-08)
 
