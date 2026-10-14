@@ -32,6 +32,7 @@ APPS = {
     "quitline": {"name_key": "QUITLINE_NAME"},
     "lumenwise": {"name_key": "LUMENWISE_NAME"},
     "paperlark": {"name_key": "PAPERLARK_NAME"},
+    "fastbloom": {"name_key": "FASTBLOOM_NAME"},
 }
 
 FRONT = re.compile(r"\A\s*<!--(.*?)-->\s*", re.S)

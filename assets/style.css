@@ -123,6 +123,7 @@ th { background: var(--surface-2); font-weight: 600; }
 .app-icon.ql { background: linear-gradient(135deg, #2f8f7c, #e0795b); }
 .app-icon.lw { background: linear-gradient(135deg, #b8862b, #7a3f6e); }
 .app-icon.pl { background: linear-gradient(135deg, #2b6cb0, #2f9e8f); }
+.app-icon.fb { background: linear-gradient(135deg, #e0607e, #f2a541); }
 
 /* FAQ */
 details { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); margin: 0 0 10px; }
