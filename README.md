@@ -8,6 +8,14 @@ https://biglerclaw-lgtm.github.io/apps-site/
 - Page sources live in `src/` (shared bits in `src/_partials/`, page shell in `src/_layout.html`).
 - App names, the support email and dates live in `site.json`.
 - Rebuild after any change: `python build.py` (no dependencies), then commit the generated `.html` files.
+- Per-app switches live in `site.json` under `"apps"`: `"ads"` (true or false) and `"LAST_UPDATED"` (the
+  "Last updated" date on that app's privacy policy and terms). Template text that only applies to a
+  version with ads sits in `{{#ads}}...{{/ads}}`, the ad-free wording in `{{^ads}}...{{/ads}}`.
+  With `"ads": false` the build fails if an ad-only phrase (AppLovin, AdMob, IDFA, "Do not sell", "removes ads",
+  "rewarded" and more; the list is `AD_ONLY_TERMS` in `build.py`) is left on any page of that app.
+- Every app's privacy, terms and support page is also written to `<app>/<page>/index.html` (same content,
+  relative links adjusted, canonical link to the `.html` page), so `.../quitline/privacy`,
+  `.../quitline/privacy/` and `.../quitline/privacy.html` all open it. Never edit those copies by hand.
 
 ## Before submission
 

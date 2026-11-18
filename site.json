@@ -10,5 +10,13 @@
   "QUITLINE_NAME": "Quitline",
   "LUMENWISE_NAME": "Lumenwise",
   "PAPERLARK_NAME": "Paperlark",
-  "FASTBLOOM_NAME": "Fastbloom"
+  "FASTBLOOM_NAME": "Fastbloom",
+
+  "apps": {
+    "swipeclean": {"ads": true, "LAST_UPDATED": "November 18, 2026"},
+    "quitline": {"ads": true, "LAST_UPDATED": "November 18, 2026"},
+    "lumenwise": {"ads": true, "LAST_UPDATED": "November 18, 2026"},
+    "paperlark": {"ads": true, "LAST_UPDATED": "November 18, 2026"},
+    "fastbloom": {"ads": true, "LAST_UPDATED": "November 18, 2026"}
+  }
 }
