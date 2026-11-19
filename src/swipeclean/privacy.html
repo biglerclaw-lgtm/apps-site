@@ -68,7 +68,7 @@ APP_AD_PROMISE: Ad SDKs never get access to your photos, videos, albums, swipe d
 <ul>
   <li><strong>Apple's App Store</strong>: loading prices, purchases, restores and subscription status.</li>
   <li><strong>iCloud Photos downloads</strong>, made by iOS as described above (optional).</li>
-  <li><strong>Apple Maps place names</strong> (off by default). City names come from a list built into the app. If you turn on "Place names from Apple Maps" in {{APP}}'s Privacy settings, photo coordinates are sent to Apple to look up a place name. Apple's handling is covered by Apple's Privacy Policy.</li>
+  <li><strong>Apple Maps place names</strong> (off by default). City names come from a list built into the app. If you turn on "Apple Maps place names" in {{APP}}'s Privacy settings, the approximate center of each place group (an area about 20 km across, not a photo's exact location) is sent to Apple to look up its name. No photos are sent. Apple's handling is covered by Apple's Privacy Policy.</li>
 {{#ads}}
   <li><strong>Ads</strong> in the free version (see <a href="#ads">Advertising</a>). These requests contain device data, not your photos.</li>
 {{/ads}}
