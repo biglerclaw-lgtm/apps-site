@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Quitline Privacy Policy</title>
-  <meta name="description" content="How Quitline handles your data: your quit journey stays on your device, no account, optional iCloud sync, Apple purchases, and ads in the free version.">
+  <meta name="description" content="How Quitline handles your data: your quit journey stays on your device, no account, optional iCloud sync, Apple purchases, no ads and no tracking.">
   <link rel="canonical" href="https://biglerclaw-lgtm.github.io/apps-site/quitline/privacy.html">
   <meta name="color-scheme" content="light dark">
   <meta name="theme-color" content="#f7f6f2" media="(prefers-color-scheme: light)">
@@ -31,10 +31,10 @@
 
   <main id="main" class="wrap">
 <h1>Quitline Privacy Policy</h1>
-<p class="meta">Effective October 8, 2026 &middot; Last updated October 8, 2026</p>
+<p class="meta">Effective October 8, 2026 &middot; Last updated November 18, 2026</p>
 
 <div class="callout">
-  <p><strong>The short version.</strong> Your quit journey (habits, check-ins, journal, slips, reasons) is stored <em>on your iPhone</em>. There is no account and we run no server, so we never have your data. You can sync it through your own iCloud if you choose. Purchases go through Apple. The free version shows ads; the ad companies collect some device data to show them, never your health or journal data, and Pro removes ads entirely.</p>
+  <p><strong>The short version.</strong> Your quit journey (habits, check-ins, journal, slips, reasons) is stored <em>on your iPhone</em>. There is no account and we run no server, so we never have your data. You can sync it through your own iCloud if you choose. Purchases go through Apple. There are no ads and no tracking.</p>
 </div>
 
 <nav class="toc" aria-labelledby="toc-h">
@@ -47,7 +47,7 @@
     <li><a href="#permissions">Permissions</a></li>
     <li><a href="#network">Network connections</a></li>
     <li><a href="#purchases">Purchases</a></li>
-    <li><a href="#ads">Advertising</a></li>
+    <li><a href="#ads">No ads or tracking</a></li>
     <li><a href="#health">Health information</a></li>
     <li><a href="#not">What we never do</a></li>
     <li><a href="#retention">Data retention</a></li>
@@ -92,63 +92,29 @@
   <li><strong>Notifications</strong> (optional): check-in reminders, milestones and, if you turn them on, heads-ups before your typical high-risk times. All are scheduled locally on your iPhone; no notification server is used.</li>
   <li><strong>Face ID / Touch ID / passcode</strong> (optional app lock): handled entirely by iOS. Quitline only learns whether unlocking succeeded; it never receives biometric data.</li>
   <li><strong>Photos</strong>: only the photos you pick for your reasons, through Apple's photo picker.</li>
-  <li><strong>App Tracking Transparency</strong> (free version): see <a href="#ads">Advertising</a>.</li>
 </ul>
 <p>Widgets and Live Activities show neutral text such as "Day 42", never what you're quitting, and you can hide Quitline's content in the app switcher.</p>
 
 <h2 id="network">Network connections</h2>
-<p>Quitline works offline. It connects to the internet only for: Apple's App Store (prices, purchases, restores, subscription status); iCloud sync, if you turn it on (through Apple); links you tap, such as helpline websites; and ads in the free version. You can check this yourself in iOS's App Privacy Report (<span class="path"><code>Settings &gt; Privacy &amp; Security &gt; App Privacy Report</code></span>).</p>
+<p>Quitline works offline. It connects to the internet only for: Apple's App Store (prices, purchases, restores, subscription status); iCloud sync, if you turn it on (through Apple); and links you tap, such as helpline websites. You can check this yourself in iOS's App Privacy Report (<span class="path"><code>Settings &gt; Privacy &amp; Security &gt; App Privacy Report</code></span>).</p>
 
 <h2 id="purchases">Purchases and subscriptions</h2>
-<p>Quitline Pro is sold through Apple's App Store using StoreKit. Apple handles the payment, your payment details, your Apple ID and your billing address. We never see your name, email address or payment information. The app only receives a signed confirmation from Apple saying which product is active (for example, "Yearly, renews on a date" or "Lifetime") so it can unlock Pro and switch off ads. That check happens on your device. Apple's handling of purchase data is covered by <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</p>
+<p>Quitline Pro is sold through Apple's App Store using StoreKit. Apple handles the payment, your payment details, your Apple ID and your billing address. We never see your name, email address or payment information. The app only receives a signed confirmation from Apple saying which product is active (for example, "Yearly, renews on a date" or "Lifetime") so it can unlock Pro. That check happens on your device. Apple's handling of purchase data is covered by <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</p>
 <p>App Store Connect gives us aggregated, non-identifying sales reports (for example, how many trials started in a country). Apple does not give us your identity.</p>
 
 
-<h2 id="ads">Advertising in the free version</h2>
-<p>The free version of Quitline shows ads. Buying Quitline Pro (a subscription or the lifetime purchase) removes all ads, and the ad SDK then stops requesting ads.</p>
-<p>Ads are delivered by <strong>AppLovin MAX</strong>, an ad mediation SDK built into the app. MAX may fill an ad slot from AppLovin itself or from other ad networks it mediates, such as <strong>Google AdMob</strong>. These companies, not us, receive and process the data described below. We do not receive it in a form that identifies you; we only see aggregated reports such as how many ads were shown and how much they earned.</p>
+<h2 id="ads">No ads and no tracking</h2>
+<p id="ads-choices">This version of Quitline has <strong>no ads</strong>. No advertising or tracking code is built into the app, it never asks for permission to track you across other companies' apps and websites, and nothing you do in Quitline is used for advertising, by us or by anyone else. Quitline is paid for only by Quitline Pro, the optional yearly subscription and lifetime purchase.</p>
+<p>If a future version adds advertising, we will update this policy, its changelog and the App Store privacy label before that version is released, and the app will ask for your permission where the law or Apple requires it.</p>
 
-<h3 id="ads-data">What the ad SDKs may collect</h3>
-<div class="table-wrap">
-<table class="stack">
-  <thead><tr><th scope="col">Data</th><th scope="col">When</th><th scope="col">Used for</th></tr></thead>
-  <tbody>
-    <tr><td data-label="Data">Advertising identifier (IDFA)</td><td data-label="When"><strong>Only if you tap "Allow" on Apple's App Tracking Transparency prompt.</strong> If you choose "Ask App Not to Track", iOS gives the SDK an all-zeros identifier instead.</td><td data-label="Used for">Personalized ads, measuring ads across apps (tracking)</td></tr>
-    <tr><td data-label="Data">Identifier for Vendor (IDFV) and SDK-generated IDs</td><td data-label="When">Whenever an ad is requested</td><td data-label="Used for">Frequency capping, fraud prevention, reporting; not linked across companies' apps without your permission</td></tr>
-    <tr><td data-label="Data">IP address and approximate (coarse) location derived from it</td><td data-label="When">Whenever an ad is requested</td><td data-label="Used for">Delivering ads, picking the right language/region, legal compliance (for example, privacy rules by region), fraud prevention</td></tr>
-    <tr><td data-label="Data">Device and app information: device model, iOS version, language, time zone, screen size, network type, carrier, app name and version</td><td data-label="When">Whenever an ad is requested</td><td data-label="Used for">Showing ads that fit your device, troubleshooting, fraud prevention</td></tr>
-    <tr><td data-label="Data">Ad interaction data: which ads were shown, taps, video completions, rewarded-ad completions</td><td data-label="When">When you see or interact with an ad</td><td data-label="Used for">Ad delivery, measurement, billing between ad companies, rewarding you for a rewarded ad</td></tr>
-    <tr><td data-label="Data">Ad SDK diagnostics (crash and performance data about the ad SDK)</td><td data-label="When">If the ad SDK has a problem</td><td data-label="Used for">Keeping the ad SDK working</td></tr>
-  </tbody>
-</table>
-</div>
-<p>Ad SDKs never get access to your habits, quit dates, check-ins, moods, cravings, slips, journal, reasons, photos, support contacts or any other health and wellness information you enter. That information stays on your device (and in your own iCloud, if you turn on sync), is never shared with ad partners, and is never used to choose which ads you see. As with any app that shows ads, an ad request does tell the ad network which app it came from (Quitline). Ads never appear on the panic, breathing, urge-surfing or crisis-help screens.</p>
-<p>The app does not request precise location for ads and does not give ad SDKs access to your contacts, camera, microphone or Health data.</p>
-
-<h3 id="ads-choices">Your ad choices</h3>
-<ul>
-  <li><strong>App Tracking Transparency (all users).</strong> The first time ads might be personalized, the app explains why and then shows Apple's prompt. Choose "Ask App Not to Track" and the ad SDKs cannot use your IDFA or track you across other companies' apps and websites; you will still see ads, but they are non-personalized or based on the content of the app. You can change this at any time in iOS <span class="path"><code>Settings &gt; Privacy &amp; Security &gt; Tracking</code></span> (per app, or turn off "Allow Apps to Request to Track" for every app).</li>
-  <li><strong>In-app consent manager (EEA, UK, Switzerland and US states with privacy laws).</strong> Where the law requires it, a consent screen (Google's User Messaging Platform, shown through AppLovin MAX) asks before any data is used for personalized ads, and lets you accept, reject or pick partners and purposes. You can reopen it at any time from <span class="path"><code>Quitline Settings &gt; Ad Privacy Choices</code></span> to change or withdraw your consent, or to opt out of the "sale" or "sharing" of personal information for targeted advertising.</li>
-  <li><strong>Remove ads entirely</strong> by buying Quitline Pro. A subscription or lifetime purchase turns off all ads.</li>
-  <li><strong>Limit ad personalization at the partner.</strong> Google: <a href="https://myadcenter.google.com/">My Ad Center</a>.</li>
-</ul>
-
-<h3 id="ads-partners">Ad partners and their privacy policies</h3>
-<ul>
-  <li>AppLovin (MAX mediation and AppLovin ads): <a href="https://www.applovin.com/privacy/">applovin.com/privacy</a></li>
-  <li>Google AdMob: <a href="https://policies.google.com/privacy">Google Privacy Policy</a> and <a href="https://policies.google.com/technologies/partner-sites">How Google uses information from apps that use its services</a></li>
-</ul>
-<p>We may add or remove mediated ad networks over time. When we add one, we will list it here and update the changelog at the bottom of this page. The full, current list of partners and purposes is also shown in the consent screen where that screen applies.</p>
-
-<p>We ask our ad partners to block ads for alcohol, tobacco and vaping products, and gambling, where their controls allow it. If you ever see an ad like that in Quitline, please tell us at <span class="email">SUPPORT_EMAIL_TBD</span>.</p>
 
 <h2 id="health">Health information</h2>
-<p>Information about smoking, vaping, drinking, gambling, mood and cravings can be sensitive. That is why it never leaves your control: it stays on your device (or your own iCloud), it is not shared with ad partners or anyone else, and it is not used for advertising, profiling or research. Quitline does not read from or write to Apple Health. We do not collect "consumer health data" as defined by laws such as Washington's My Health My Data Act.</p>
+<p>Information about smoking, vaping, drinking, gambling, mood and cravings can be sensitive. That is why it never leaves your control: it stays on your device (or your own iCloud), it is not shared with anyone else, and it is not used for advertising, profiling or research. Quitline does not read from or write to Apple Health. We do not collect "consumer health data" as defined by laws such as Washington's My Health My Data Act.</p>
 
 <h2 id="not">What we never do</h2>
 <ul>
   <li>No account, sign-in or email address needed.</li>
-  <li>No server holding your journey, and no analytics or crash-reporting SDKs of our own. (Ad SDKs may report their own diagnostics, as described above.)</li>
+  <li>No server holding your journey, no ads, and no advertising, analytics, tracking or crash-reporting SDKs.</li>
   <li>We never sell your data and never use your habit or journal data for advertising.</li>
 </ul>
 
@@ -156,7 +122,6 @@
 <ul>
   <li><strong>On-device data</strong> is kept until you delete it (individual entries, Delete everything, or deleting the app). We keep no copy.</li>
   <li><strong>iCloud sync data</strong> (if you turned it on) stays in your iCloud until you delete it.</li>
-  <li><strong>Ad data</strong> is retained by AppLovin, Google and other ad partners according to their policies linked above.</li>
   <li><strong>Purchase records</strong> are kept by Apple under Apple's policies.</li>
   <li><strong>Support emails</strong> are kept only as long as needed to help you and keep a record of the conversation, then deleted, normally within 24 months. Ask us to delete them sooner at any time.</li>
 </ul>
@@ -167,31 +132,28 @@
   <li><strong>Delete everything</strong>: <span class="path"><code>Me &gt; Settings &gt; Your data &gt; Delete everything</code></span> (type DELETE to confirm). This erases all your Quitline data, scheduled reminders and widget content on this device, and, with iCloud sync on, from your iCloud too.</li>
   <li><strong>iCloud copy</strong>: you can also remove it in iOS <span class="path"><code>Settings &gt; [your name] &gt; iCloud &gt; Manage Account Storage</code></span> (select Quitline and delete its data, where listed).</li>
   <li><strong>Deleting the app</strong> removes its on-device data. It does not cancel a subscription.</li>
-  <li><strong>Ad data</strong>: use <a href="#ads-choices">your ad choices</a> or contact the ad partner; email us and we'll help.</li>
 </ul>
 
 <h2 id="rights">Your privacy rights</h2>
-<p>Because Quitline has no account and no server, we do not hold a profile about you. Your app data is on your device, where you can view, export (where the app offers it) and delete it yourself. For data the ad partners collect, you can use the choices above or contact the partner directly. Whatever your location, you can email us and we will help.</p>
+<p>Because Quitline has no account, no server and no ads, we do not hold a profile about you. Your app data is on your device, where you can view, export (where the app offers it) and delete it yourself. Whatever your location, you can email us and we will help.</p>
 
 <h3 id="gdpr">EEA, UK and Switzerland (GDPR / UK GDPR)</h3>
 <ul>
-  <li><strong>Who is responsible.</strong> We, the developer of Quitline, are the controller for the limited personal data we handle (for example, emails you send us, and the decision to integrate ad SDKs). AppLovin, Google and other ad partners act as independent controllers for the data they collect to deliver and measure ads.</li>
-  <li><strong>Legal bases.</strong> Personalized ads and the access to device identifiers they need: your <em>consent</em>, collected through the consent screen and Apple's tracking prompt. Showing non-personalized ads, frequency capping, fraud prevention and security: the <em>legitimate interests</em> of the developer of Quitline and the ad partners in funding a free app and keeping ads safe. Replying to your support email: our legitimate interest in helping you (or steps you ask for before a contract). Purchases: handled by Apple under Apple's terms.</li>
-  <li><strong>Your rights.</strong> Access, correction, deletion, restriction, objection (including to processing based on legitimate interests), data portability, and withdrawing consent at any time without affecting earlier processing. Withdraw ad consent in <span class="path"><code>Quitline Settings &gt; Ad Privacy Choices</code></span>; object or ask about anything else by emailing <span class="email">SUPPORT_EMAIL_TBD</span>.</li>
+  <li><strong>Who is responsible.</strong> We, the developer of Quitline, are the controller for the limited personal data we handle, which in practice means emails you send us. What you keep in the app stays on your device; we never receive it.</li>
+  <li><strong>Legal bases.</strong> Replying to your support email: our legitimate interest in helping you (or steps you ask for before a contract). Purchases: handled by Apple under Apple's terms.</li>
+  <li><strong>Your rights.</strong> Access, correction, deletion, restriction, objection, data portability, and withdrawing consent at any time without affecting earlier processing. Ask about any of them by emailing <span class="email">SUPPORT_EMAIL_TBD</span>.</li>
   <li><strong>Complaints.</strong> You can complain to your local data protection authority. We would appreciate the chance to fix things first.</li>
-  <li><strong>International transfers.</strong> Ad partners may process data in the United States and other countries. They rely on safeguards such as the EU Standard Contractual Clauses and, where they are certified, the EU-U.S. Data Privacy Framework; see their policies above.</li>
+  <li><strong>International transfers.</strong> Your app data is not transferred anywhere, because it never leaves your device. If you email us, your message is stored by the email service we use, which may be located outside your country.</li>
 </ul>
 
 <h3 id="ccpa">California and other US states (CCPA / CPRA and similar laws)</h3>
 <ul>
-  <li><strong>Categories collected in the last 12 months</strong> (by ad partners through the free version only): identifiers (IDFA with your permission, IDFV, SDK IDs, IP address); internet or other electronic network activity (ad impressions and taps); approximate geolocation derived from IP; device information. Inferences may be drawn by ad partners for personalized ads if you allow it. We do not collect sensitive personal information, and your in-app data is never shared with ad partners.</li>
-  <li><strong>Sources and purposes.</strong> Collected directly from your device by the ad SDKs, for the advertising, measurement, security and fraud-prevention purposes described above.</li>
-  <li><strong>"Sale" and "sharing".</strong> We do not sell personal information for money. Letting ad partners use identifiers for cross-context behavioral advertising may count as "selling" or "sharing" under California law. <strong>To opt out</strong>: choose "Ask App Not to Track", and/or open <span class="path"><code>Quitline Settings &gt; Ad Privacy Choices</code></span> and opt out of sale/sharing, or email us. You can also buy Pro to remove ads entirely.</li>
-  <li><strong>Your rights.</strong> To know/access, delete, correct, opt out of sale or sharing, and limit the use of sensitive personal information (we do not use any). We will not discriminate against you for using these rights; the free version stays the same whether or not you opt out. An authorized agent may make a request on your behalf with your written permission. Because we hold no account data, we may not be able to link ad-partner data to you; we will tell you which partner to contact and how.</li>
+  <li><strong>What we collect.</strong> The app itself collects no personal information: what you enter stays on your device, and there is no advertising, analytics or tracking code. If you email us, we receive your email address and what you write, and use them only to reply.</li>
+  <li><strong>No selling or sharing.</strong> We never sell personal information and never share it for cross-context behavioral advertising. We do not use or disclose sensitive personal information.</li>
+  <li><strong>Your rights.</strong> To know/access, delete and correct the personal information we hold (in practice, your emails to us). We will not discriminate against you for using these rights. An authorized agent may make a request on your behalf with your written permission.</li>
   <li><strong>Retention.</strong> See <a href="#retention">Data retention</a>.</li>
-  <li><strong>Minors.</strong> We do not knowingly sell or share the personal information of consumers under 16.</li>
 </ul>
-<p>Residents of other US states with consumer privacy laws (for example Virginia, Colorado, Connecticut, Utah, Texas and Oregon) have similar rights to access, delete, correct and opt out of targeted advertising. Use the same steps above or email us. If we decline a request, you can appeal by replying to our answer with "Appeal" in the subject line.</p>
+<p>Residents of other US states with consumer privacy laws (for example Virginia, Colorado, Connecticut, Utah, Texas and Oregon) have similar rights. Email us to use them. If we decline a request, you can appeal by replying to our answer with "Appeal" in the subject line.</p>
 
 
 <h2 id="children">Children and teens</h2>
@@ -209,7 +171,8 @@
 <table class="stack">
   <thead><tr><th scope="col">Date</th><th scope="col">Change</th></tr></thead>
   <tbody>
-    <tr><td data-label="Date">October 8, 2026</td><td data-label="Change">First published version. Covers on-device storage, optional iCloud sync, StoreKit purchases (Pro subscription with free trial, and lifetime), and ads in the free version through AppLovin MAX with mediated networks such as Google AdMob.</td></tr>
+    <tr><td data-label="Date">November 18, 2026</td><td data-label="Change">Version 1.0 has no ads and no tracking. The advertising, tracking-prompt and ad-choices sections are replaced by <a href="#ads">No ads and no tracking</a>, and privacy rights and retention no longer describe advertising data.</td></tr>
+    <tr><td data-label="Date">October 8, 2026</td><td data-label="Change">First published version. Covers on-device storage, optional iCloud sync, StoreKit purchases (Pro subscription with free trial, and lifetime), and advertising in the free version, which version 1.0 does not have (see the row above).</td></tr>
   </tbody>
 </table>
 </div>

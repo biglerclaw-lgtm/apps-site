@@ -1,18 +1,18 @@
 <!--
 title: {{APP}} Privacy Policy
-description: How {{APP}} handles your data: fasts, weight, water and GLP-1 logs stay on your iPhone, optional Apple Health, on-device AI, no account, Apple purchases, and ads in the free version.
+description: How {{APP}} handles your data: fasts, weight, water and GLP-1 logs stay on your iPhone, optional Apple Health, on-device AI, no account, Apple purchases{{#ads}}, and ads in the free version{{/ads}}{{^ads}}, no ads and no tracking{{/ads}}.
 app: fastbloom
 EFFECTIVE_DATE: October 13, 2026
 EFFECTIVE_ISO: 2026-10-13
-UPDATED_DATE: October 14, 2026
+
 APP_AD_PROMISE: Ad SDKs never get access to your fasts, fasting plans, journal notes, mood, energy or hunger ratings, weight, waist, water or protein logs, GLP-1 medication, dose, injection-site or side-effect logs, your safety-check answers, buddy data or anything from Apple Health. That information stays on your iPhone (apart from the start and end times, goal and plan name of your fasts, which are also kept in your own iCloud as described below), is never shared with ad partners or anyone else, and is never used to choose which ads you see. As with any app that shows ads, an ad request does tell the ad network which app it came from ({{APP}}).
 ADS_CONSENT_ITEM: <li><strong>In-app consent manager (EEA, UK and Switzerland).</strong> Where the law requires it, a consent screen (Google's User Messaging Platform, shown through AppLovin MAX) asks before any data is used for personalized ads, and lets you accept, reject or pick partners and purposes. You can reopen it at any time from <span class="path"><code>{{APP}} Settings &gt; Ad Privacy Choices</code></span> to change or withdraw your consent.</li> <li><strong>US: Do not sell or share.</strong> Settings &gt; Ad Privacy Choices has a 'Do not sell or share my personal information' switch; it applies before ads start.</li>
 -->
 <h1>{{APP}} Privacy Policy</h1>
-<p class="meta">Effective {{EFFECTIVE_DATE}} &middot; Last updated {{UPDATED_DATE}}</p>
+<p class="meta">Effective {{EFFECTIVE_DATE}} &middot; Last updated {{LAST_UPDATED}}</p>
 
 <div class="callout">
-  <p><strong>The short version.</strong> Your fasts, weight, water, notes and GLP-1 logs are stored <em>on your iPhone</em>. There is no account and we run no server, so we never have your data. Apple Health is optional and its data never leaves your phone. The weekly recap is written by Apple's on-device AI. Your own iCloud keeps a small copy of your fasts (start and end times, goal and plan name, nothing else) so a reinstall or a new iPhone never loses them; you can switch that off. Purchases go through Apple. The free version shows ads; the ad companies collect some device data to show them, never your fasting or health information, and Pro removes ads entirely.</p>
+  <p><strong>The short version.</strong> Your fasts, weight, water, notes and GLP-1 logs are stored <em>on your iPhone</em>. There is no account and we run no server, so we never have your data. Apple Health is optional and its data never leaves your phone. The weekly recap is written by Apple's on-device AI. Your own iCloud keeps a small copy of your fasts (start and end times, goal and plan name, nothing else) so a reinstall or a new iPhone never loses them; you can switch that off. Purchases go through Apple. {{#ads}}The free version shows ads; the ad companies collect some device data to show them, never your fasting or health information, and Pro removes ads entirely.{{/ads}}{{^ads}}There are no ads and no tracking.{{/ads}}</p>
 </div>
 
 <nav class="toc" aria-labelledby="toc-h">
@@ -28,7 +28,7 @@ ADS_CONSENT_ITEM: <li><strong>In-app consent manager (EEA, UK and Switzerland).<
     <li><a href="#permissions">Permissions</a></li>
     <li><a href="#network">Network connections</a></li>
     <li><a href="#purchases">Purchases</a></li>
-    <li><a href="#ads">Advertising</a></li>
+    <li><a href="#ads">{{#ads}}Advertising{{/ads}}{{^ads}}No ads or tracking{{/ads}}</a></li>
     <li><a href="#sensitive">Health and other sensitive information</a></li>
     <li><a href="#not">What we never do</a></li>
     <li><a href="#retention">Data retention</a></li>
@@ -53,7 +53,7 @@ ADS_CONSENT_ITEM: <li><strong>In-app consent manager (EEA, UK and Switzerland).<
   <li>GLP-1 logs: medication, dose and injection site, and any side effects you record;</li>
   <li>fasting-buddy snapshots you import from a share code (see <a href="#sharing">Things you choose to share</a>).</li>
 </ul>
-<p>Your preferences are kept in the app's settings on the device: for example your units and reminder choices, a cached note of whether Pro is active, and your "do not sell or share" choice. If you answer the optional <strong>safety check</strong> during onboarding (whether you are under 18, pregnant or breastfeeding, have a history of an eating disorder, or take diabetes medication), your answers are stored in the same on-device settings and used only to adjust which fasts and guidance the app offers you. They are never sent anywhere and never given to ad SDKs.</p>
+<p>Your preferences are kept in the app's settings on the device: for example your units and reminder choices{{#ads}}, a cached note of whether Pro is active, and your "do not sell or share" choice{{/ads}}{{^ads}}, and a cached note of whether Pro is active{{/ads}}. If you answer the optional <strong>safety check</strong> during onboarding (whether you are under 18, pregnant or breastfeeding, have a history of an eating disorder, or take diabetes medication), your answers are stored in the same on-device settings and used only to adjust which fasts and guidance the app offers you. They are never sent anywhere{{#ads}} and never given to ad SDKs{{/ads}}.</p>
 <p>We have no server for any of this and cannot see it. Like any app's data, it is included in your own device backups (iCloud Backup or a computer backup), which Apple and you control.</p>
 
 <h2 id="icloud">iCloud: a copy of your fasts</h2>
@@ -74,7 +74,7 @@ ADS_CONSENT_ITEM: <li><strong>In-app consent manager (EEA, UK and Switzerland).<
 <ul>
   <li><strong>{{APP}} writes</strong> the body mass (weight), water and protein that you log in the app.</li>
   <li><strong>{{APP}} reads</strong> body mass, water and protein, so your logs from other apps and devices show up, and <strong>dietary energy</strong> (food calories). Food energy is used for one thing only: if another app logs food while a fast is running, {{APP}} asks whether you broke your fast. It is not stored as a diet log or used for anything else.</li>
-  <li>Health data is processed on your iPhone. It is <strong>never uploaded</strong>, never sent to us, <strong>never used for advertising or marketing</strong>, and never shared with ad SDKs, data brokers or any other third party.</li>
+  <li>Health data is processed on your iPhone. It is <strong>never uploaded</strong>, never sent to us, <strong>never used for advertising or marketing</strong>, and never shared with {{#ads}}ad SDKs, {{/ads}}data brokers or any other third party.</li>
   <li>{{APP}} does not read or write medications in Apple Health. GLP-1 logs are kept only inside {{APP}}.</li>
 </ul>
 
@@ -106,19 +106,22 @@ ADS_CONSENT_ITEM: <li><strong>In-app consent manager (EEA, UK and Switzerland).<
   <li><strong>Notifications</strong>: when you reach your fasting goal, opt-in eating-window and break-fast reminders, and a reminder 2 days before a free trial turns into a paid subscription. All are scheduled locally on your iPhone. {{APP}} does not use push notifications or a notification server.</li>
   <li><strong>Apple Health</strong> (read and write): see <a href="#health">Apple Health</a>.</li>
   <li><strong>Photos (add only)</strong>: to save a fast receipt or share card to your library. {{APP}} cannot see or read your photos.</li>
+{{#ads}}
   <li><strong>App Tracking Transparency</strong>: asked only in the free version, after a short explanation in the app, and never before you have completed your first fast. See <a href="#ads">Advertising</a>.</li>
+{{/ads}}
   <li><strong>Live Activities</strong>: to show your running fast on the Lock Screen and Dynamic Island. You can turn them off in <span class="path"><code>Settings &gt; {{APP}}</code></span>.</li>
   <li><strong>Siri and Shortcuts</strong>: actions such as starting or ending a fast, run on your iPhone.</li>
 </ul>
 <p>{{APP}} does not ask for your camera, location, contacts or microphone.</p>
 
 <h2 id="network">Network connections</h2>
-<p>{{APP}} works offline. It connects to the internet only for Apple's App Store (prices, purchases, restores and subscription status), Apple's iCloud key-value storage for the copy of your fasts (handled by iOS, see <a href="#icloud">iCloud</a>), ads in the free version, and links you tap, such as helpline or source websites. Apart from that iCloud copy, fasting, logging, Apple Health and the weekly recap never use the network. You can check this yourself in iOS's App Privacy Report (<span class="path"><code>Settings &gt; Privacy &amp; Security &gt; App Privacy Report</code></span>).</p>
+<p>{{APP}} works offline. It connects to the internet only for Apple's App Store (prices, purchases, restores and subscription status), Apple's iCloud key-value storage for the copy of your fasts (handled by iOS, see <a href="#icloud">iCloud</a>), {{#ads}}ads in the free version, {{/ads}}and links you tap, such as helpline or source websites. Apart from that iCloud copy, fasting, logging, Apple Health and the weekly recap never use the network. You can check this yourself in iOS's App Privacy Report (<span class="path"><code>Settings &gt; Privacy &amp; Security &gt; App Privacy Report</code></span>).</p>
 
 {{> purchases-privacy}}
 <p>{{APP}} Pro is offered as <strong>{{APP}} Pro Yearly</strong> (an auto-renewing yearly subscription, US$24.99 per year in the US, with a 7-day free trial for eligible new subscribers) and <strong>{{APP}} Pro Lifetime</strong> (a one-time purchase, US$44.99 in the US). Prices in other countries are shown in the app. You can restore purchases and manage your subscription from the app's Settings.</p>
 
 {{> ads}}
+{{#ads}}
 <h3 id="ads-dns">"Do not sell or share my personal information"</h3>
 <p>{{APP}} Settings &gt; Ad Privacy Choices also has a <strong>"Do not sell or share my personal information"</strong> switch. When it is on, {{APP}} tells AppLovin, and through it the networks it mediates, not to sell or share your personal information for targeted advertising, as US state privacy laws allow. Your choice is stored on your device.</p>
 <h3 id="ads-when">When ads start, and where they appear</h3>
@@ -131,14 +134,15 @@ ADS_CONSENT_ITEM: <li><strong>In-app consent manager (EEA, UK and Switzerland).<
   <li>Versions of {{APP}} built without ad keys contain no ad SDK at all; they show no ads and no data is collected for advertising.</li>
 </ul>
 <p>If you see an inappropriate ad in {{APP}}, please tell us at {{SUPPORT_LINK}}.</p>
+{{/ads}}
 
 <h2 id="sensitive">Health and other sensitive information</h2>
-<p>Fasting patterns, weight, medications such as GLP-1s, side effects, eating-disorder history and pregnancy are health information, which many privacy laws treat as sensitive (for example "special category" data under the GDPR and "consumer health data" under some US state laws). That is why it never leaves your control: it stays on your iPhone (only the times, goal and plan name of your fasts are also copied to your own iCloud, which we cannot access), it is not sent to us, it is not shared with ad partners or anyone else, and it is not used for advertising, profiling or research. We do not collect, sell or share consumer health data.</p>
+<p>Fasting patterns, weight, medications such as GLP-1s, side effects, eating-disorder history and pregnancy are health information, which many privacy laws treat as sensitive (for example "special category" data under the GDPR and "consumer health data" under some US state laws). That is why it never leaves your control: it stays on your iPhone (only the times, goal and plan name of your fasts are also copied to your own iCloud, which we cannot access), it is not sent to us, it is not shared with {{#ads}}ad partners or {{/ads}}anyone else, and it is not used for advertising, profiling or research. We do not collect, sell or share consumer health data.</p>
 
 <h2 id="not">What we never do</h2>
 <ul>
   <li>No account, sign-in or email address needed.</li>
-  <li>No server holding your data, no cloud AI, and no analytics, tracking or crash-reporting SDKs of our own. (Ad SDKs may report their own diagnostics, as described above.) The app's own privacy manifest declares no tracking, no tracking domains and no collected data.</li>
+  <li>{{#ads}}No server holding your data, no cloud AI, and no analytics, tracking or crash-reporting SDKs of our own. (Ad SDKs may report their own diagnostics, as described above.) The app's own privacy manifest declares no tracking, no tracking domains and no collected data.{{/ads}}{{^ads}}No server holding your data, no cloud AI, no ads, and no advertising, analytics, tracking or crash-reporting SDKs. The app's privacy manifest declares no tracking, no tracking domains and no collected data.{{/ads}}</li>
   <li>We never sell your data and never use your fasting, health or Apple Health information for advertising.</li>
   <li>{{APP}} does not use a CloudKit database, and it does not access your camera, location, contacts or microphone.</li>
 </ul>
@@ -149,7 +153,9 @@ ADS_CONSENT_ITEM: <li><strong>In-app consent manager (EEA, UK and Switzerland).<
   <li><strong>The iCloud copy of your fasts</strong> is kept in your iCloud until you switch it off in Export and restore (finished fasts) or use "Delete everything" (all of it). The running-fast part is replaced by your next fast.</li>
   <li><strong>The Keychain copy of a running fast</strong> stays on this iPhone, even after the app is deleted, until the fast ends or you use "Delete everything".</li>
   <li><strong>Data in Apple Health</strong> that {{APP}} wrote stays in the Health app until you delete it there.</li>
+{{#ads}}
   <li><strong>Ad data</strong> is retained by AppLovin, Google and other ad partners according to their policies linked above.</li>
+{{/ads}}
   <li><strong>Purchase records</strong> are kept by Apple under Apple's policies.</li>
   <li><strong>Support emails</strong> are kept only as long as needed to help you and keep a record of the conversation, then deleted, normally within 24 months. Ask us to delete them sooner at any time.</li>
 </ul>
@@ -160,13 +166,15 @@ ADS_CONSENT_ITEM: <li><strong>In-app consent manager (EEA, UK and Switzerland).<
   <li><strong>Delete everything</strong>: {{APP}} Settings has a "Delete everything" option, with a confirmation. It erases your {{APP}} data and settings on this iPhone, the widget and Siri data in the App Group, the Keychain copy of a running fast, and the copy of your fasts (running and finished) in your iCloud. It can't be undone.</li>
   <li><strong>Deleting the app</strong> removes its database, settings and widget data. It does not remove the copy of your fasts in iCloud, and iOS may keep the Keychain copy of a running fast. To clear both, use "Delete everything" before deleting the app. Deleting the app does not cancel a subscription.</li>
   <li><strong>Apple Health</strong>: data {{APP}} wrote to Health is not removed by deleting the app. Delete it in the Health app (<span class="path"><code>Health &gt; Sharing &gt; Apps &gt; {{APP}}</code></span>, or the data type's "Show All Data" list), and revoke access in Health settings.</li>
+{{#ads}}
   <li><strong>Ad data</strong>: use <a href="#ads-choices">your ad choices</a> or contact the ad partner; email us and we'll help.</li>
+{{/ads}}
 </ul>
 
 {{> rights}}
 
 <h2 id="children">Children</h2>
-<p>{{APP}} is <strong>not directed at children</strong>, and we do not knowingly collect personal information from children under 13 (or the minimum age in your country). Fasting of 24 hours or longer is limited to adults who report none of the safety-check risk factors; if you tell the app you are under 18, it does not offer extended fasts. If you believe a child has provided personal information to us, for example by email, contact us and we will delete it. If you tell the app's safety check that you are under 18, the free version shows you no ads at all: the ad SDK is not started (or is stopped if it was running), Apple's tracking prompt is never shown, and "Do not sell or share" is turned on.</p>
+<p>{{APP}} is <strong>not directed at children</strong>, and we do not knowingly collect personal information from children under 13 (or the minimum age in your country). Fasting of 24 hours or longer is limited to adults who report none of the safety-check risk factors; if you tell the app you are under 18, it does not offer extended fasts. If you believe a child has provided personal information to us, for example by email, contact us and we will delete it.{{#ads}} If you tell the app's safety check that you are under 18, the free version shows you no ads at all: the ad SDK is not started (or is stopped if it was running), Apple's tracking prompt is never shown, and "Do not sell or share" is turned on.{{/ads}}</p>
 
 <h2 id="security">Security</h2>
 <p>Your data is protected by iOS app sandboxing and Data Protection encryption, and Apple Health data is protected by iOS's own Health encryption and permissions. Because we don't operate a server, there is no developer-held database of your fasting or health data that could be breached. Keep your device passcode, your Apple ID and any images you share secure.</p>
@@ -180,8 +188,11 @@ ADS_CONSENT_ITEM: <li><strong>In-app consent manager (EEA, UK and Switzerland).<
 <table class="stack">
   <thead><tr><th scope="col">Date</th><th scope="col">Change</th></tr></thead>
   <tbody>
-    <tr><td data-label="Date">October 14, 2026</td><td data-label="Change">Corrected the iCloud section: besides the running fast, the start and end times, goal and plan name of finished fasts are kept in your iCloud key-value storage (on by default, switch in Export and restore). Added the this-device-only Keychain copy of a running fast, which can outlive deleting the app until "Delete everything". Network, retention, advertising and sensitive-information sections updated to match. Children and advertising: an under-18 answer in the safety check turns off ads, the ad SDK and the tracking prompt.</td></tr>
-    <tr><td data-label="Date">{{EFFECTIVE_DATE}}</td><td data-label="Change">First published version. Covers on-device storage, the iCloud key-value backup of a running fast, optional Apple Health read and write, the on-device weekly recap, widgets, Live Activities and Siri, buddy share codes, StoreKit purchases (Pro Yearly with a 7-day free trial, and Pro Lifetime), and ads in the free version through AppLovin MAX with Google AdMob mediated.</td></tr>
+{{^ads}}
+    <tr><td data-label="Date">{{LAST_UPDATED}}</td><td data-label="Change">Version 1.0 has no ads and no tracking. The advertising, tracking-prompt and ad-choices sections are replaced by <a href="#ads">No ads and no tracking</a>, the settings stored on your device no longer include an advertising choice, and privacy rights, retention and the children section no longer describe advertising.</td></tr>
+{{/ads}}
+    <tr><td data-label="Date">October 14, 2026</td><td data-label="Change">Corrected the iCloud section: besides the running fast, the start and end times, goal and plan name of finished fasts are kept in your iCloud key-value storage (on by default, switch in Export and restore). Added the this-device-only Keychain copy of a running fast, which can outlive deleting the app until "Delete everything". Network, retention, {{#ads}}advertising {{/ads}}and sensitive-information sections updated to match.{{#ads}} Children and advertising: an under-18 answer in the safety check turns off ads, the ad SDK and the tracking prompt.{{/ads}}</td></tr>
+    <tr><td data-label="Date">{{EFFECTIVE_DATE}}</td><td data-label="Change">First published version. Covers on-device storage, the iCloud key-value backup of a running fast, optional Apple Health read and write, the on-device weekly recap, widgets, Live Activities and Siri, buddy share codes, StoreKit purchases (Pro Yearly with a 7-day free trial, and Pro Lifetime), and {{#ads}}ads in the free version through AppLovin MAX with Google AdMob mediated{{/ads}}{{^ads}}advertising in the free version, which version 1.0 does not have (see the first row){{/ads}}.</td></tr>
   </tbody>
 </table>
 </div>

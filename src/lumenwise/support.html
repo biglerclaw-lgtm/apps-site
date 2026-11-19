@@ -28,7 +28,7 @@ app: lumenwise
 <details id="ask-limit">
   <summary>Is there a limit on questions?</summary>
   <div>
-    <p>The free version includes a few questions each day, and you can choose to watch a short ad for a few more. {{APP}} Pro gives you unlimited questions with no ads.</p>
+    <p>{{#ads}}The free version includes a few questions each day, and you can choose to watch a short ad for a few more. {{APP}} Pro gives you unlimited questions with no ads.{{/ads}}{{^ads}}The free version includes 3 questions a day. {{APP}} Pro gives you unlimited questions.{{/ads}}</p>
   </div>
 </details>
 
@@ -56,7 +56,7 @@ app: lumenwise
 <details id="where">
   <summary>Where are my notes and prayers stored? Can the developer see them?</summary>
   <div>
-    <p>On your iPhone. There is no account and no server of ours, so we can't see your highlights, notes, prayers or questions. Ads in the free version never receive this information. Full details: <a href="privacy.html">privacy policy</a>.</p>
+    <p>On your iPhone. There is no account and no server of ours, so we can't see your highlights, notes, prayers or questions.{{#ads}} Ads in the free version never receive this information.{{/ads}} Full details: <a href="privacy.html">privacy policy</a>.</p>
   </div>
 </details>
 <details id="new-iphone">

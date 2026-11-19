@@ -1,6 +1,6 @@
 <!--
 title: {{APP}} Privacy Policy
-description: How {{APP}} handles your documents: scans, recognized text and signatures stay on your device, AI runs on your iPhone, no account, Apple purchases, and ads in the free version.
+description: How {{APP}} handles your documents: scans, recognized text and signatures stay on your device, AI runs on your iPhone, no account, Apple purchases{{#ads}}, and ads in the free version{{/ads}}{{^ads}}, no ads and no tracking{{/ads}}.
 app: paperlark
 EFFECTIVE_DATE: October 9, 2026
 EFFECTIVE_ISO: 2026-10-09
@@ -8,10 +8,10 @@ APP_AD_PROMISE: Ad SDKs never get access to your scanned pages, their recognized
 ADS_CONSENT_ITEM: <li><strong>In-app consent screen (EEA, UK and Switzerland).</strong> In the EEA, the UK and Switzerland, the consent screen opens before ads and can be reopened from Settings &gt; Ad Privacy Choices. It is Google's User Messaging Platform, shown through AppLovin MAX; it asks before any data is used for personalized ads and lets you accept, reject or pick partners and purposes, and change or withdraw your consent later.</li> <li><strong>US: Do not sell or share.</strong> In US states with privacy laws, use the <strong>Do not sell or share</strong> switch in Settings &gt; Ad Privacy Choices.</li>
 -->
 <h1>{{APP}} Privacy Policy</h1>
-<p class="meta">Effective {{EFFECTIVE_DATE}} &middot; Last updated {{EFFECTIVE_DATE}}</p>
+<p class="meta">Effective {{EFFECTIVE_DATE}} &middot; Last updated {{LAST_UPDATED}}</p>
 
 <div class="callout">
-  <p><strong>The short version.</strong> Your scans, the text recognized in them and your signatures are stored <em>on your iPhone</em>. Text recognition, auto-filing, redaction and AI summaries all run on the device, and nothing is uploaded to us or to any AI service. There is no account and we run no server. Purchases go through Apple. The free version shows ads; the ad companies collect some device data to show them, never your documents, and Pro removes ads entirely.</p>
+  <p><strong>The short version.</strong> Your scans, the text recognized in them and your signatures are stored <em>on your iPhone</em>. Text recognition, auto-filing, redaction and AI summaries all run on the device, and nothing is uploaded to us or to any AI service. There is no account and we run no server. Purchases go through Apple. {{#ads}}The free version shows ads; the ad companies collect some device data to show them, never your documents, and Pro removes ads entirely.{{/ads}}{{^ads}}There are no ads and no tracking.{{/ads}}</p>
 </div>
 
 <nav class="toc" aria-labelledby="toc-h">
@@ -28,7 +28,7 @@ ADS_CONSENT_ITEM: <li><strong>In-app consent screen (EEA, UK and Switzerland).</
     <li><a href="#files">Files app and opening documents</a></li>
     <li><a href="#network">Network connections</a></li>
     <li><a href="#purchases">Purchases</a></li>
-    <li><a href="#ads">Advertising</a></li>
+    <li><a href="#ads">{{#ads}}Advertising{{/ads}}{{^ads}}No ads or tracking{{/ads}}</a></li>
     <li><a href="#sensitive">Sensitive documents</a></li>
     <li><a href="#not">What we never do</a></li>
     <li><a href="#retention">Data retention</a></li>
@@ -79,7 +79,9 @@ ADS_CONSENT_ITEM: <li><strong>In-app consent screen (EEA, UK and Switzerland).</
   <li><strong>Face ID</strong> (optional app lock): handled entirely by iOS, which also offers your passcode as a fallback. {{APP}} only learns whether unlocking succeeded and never receives biometric data.</li>
   <li><strong>Photos (add only)</strong>: to save page images to your library. Importing from Photos uses Apple's photo picker, so {{APP}} only gets the photos you pick and cannot read the rest of your library.</li>
   <li><strong>Notifications</strong>: see <a href="#notifications">Notifications</a>.</li>
+{{#ads}}
   <li><strong>App Tracking Transparency</strong>: asked only in the free version when ads are switched on, after a short explanation in the app, and never while you are scanning, editing or signing. See <a href="#ads">Advertising</a>.</li>
+{{/ads}}
 </ul>
 <p>{{APP}} does not ask for your location, contacts, microphone or calendar.</p>
 
@@ -87,12 +89,13 @@ ADS_CONSENT_ITEM: <li><strong>In-app consent screen (EEA, UK and Switzerland).</
 <p>{{APP}} doesn't keep a folder in On My iPhone; use Save to Files to put a copy anywhere you like. You can also open PDFs and images in {{APP}} from Files, Mail and other apps; {{APP}} copies the file it is given and does not access anything else.</p>
 
 <h2 id="network">Network connections</h2>
-<p>{{APP}} makes no network connections of its own other than Apple's App Store (prices, purchases, restores and subscription status) and, in the free version, the ad SDKs. Scanning, text recognition, search, summaries, redaction and signing work offline. You can check this yourself in iOS's App Privacy Report (<span class="path"><code>Settings &gt; Privacy &amp; Security &gt; App Privacy Report</code></span>).</p>
+<p>{{APP}} makes no network connections of its own other than Apple's App Store (prices, purchases, restores and subscription status){{#ads}} and, in the free version, the ad SDKs{{/ads}}. Scanning, text recognition, search, summaries, redaction and signing work offline. You can check this yourself in iOS's App Privacy Report (<span class="path"><code>Settings &gt; Privacy &amp; Security &gt; App Privacy Report</code></span>).</p>
 
 {{> purchases-privacy}}
 <p>{{APP}} Pro is offered as a yearly subscription with a 7-day free trial for eligible new subscribers, and as a one-time lifetime purchase that supports Family Sharing. You can cancel from <span class="path"><code>{{APP}} Settings &gt; Manage subscription</code></span> (which opens Apple's screen) and restore purchases at any time.</p>
 
 {{> ads}}
+{{#ads}}
 <h3 id="ads-dns">"Do not sell or share my personal information"</h3>
 <p>{{APP}} Settings &gt; Ad Privacy Choices also has a <strong>"Do not sell or share my personal information"</strong> switch. When it is on, {{APP}} tells AppLovin, and through it the networks it mediates, not to sell or share your personal information for targeted advertising, as US state privacy laws allow. Your choice is stored on your device.</p>
 <h3 id="ads-when">When ads start, and where they appear</h3>
@@ -105,14 +108,15 @@ ADS_CONSENT_ITEM: <li><strong>In-app consent screen (EEA, UK and Switzerland).</
   <li><strong>If ads are not switched on.</strong> Ads run only in versions of the app where ad accounts are configured. In a version without them, no ad SDK starts, no tracking prompt is shown and no data goes to any third party, and the App Store privacy label for that version says so.</li>
 </ul>
 <p>We ask our ad partners to block ads for gambling, dating and mature content where their controls allow it. If you see an inappropriate ad in {{APP}}, please tell us at {{SUPPORT_LINK}}.</p>
+{{/ads}}
 
 <h2 id="sensitive">Sensitive documents</h2>
-<p>People scan IDs, bank statements, medical letters and tax forms. That is why {{APP}} keeps them on your iPhone: their images, text and details are never sent to us, never shared with ad partners or anyone else, and never used for advertising, profiling or research. If you use Spotlight, remember that text from your documents can appear in iPhone search results; you can turn that off at any time (see <a href="#spotlight">Spotlight search</a>). Use the app lock and redaction for extra protection, and check a redacted copy before you share it.</p>
+<p>People scan IDs, bank statements, medical letters and tax forms. That is why {{APP}} keeps them on your iPhone: their images, text and details are never sent to us, never shared with {{#ads}}ad partners or {{/ads}}anyone else, and never used for advertising, profiling or research. If you use Spotlight, remember that text from your documents can appear in iPhone search results; you can turn that off at any time (see <a href="#spotlight">Spotlight search</a>). Use the app lock and redaction for extra protection, and check a redacted copy before you share it.</p>
 
 <h2 id="not">What we never do</h2>
 <ul>
   <li>No account, sign-in or email address needed.</li>
-  <li>No server holding your documents, no cloud AI or OCR service, and no analytics or crash-reporting SDKs of our own. (Ad SDKs may report their own diagnostics, as described above.)</li>
+  <li>{{#ads}}No server holding your documents, no cloud AI or OCR service, and no analytics or crash-reporting SDKs of our own. (Ad SDKs may report their own diagnostics, as described above.){{/ads}}{{^ads}}No server holding your documents, no cloud AI or OCR service, no ads, and no advertising, analytics, tracking or crash-reporting SDKs.{{/ads}}</li>
   <li>We never sell your data and never use your documents for advertising.</li>
   <li>This version of {{APP}} does not use iCloud sync.</li>
 </ul>
@@ -120,7 +124,9 @@ ADS_CONSENT_ITEM: <li><strong>In-app consent screen (EEA, UK and Switzerland).</
 <h2 id="retention">Data retention</h2>
 <ul>
   <li><strong>Documents and their data</strong> are kept on your iPhone until you delete them. We keep no copy.</li>
+{{#ads}}
   <li><strong>Ad data</strong> is retained by AppLovin, Google and other ad partners according to their policies linked above.</li>
+{{/ads}}
   <li><strong>Purchase records</strong> are kept by Apple under Apple's policies.</li>
   <li><strong>Support emails</strong> are kept only as long as needed to help you and keep a record of the conversation, then deleted, normally within 24 months. Ask us to delete them sooner at any time.</li>
 </ul>
@@ -131,7 +137,9 @@ ADS_CONSENT_ITEM: <li><strong>In-app consent screen (EEA, UK and Switzerland).</
   <li><strong>Delete everything</strong>: <span class="path"><code>{{APP}} Settings &gt; Delete everything</code></span> wipes all documents, files, saved signatures, Spotlight entries and scheduled notifications. It can't be undone.</li>
   <li><strong>Deleting the app</strong> removes all its data. It does not cancel a subscription.</li>
   <li><strong>Exported copies</strong> you saved to Files or Photos or sent to others are outside {{APP}}; delete them where you saved them.</li>
+{{#ads}}
   <li><strong>Ad data</strong>: use <a href="#ads-choices">your ad choices</a> or contact the ad partner; email us and we'll help.</li>
+{{/ads}}
 </ul>
 
 {{> rights}}
@@ -151,8 +159,11 @@ ADS_CONSENT_ITEM: <li><strong>In-app consent screen (EEA, UK and Switzerland).</
 <table class="stack">
   <thead><tr><th scope="col">Date</th><th scope="col">Change</th></tr></thead>
   <tbody>
-    <tr><td data-label="Date">{{EFFECTIVE_DATE}}</td><td data-label="Change">First published version. Covers on-device storage (no iCloud sync), on-device text recognition, AI and redaction, the on-device Spotlight index, widgets, local notifications, StoreKit purchases (yearly subscription with a 7-day free trial, and lifetime), and ads in the free version through AppLovin MAX with Google AdMob mediated.</td></tr>
-    <tr><td data-label="Date">{{EFFECTIVE_DATE}}</td><td data-label="Change">Corrected to match version 1.0: widget contents and App Lock behavior, when ads are requested, Pro and ads, Spotlight with App Lock, no Files app folder, how page images are encrypted, default bill reminders, and the consent screen (EEA, UK and Switzerland) with a separate US "Do not sell or share" switch.</td></tr>
+{{^ads}}
+    <tr><td data-label="Date">{{LAST_UPDATED}}</td><td data-label="Change">Version 1.0 has no ads and no tracking. The advertising, tracking-prompt and ad-choices sections are replaced by <a href="#ads">No ads and no tracking</a>, and privacy rights and retention no longer describe advertising data.</td></tr>
+{{/ads}}
+    <tr><td data-label="Date">{{EFFECTIVE_DATE}}</td><td data-label="Change">First published version. Covers on-device storage (no iCloud sync), on-device text recognition, AI and redaction, the on-device Spotlight index, widgets, local notifications, StoreKit purchases (yearly subscription with a 7-day free trial, and lifetime), and {{#ads}}ads in the free version through AppLovin MAX with Google AdMob mediated{{/ads}}{{^ads}}advertising in the free version, which version 1.0 does not have (see the row above){{/ads}}.</td></tr>
+    <tr><td data-label="Date">{{EFFECTIVE_DATE}}</td><td data-label="Change">{{#ads}}Corrected to match version 1.0: widget contents and App Lock behavior, when ads are requested, Pro and ads, Spotlight with App Lock, no Files app folder, how page images are encrypted, default bill reminders, and the consent screen (EEA, UK and Switzerland) with a separate US "Do not sell or share" switch.{{/ads}}{{^ads}}Corrected to match the build of that time: widget contents and App Lock behavior, Spotlight with App Lock, no Files app folder, how page images are encrypted, default bill reminders, and the advertising details (advertising has since been removed, see the first row).{{/ads}}</td></tr>
   </tbody>
 </table>
 </div>

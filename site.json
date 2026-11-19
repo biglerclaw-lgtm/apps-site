@@ -13,10 +13,10 @@
   "FASTBLOOM_NAME": "Fastbloom",
 
   "apps": {
-    "swipeclean": {"ads": true, "LAST_UPDATED": "November 18, 2026"},
-    "quitline": {"ads": true, "LAST_UPDATED": "November 18, 2026"},
-    "lumenwise": {"ads": true, "LAST_UPDATED": "November 18, 2026"},
-    "paperlark": {"ads": true, "LAST_UPDATED": "November 18, 2026"},
-    "fastbloom": {"ads": true, "LAST_UPDATED": "November 18, 2026"}
+    "swipeclean": {"ads": false, "LAST_UPDATED": "November 18, 2026"},
+    "quitline": {"ads": false, "LAST_UPDATED": "November 18, 2026"},
+    "lumenwise": {"ads": false, "LAST_UPDATED": "November 18, 2026"},
+    "paperlark": {"ads": false, "LAST_UPDATED": "November 18, 2026"},
+    "fastbloom": {"ads": false, "LAST_UPDATED": "November 18, 2026"}
   }
 }

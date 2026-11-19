@@ -16,7 +16,7 @@ app: fastbloom
     <li><strong>Australia: Butterfly Foundation</strong>: <a href="https://butterfly.org.au/">butterfly.org.au</a>.</li>
     <li><strong>Anywhere else</strong>: <a href="https://findahelpline.com/">findahelpline.com</a> lists free, confidential helplines by country.</li>
   </ul>
-  <p>These resources are always free in {{APP}} and never shown next to ads. {{APP}} is not a crisis or medical service and can't respond to emergencies. {{APP}} is an independent app and is not affiliated with these organizations.</p>
+  <p>These resources are always free in {{APP}}{{#ads}} and never shown next to ads{{/ads}}. {{APP}} is not a crisis or medical service and can't respond to emergencies. {{APP}} is an independent app and is not affiliated with these organizations.</p>
 </div>
 
 <p class="lede">Answers to common questions. Still stuck? Email {{SUPPORT_LINK_SUBJ}} and a human will reply, usually within 2 business days.</p>
@@ -31,7 +31,7 @@ app: fastbloom
 <details id="safety-check">
   <summary>Why does {{APP}} ask safety questions? Why can't I start a 24-hour fast?</summary>
   <div>
-    <p>During onboarding you can answer a short, optional safety check: whether you are under 18, pregnant or breastfeeding, have a history of an eating disorder, or take medication for diabetes. Fasting can be risky in these situations, so fasts of 24 hours or longer are offered only to adults who report none of these, and the app shows extra guidance. Your answers stay on your iPhone and are never sent anywhere or given to ad companies. You can review them in {{APP}} Settings.</p>
+    <p>During onboarding you can answer a short, optional safety check: whether you are under 18, pregnant or breastfeeding, have a history of an eating disorder, or take medication for diabetes. Fasting can be risky in these situations, so fasts of 24 hours or longer are offered only to adults who report none of these, and the app shows extra guidance. Your answers stay on your iPhone and are never sent anywhere{{#ads}} or given to ad companies{{/ads}}. You can review them in {{APP}} Settings.</p>
     <div class="callout warn"><p><strong>If you take insulin or other diabetes medication</strong>, fasting can cause dangerously low blood sugar. Don't change how you eat or take your medication without talking to your doctor.</p></div>
   </div>
 </details>
@@ -46,13 +46,13 @@ app: fastbloom
 <details id="health">
   <summary>How do I connect Apple Health? What does {{APP}} read and write?</summary>
   <div>
-    <p>Turn on Apple Health in {{APP}} Settings and choose what to allow in the iOS screen that appears. {{APP}} can write the weight, water and protein you log, and read weight, water, protein and food energy. Food energy is used only to ask "did you break your fast?" when another app logs food during a fast. Health data stays on your iPhone and is never shared with ad companies or anyone else. To change access later: <span class="path"><code>Settings &gt; Health &gt; Data Access &amp; Devices &gt; {{APP}}</code></span>.</p>
+    <p>Turn on Apple Health in {{APP}} Settings and choose what to allow in the iOS screen that appears. {{APP}} can write the weight, water and protein you log, and read weight, water, protein and food energy. Food energy is used only to ask "did you break your fast?" when another app logs food during a fast. Health data stays on your iPhone and is never shared with {{#ads}}ad companies or {{/ads}}anyone else. To change access later: <span class="path"><code>Settings &gt; Health &gt; Data Access &amp; Devices &gt; {{APP}}</code></span>.</p>
   </div>
 </details>
 <details id="recap">
   <summary>How is the weekly recap written? Is it sent anywhere?</summary>
   <div>
-    <p>On iOS 26 or later with Apple Intelligence turned on, the recap is written by Apple's on-device AI model. Otherwise {{APP}} uses a built-in template. Either way it is created on your iPhone and nothing is sent to us or any server. Free users can unlock a recap by choosing to watch a short ad; Pro includes it.</p>
+    <p>On iOS 26 or later with Apple Intelligence turned on, the recap is written by Apple's on-device AI model. Otherwise {{APP}} uses a built-in template. Either way it is created on your iPhone and nothing is sent to us or any server. {{#ads}}Free users can unlock a recap by choosing to watch a short ad; Pro includes it.{{/ads}}{{^ads}}The weekly recap is part of {{APP}} Pro.{{/ads}}</p>
   </div>
 </details>
 <details id="widgets">
@@ -78,7 +78,7 @@ app: fastbloom
 <details id="where">
   <summary>Where is my data stored? Can the developer see it?</summary>
   <div>
-    <p>On your iPhone. There is no account and no server of ours, so we can't see your fasts, weight, notes or GLP-1 logs. Your fasts' times, goal and plan name are also copied to your own iCloud, which we can't access either (see the next answer). Ads in the free version never receive this information or anything from Apple Health. Full details: <a href="privacy.html">privacy policy</a>.</p>
+    <p>On your iPhone. There is no account and no server of ours, so we can't see your fasts, weight, notes or GLP-1 logs. Your fasts' times, goal and plan name are also copied to your own iCloud, which we can't access either (see the next answer).{{#ads}} Ads in the free version never receive this information or anything from Apple Health.{{/ads}} Full details: <a href="privacy.html">privacy policy</a>.</p>
   </div>
 </details>
 <details id="new-iphone">

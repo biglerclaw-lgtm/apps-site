@@ -53,7 +53,7 @@ ALIASED_PAGES = ("privacy", "terms", "support")
 # avoids all of them, so a match means an ads-only sentence escaped its {{#ads}} block.
 AD_ONLY_TERMS = [
     "AppLovin", "AdMob", "IDFA", "IDFV", "Tracking Transparency", "Ad Privacy Choices",
-    "Do not sell", "removes ads", "removes all ads", "remove ads", "and no ads", "rewarded",
+    "Do not sell or share", "removes ads", "removes all ads", "remove ads", "rewarded",
     "ad SDK", "ad partner", "ad network", "interstitial", "banner", "consent screen",
     "consent manager", "consent form", "personalized ads", "My Ad Center", "shows ads",
     "funded by ads", "switch off ads", "ads in the free version", "free version shows",

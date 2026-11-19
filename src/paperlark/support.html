@@ -10,7 +10,7 @@ app: paperlark
 <details id="free">
   <summary>What's free, and what does Pro add?</summary>
   <div>
-    <p>Scanning, text recognition, search and export are free, with no watermark and no page limit. The free version shows ads and includes up to 3 folders and 1 saved signature. {{APP}} Pro removes ads and unlocks extras such as unlimited folders and signatures, smart redaction and receipt exports. The Pro screen in the app lists everything included.</p>
+    <p>Scanning, text recognition, search and export are free, with no watermark and no page limit. The free version {{#ads}}shows ads and {{/ads}}includes up to 3 folders and 1 saved signature{{^ads}}, with no ads{{/ads}}. {{APP}} Pro {{#ads}}removes ads and {{/ads}}unlocks extras such as unlimited folders and signatures, smart redaction and receipt exports. The Pro screen in the app lists everything included.</p>
   </div>
 </details>
 <details id="ocr">
@@ -46,7 +46,7 @@ app: paperlark
 <details id="sign">
   <summary>Are my saved signatures private?</summary>
   <div>
-    <p>Yes. Signatures and initials you save are stored as drawings in {{APP}}'s private database on your iPhone. They are never uploaded and never shared with ad partners. Delete a saved signature from the signature library at any time.</p>
+    <p>Yes. Signatures and initials you save are stored as drawings in {{APP}}'s private database on your iPhone. They are never uploaded{{#ads}} and never shared with ad partners{{/ads}}. Delete a saved signature from the signature library at any time.</p>
   </div>
 </details>
 
@@ -54,7 +54,7 @@ app: paperlark
 <details id="where">
   <summary>Where are my documents stored? Can the developer see them?</summary>
   <div>
-    <p>On your iPhone, in {{APP}}'s private storage, <strong>encrypted at rest with iOS data protection; after a restart the files can't be read until you first unlock your iPhone</strong>. There is no account and no server of ours, so we can't see your documents. Ads in the free version never receive them. Full details: <a href="privacy.html">privacy policy</a>.</p>
+    <p>On your iPhone, in {{APP}}'s private storage, <strong>encrypted at rest with iOS data protection; after a restart the files can't be read until you first unlock your iPhone</strong>. There is no account and no server of ours, so we can't see your documents.{{#ads}} Ads in the free version never receive them.{{/ads}} Full details: <a href="privacy.html">privacy policy</a>.</p>
   </div>
 </details>
 <details id="new-iphone">
