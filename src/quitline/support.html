@@ -1,6 +1,6 @@
 <!--
 title: {{APP}} Support
-description: Help with {{APP}}: crisis resources, medical safety, your data and iCloud, restoring purchases, cancelling a free trial and contacting support.
+description: Help with {{APP}}: crisis resources, medical safety, your data and moving to a new iPhone, restoring purchases, cancelling a free trial and contacting support.
 app: quitline
 -->
 <h1>{{APP}} Support</h1>
@@ -37,7 +37,7 @@ app: quitline
 <details id="panic">
   <summary>Where is the panic button?</summary>
   <div>
-    <p>The round button in the bottom corner of every tab opens breathing, a 10-minute urge-surfing timer, your reasons, "call my person" and crisis help. You can also use the {{APP}} widget, Siri ("I have an urge in {{APP}}"), the Action Button on supported iPhones, or with VoiceOver a two-finger double-tap. The panic tools are always free and never show ads.</p>
+    <p>The round button in the bottom corner of every tab opens breathing, a 10-minute urge-surfing timer, your reasons, "call my person" and crisis help. You can also use the {{APP}} widget, Siri ("I have an urge in {{APP}}"), the Action Button on supported iPhones, or with VoiceOver a two-finger double-tap. The panic tools are always free{{#ads}} and never show ads{{/ads}}.</p>
   </div>
 </details>
 <details id="slip">
@@ -51,26 +51,26 @@ app: quitline
 <details id="where">
   <summary>Where is my data stored? Can the developer see it?</summary>
   <div>
-    <p>On your iPhone. There is no account and no server of ours, so we can't see your habits, check-ins or journal. With iCloud sync on, a copy is kept in your own private iCloud, which we also can't access. Ads in the free version never receive this information. Full details: <a href="privacy.html">privacy policy</a>.</p>
+    <p>On your iPhone. There is no account and no server of ours, so we can't see your habits, check-ins or journal. {{APP}} has no iCloud sync, so the only copies are on your iPhone, in your own device backups and in any export you make.{{#ads}} Ads in the free version never receive this information.{{/ads}} Full details: <a href="privacy.html">privacy policy</a>.</p>
   </div>
 </details>
 <details id="icloud">
-  <summary>How does iCloud sync work? How do I move to a new iPhone?</summary>
+  <summary>Does {{APP}} sync with iCloud? How do I move to a new iPhone?</summary>
   <div>
-    <p>Where available, turn on iCloud sync in {{APP}} Settings on each device, signed in to the same Apple ID with iCloud Drive enabled. Changes take effect the next time the app opens, and the first sync can take a few minutes.</p>
-    <p>Without iCloud sync, your data moves to a new iPhone with an iCloud Backup or computer backup, or you can use <span class="path"><code>Me &gt; Settings &gt; Your data &gt; Export</code></span> on the old phone and "Restore from a {{APP}} export" on the new one. Restoring adds what's missing and never overwrites what's there.</p>
+    <p>This version of {{APP}} has no iCloud sync, so your data is not kept in step across devices.</p>
+    <p>Your data moves to a new iPhone with an iCloud Backup or computer backup, or you can use <span class="path"><code>Me &gt; Settings &gt; Your data &gt; Export my data</code></span> on the old phone and "Restore from a {{APP}} export" on the new one. Restoring adds what's missing and never overwrites what's there.</p>
   </div>
 </details>
 <details id="lock">
   <summary>How do I lock {{APP}} with Face ID?</summary>
   <div>
-    <p>Me &gt; Settings &gt; Privacy &amp; security &gt; App lock. If Face ID fails, you can use your iPhone passcode. While locked, the panic button still works in a private mode that hides personal content. You can also hide {{APP}} in the app switcher.</p>
+    <p><span class="path"><code>Me &gt; Settings &gt; Privacy &amp; security &gt; Lock with Face ID</code></span> (Touch ID on iPhones with a Home button). If Face ID fails, you can use your iPhone passcode. While locked, the panic button still works in a private mode that hides personal content. You can also hide {{APP}} in the app switcher.</p>
   </div>
 </details>
 <details id="partner">
   <summary>What does my accountability partner see?</summary>
   <div>
-    <p>Only what's in the code you send: your streak numbers, plus an "I'm struggling" note or what you're quitting only if you include them. Never your journal. Codes travel through Messages or whatever app you choose; {{APP}} has no server.</p>
+    <p>Only what's in the code you send: the name you enter and your streak numbers, plus an "I'm struggling" note or what you're quitting only if you include them. Never your journal. Codes travel through Messages or whatever app you choose; {{APP}} has no server.</p>
   </div>
 </details>
 <details id="delete-data">
@@ -78,7 +78,7 @@ app: quitline
   <div>
     <ul>
       <li>Single items: delete individual journal entries, slips or check-ins where they are listed, or delete a habit in its editor.</li>
-      <li>Everything: <span class="path"><code>Me &gt; Settings &gt; Your data &gt; Delete everything</code></span>, then type DELETE. This erases your data, reminders and widget content on this device, and from iCloud too if sync is on. It can't be undone, so export first if you want a copy.</li>
+      <li>Everything: <span class="path"><code>Me &gt; Settings &gt; Your data &gt; Delete everything</code></span>, then type DELETE. This erases your data, reminders and widget content on this device. It can't be undone, so export first if you want a copy.</li>
       <li>Deleting the app also removes its on-device data (but does not cancel a subscription).</li>
     </ul>
   </div>

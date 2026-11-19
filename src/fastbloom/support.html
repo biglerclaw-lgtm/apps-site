@@ -16,7 +16,7 @@ app: fastbloom
     <li><strong>Australia: Butterfly Foundation</strong>: <a href="https://butterfly.org.au/">butterfly.org.au</a>.</li>
     <li><strong>Anywhere else</strong>: <a href="https://findahelpline.com/">findahelpline.com</a> lists free, confidential helplines by country.</li>
   </ul>
-  <p>These resources are always free in {{APP}} and never shown next to ads. {{APP}} is not a crisis or medical service and can't respond to emergencies. {{APP}} is an independent app and is not affiliated with these organizations.</p>
+  <p>These resources are always free in {{APP}}{{#ads}} and never shown next to ads{{/ads}}. {{APP}} is not a crisis or medical service and can't respond to emergencies. {{APP}} is an independent app and is not affiliated with these organizations.</p>
 </div>
 
 <p class="lede">Answers to common questions. Still stuck? Email {{SUPPORT_LINK_SUBJ}} and a human will reply, usually within 2 business days.</p>
@@ -31,14 +31,14 @@ app: fastbloom
 <details id="safety-check">
   <summary>Why does {{APP}} ask safety questions? Why can't I start a 24-hour fast?</summary>
   <div>
-    <p>During onboarding you can answer a short, optional safety check: whether you are under 18, pregnant or breastfeeding, have a history of an eating disorder, or take medication for diabetes. Fasting can be risky in these situations, so fasts of 24 hours or longer are offered only to adults who report none of these, and the app shows extra guidance. Your answers stay on your iPhone and are never sent anywhere or given to ad companies. You can review them in {{APP}} Settings.</p>
+    <p>During onboarding you can answer a short, optional safety check: whether you are under 18, pregnant or breastfeeding, have a history of an eating disorder, or take medication for diabetes. Fasting can be risky in these situations, so fasts of 24 hours or longer are offered only to adults who report none of these, and the app shows extra guidance. Your answers stay on your iPhone and are never sent anywhere{{#ads}} or given to ad companies{{/ads}}. You can review them in {{APP}} Settings.</p>
     <div class="callout warn"><p><strong>If you take insulin or other diabetes medication</strong>, fasting can cause dangerously low blood sugar. Don't change how you eat or take your medication without talking to your doctor.</p></div>
   </div>
 </details>
 <details id="glp1">
   <summary>How does GLP-1 tracking work?</summary>
   <div>
-    <p>You can log your medication, dose and injection site, and any side effects, so you have a private record to look back on or show your doctor. {{APP}} does not tell you what dose to take or when, and it does not read or write medications in Apple Health. Always follow your prescriber's instructions and the medication's leaflet.</p>
+    <p>You can log your medication, dose and injection site, and any side effects, so you have a private record to look back on or show your doctor. GLP-1 tracking is part of {{APP}} Pro. {{APP}} does not tell you what dose to take or when, and it does not read or write medications in Apple Health. With Pro you can also share a doctor summary (text or PDF) of your weight trend, doses, sites and side effects. Always follow your prescriber's instructions and the medication's leaflet.</p>
   </div>
 </details>
 
@@ -46,13 +46,13 @@ app: fastbloom
 <details id="health">
   <summary>How do I connect Apple Health? What does {{APP}} read and write?</summary>
   <div>
-    <p>Turn on Apple Health in {{APP}} Settings and choose what to allow in the iOS screen that appears. {{APP}} can write the weight, water and protein you log, and read weight, water, protein and food energy. Food energy is used only to ask "did you break your fast?" when another app logs food during a fast. Health data stays on your iPhone and is never shared with ad companies or anyone else. To change access later: <span class="path"><code>Settings &gt; Health &gt; Data Access &amp; Devices &gt; {{APP}}</code></span>.</p>
+    <p>Turn on Apple Health in {{APP}} Settings and choose what to allow in the iOS screen that appears. {{APP}} can write the weight, water and protein you log, and read weight, water, protein and food energy. Food energy is used only to ask "did you break your fast?" when another app logs food during a fast. Health data stays on your iPhone unless you export or share it yourself (for example a backup file or a doctor summary), and {{APP}} never shares it with {{#ads}}ad companies or {{/ads}}anyone else. To change access later: <span class="path"><code>Settings &gt; Health &gt; Data Access &amp; Devices &gt; {{APP}}</code></span>.</p>
   </div>
 </details>
 <details id="recap">
   <summary>How is the weekly recap written? Is it sent anywhere?</summary>
   <div>
-    <p>On iOS 26 or later with Apple Intelligence turned on, the recap is written by Apple's on-device AI model. Otherwise {{APP}} uses a built-in template. Either way it is created on your iPhone and nothing is sent to us or any server. Free users can unlock a recap by choosing to watch a short ad; Pro includes it.</p>
+    <p>On iOS 26 or later with Apple Intelligence turned on, the recap is written by Apple's on-device AI model. Otherwise {{APP}} uses a built-in template. Either way it is created on your iPhone and nothing is sent to us or any server. {{#ads}}Free users can unlock a recap by choosing to watch a short ad; Pro includes it.{{/ads}}{{^ads}}The weekly recap is part of {{APP}} Pro.{{/ads}}</p>
   </div>
 </details>
 <details id="widgets">
@@ -64,13 +64,13 @@ app: fastbloom
 <details id="buddy">
   <summary>How do fasting buddies work?</summary>
   <div>
-    <p>Share a buddy code from the app with a friend through Messages or any app in the share sheet. The code holds only the display name you choose, a random code ID, your running fast's start time and goal, and your weekly goal progress. There is no server, so we never see it. To see a friend's progress, import the code they send you; it is saved on your iPhone only.</p>
+    <p>Fasting buddies are part of {{APP}} Pro. Share a buddy code from the app with a friend through Messages or any app in the share sheet. The code holds only the display name you choose, a random code ID, your running fast's start time and goal, when your last fast ended, your weekly goal progress, and when the code was made. There is no server, so we never see it. To see a friend's progress, import the code they send you; it is saved on your iPhone only.</p>
   </div>
 </details>
 <details id="notifications">
   <summary>What notifications does {{APP}} send?</summary>
   <div>
-    <p>A notification when you reach your fasting goal, eating-window and break-fast reminders if you turn them on, and, if you start a free trial, a reminder 2 days before it ends. They are scheduled on your iPhone, not sent from a server. Turn them off in <span class="path"><code>Settings &gt; Notifications &gt; {{APP}}</code></span>.</p>
+    <p>Goal reached, an optional "fast ending soon" alert, safety check-ins at 24, 36 and 48 hours during long fasts, eating-window reminders, "did you break your fast?" prompts, a weekly "your recap is ready" notice (Pro), GLP-1 shot-day and water-and-protein reminders (Pro) and, if you start a free trial, a reminder about 2 days before it ends. You choose which ones you get in {{APP}} Settings. They are scheduled on your iPhone, not sent from a server. Turn them off in <span class="path"><code>Settings &gt; Notifications &gt; {{APP}}</code></span>.</p>
   </div>
 </details>
 
@@ -78,13 +78,13 @@ app: fastbloom
 <details id="where">
   <summary>Where is my data stored? Can the developer see it?</summary>
   <div>
-    <p>On your iPhone. There is no account and no server of ours, so we can't see your fasts, weight, notes or GLP-1 logs. Your fasts' times, goal and plan name are also copied to your own iCloud, which we can't access either (see the next answer). Ads in the free version never receive this information or anything from Apple Health. Full details: <a href="privacy.html">privacy policy</a>.</p>
+    <p>On your iPhone. There is no account and no server of ours, so we can't see your fasts, weight, notes or GLP-1 logs. Your fasts' times, goal and plan name are also copied to your own iCloud, which we can't access either (see the next answer).{{#ads}} Ads in the free version never receive this information or anything from Apple Health.{{/ads}} Full details: <a href="privacy.html">privacy policy</a>.</p>
   </div>
 </details>
 <details id="new-iphone">
   <summary>I got a new iPhone or reinstalled the app. Will I lose my fast?</summary>
   <div>
-    <p>No. {{APP}} keeps a small copy of your fasts in your own iCloud (if iCloud is on): the fast you are running now, and each finished fast's start and end time, goal and plan name. After a reinstall, or on a new iPhone signed in to the same Apple ID, they come back automatically. Fasts you deleted stay deleted. This is on by default; you can switch it off in {{APP}} Settings &gt; Export and restore ("Keep fast history in my iCloud"), which removes the finished-fast copy from iCloud. Notes, moods, weight, water, protein, GLP-1 logs and Apple Health data are not in iCloud: they move to a new iPhone with an iCloud Backup, a computer backup or Apple's Quick Start transfer. Weight, water and protein you wrote to Apple Health are also kept in Health.</p>
+    <p>No. {{APP}} keeps a small copy of your fasts in your own iCloud (if iCloud is on): the fast you are running now, and each finished fast's start and end time, goal and plan name. After a reinstall, or on a new iPhone signed in to the same Apple ID, they come back automatically. Fasts you deleted stay deleted. This is on by default; you can switch it off in {{APP}} Settings &gt; Export and restore ("Keep fast history in my iCloud"), which removes the finished-fast copy from iCloud. Notes, moods, weight, water, protein, GLP-1 logs and Apple Health data are not in iCloud: they move to a new iPhone with an iCloud Backup, a computer backup or Apple's Quick Start transfer, or with a backup file from <span class="path"><code>{{APP}} Settings &gt; Export and restore</code></span> that you restore on the new iPhone. Weight, water and protein you wrote to Apple Health are also kept in Health.</p>
   </div>
 </details>
 <details id="delete-data">
@@ -92,7 +92,7 @@ app: fastbloom
   <div>
     <ul>
       <li>Single entries: delete fasts, notes and logs where they are listed.</li>
-      <li>Everything: use "Delete everything" in {{APP}} Settings and confirm. This erases your data on this iPhone, widget data, and the copy of your fasts (running and finished) in your iCloud. It can't be undone.</li>
+      <li>Everything: use "Delete everything" in {{APP}} Settings and confirm. This erases your data on this iPhone, widget data, and the copy of your fasts (running and finished) in your iCloud. It can't be undone. Your purchase status and any free-trial reminder are kept so Pro and the reminder keep working.</li>
       <li>Deleting the app also removes its data on your iPhone, but not the copy of your fasts in iCloud or a this-iPhone-only Keychain copy of a running fast that iOS may keep (use "Delete everything" first to clear both), not data it wrote to Apple Health (delete that in the Health app), and it does not cancel a subscription.</li>
     </ul>
   </div>

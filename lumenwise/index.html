@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Lumenwise</title>
   <meta name="description" content="Lumenwise is an offline Bible reader for iPhone with reading plans, a private prayer journal and Bible questions answered on your device. Privacy policy, terms of use and support.">
+  <link rel="canonical" href="https://biglerclaw-lgtm.github.io/apps-site/lumenwise/index.html">
   <meta name="color-scheme" content="light dark">
   <meta name="theme-color" content="#f7f6f2" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#121417" media="(prefers-color-scheme: dark)">
@@ -33,11 +34,31 @@
 <h1>Lumenwise</h1>
 <p class="lede">Read the King James Version and the World English Bible offline, follow reading plans, keep a private prayer journal and ask Bible questions that are answered on your iPhone, not in the cloud. No account; your notes and prayers stay on your device.</p>
 <div class="cards">
-  <section class="card"><h2>Privacy Policy</h2><p>Data on your device, on-device AI, purchases and ads in the free version.</p><div class="links"><a class="btn" href="privacy.html">Read the privacy policy</a></div></section>
+  <section class="card"><h2>Privacy Policy</h2><p>Data on your device, on-device AI, purchases, and no ads or tracking.</p><div class="links"><a class="btn" href="privacy.html">Read the privacy policy</a></div></section>
   <section class="card"><h2>Support</h2><p>Ask, translations, prayer journal lock, restore purchases, cancel a trial.</p><div class="links"><a class="btn primary" href="support.html">Get help</a></div></section>
   <section class="card"><h2>Terms of Use</h2><p>Apple's Standard EULA, AI answers, Bible texts, subscription and trial terms.</p><div class="links"><a class="btn" href="terms.html">Read the terms</a></div></section>
   <section class="card"><h2>Contact</h2><p>A human reads every message.</p><div class="links"><a class="btn" href="support.html#contact">SUPPORT_EMAIL_TBD</a></div></section>
 </div>
+<h2 id="join">Invited to a reading plan?</h2>
+<div class="callout">
+  <p>Someone shared a Lumenwise reading plan with you. To join:</p>
+  <ol>
+    <li>Install <strong>Lumenwise</strong> from the App Store on your iPhone (search for "Lumenwise"). It's free to download.</li>
+    <li>Open Lumenwise, go to <strong>Plans &gt; Join with a code</strong> and enter the code from your invite<span id="invite-code" hidden></span>.</li>
+  </ol>
+  <p>Already have Lumenwise? Tap the Lumenwise link in your invite instead. Each person's reading stays on their own iPhone; there is no account and Lumenwise never sees who you invite.</p>
+</div>
+<script>
+  (function () {
+    try {
+      var code = new URLSearchParams(window.location.search).get("code");
+      if (!code || !/^[A-Za-z0-9-]{4,16}$/.test(code)) return;
+      var el = document.getElementById("invite-code");
+      el.textContent = ": " + code.toUpperCase();
+      el.hidden = false;
+    } catch (e) {}
+  })();
+</script>
 <p class="fine">Lumenwise is an independent app and is not affiliated with any church, denomination or Bible publisher. Bible texts: King James Version (1769) and World English Bible, public domain, from eBible.org. "World English Bible" is a trademark of eBible.org.</p>
 
   </main>

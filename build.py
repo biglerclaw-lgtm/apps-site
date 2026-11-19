@@ -4,11 +4,19 @@
 Edit pages in src/ and app names/dates/support email in site.json, then run:  python build.py
 Generated .html files are written next to this script (the GitHub Pages root).
 
+Set the support address (the only place it lives is site.json), then rebuild:
+  python build.py --support-email help@example.com
+  python build.py
+
 Template syntax (no dependencies):
   {{KEY}}         value from site.json or the page's front matter (unknown keys fail the build)
   {{APP}}         the page's app name (front matter `app: swipeclean` -> site.json SWIPECLEAN_NAME)
   {{> name}}      include src/_partials/name.html (partials may use {{...}} too)
   {{root}}        relative path back to the site root ("" or "../")
+  {{#ads}}...{{/ads}}   kept only when the page's app has "ads": true in site.json "apps"
+  {{^ads}}...{{/ads}}   kept only when it is false (the ad-free version)
+                  A tag alone on its line takes the line with it. Blocks for different keys may nest;
+                  blocks for the same key may not. Front matter values may use them on one line.
 
 Front matter is an HTML comment at the very top of a src page:
   <!--
@@ -16,6 +24,9 @@ Front matter is an HTML comment at the very top of a src page:
   description: One sentence for search results.
   app: swipeclean            (optional)
   -->
+
+Every app's privacy, terms and support page is also written to <app>/<page>/index.html, so
+.../quitline/privacy, .../quitline/privacy/ and .../quitline/privacy.html all open the same page.
 """
 import json
 from urllib.parse import quote
@@ -35,9 +46,36 @@ APPS = {
     "fastbloom": {"name_key": "FASTBLOOM_NAME"},
 }
 
+# Per-app strings every app must define in site.json "apps" (used by the shared partials):
+#   LAST_UPDATED    date of the current version of the app's pages
+#   PRO_SUMMARY     what Pro adds, in one or two sentences (terms #pro, support #ads-faq)
+#   FAMILY_SHARING  which purchases Family Sharing covers (terms #billing)
+#   SETTINGS_PATH   how to reach the app's Settings, e.g. "Settings" or "Me &gt; Settings"
+#   REFUND_IN_APP   sentence about an in-app "Request a refund" button, or "" if the app has none
+APP_KEYS = ("LAST_UPDATED", "PRO_SUMMARY", "FAMILY_SHARING", "SETTINGS_PATH", "REFUND_IN_APP")
+APP_KEYS_NONEMPTY = ("LAST_UPDATED", "PRO_SUMMARY", "FAMILY_SHARING", "SETTINGS_PATH")
+
+# App pages that also get an extensionless copy at <app>/<page>/index.html (App Store Connect URLs).
+ALIASED_PAGES = ("privacy", "terms", "support")
+
+# Words that must never appear on a page of an app whose "ads" switch is false. The ad-free wording
+# avoids all of them, so a match means an ads-only sentence escaped its {{#ads}} block.
+AD_ONLY_TERMS = [
+    "AppLovin", "AdMob", "IDFA", "IDFV", "Tracking Transparency", "Ad Privacy Choices",
+    "Do not sell or share", "removes ads", "removes all ads", "remove ads", "rewarded",
+    "ad SDK", "ad partner", "ad network", "interstitial", "banner", "consent screen",
+    "consent manager", "consent form", "personalized ads", "My Ad Center", "shows ads",
+    "funded by ads", "switch off ads", "ads in the free version", "free version shows",
+]
+
 FRONT = re.compile(r"\A\s*<!--(.*?)-->\s*", re.S)
 PARTIAL = re.compile(r"\{\{>\s*([\w-]+)\s*\}\}")
 VAR = re.compile(r"\{\{\s*([A-Za-z_][\w]*)\s*\}\}")
+COND = re.compile(r"\{\{([#^])(\w+)\}\}(.*?)\{\{/\2\}\}", re.S)
+COND_LINE = re.compile(r"(?m)^[ \t]*(\{\{[#^/]\w+\}\})[ \t]*\n")
+COND_LEFT = re.compile(r"\{\{[#^/]\w+\}\}")
+RELATIVE_URL = re.compile(r"""(\b(?:href|src)=")(?![a-zA-Z][a-zA-Z0-9+.-]*:|#|/|\?)""")
+EMAIL_KEY = re.compile(r'("SUPPORT_EMAIL"\s*:\s*")[^"]*(")')
 
 
 def parse(path):
@@ -66,6 +104,26 @@ def expand_partials(text, depth=0):
     return PARTIAL.sub(sub, text)
 
 
+def conditionals(text, flags, where):
+    """Resolve {{#key}}...{{/key}} (kept when flags[key] is true) and {{^key}}...{{/key}} (when false)."""
+    text = COND_LINE.sub(r"\1", text)
+
+    def sub(m):
+        kind, key, inner = m.groups()
+        if key not in flags:
+            sys.exit(f"{where}: unknown switch {{{{{kind}{key}}}}}")
+        keep = flags[key] if kind == "#" else not flags[key]
+        return inner if keep else ""
+
+    prev = None
+    while prev != text:
+        prev, text = text, COND.sub(sub, text)
+    left = COND_LEFT.search(text)
+    if left:
+        sys.exit(f"{where}: unbalanced {left.group(0)}")
+    return text
+
+
 def fill(text, env, where):
     def sub(m):
         k = m.group(1)
@@ -79,9 +137,7 @@ def fill(text, env, where):
 
 def nav_html(app, rel, env):
     page = rel.name
-    root = env["root"]
     if app:
-        base = ""  # app pages live in the app folder
         items = [
             ("index.html", "Overview"),
             ("privacy.html", "Privacy"),
@@ -89,7 +145,6 @@ def nav_html(app, rel, env):
             ("support.html", "Support"),
         ]
     else:
-        base = ""
         items = [
             ("index.html", "Apps"),
             ("privacy.html", "Privacy"),
@@ -98,7 +153,7 @@ def nav_html(app, rel, env):
     out = []
     for href, label in items:
         cur = ' aria-current="page"' if href == page else ""
-        out.append(f'<li><a href="{base}{href}"{cur}>{label}</a></li>')
+        out.append(f'<li><a href="{href}"{cur}>{label}</a></li>')
     return "\n          ".join(out)
 
 
@@ -120,10 +175,59 @@ def support_links(env, app):
         env["SUPPORT_HREF"] = "support.html#contact" if app else "#contact"
 
 
+def load_apps(site):
+    """site.json "apps": per-app switch, dates and wording (APP_KEYS), e.g.
+    {"quitline": {"ads": false, "LAST_UPDATED": "...", "PRO_SUMMARY": "...", ...}}."""
+    cfg = site.pop("apps", None)
+    if not isinstance(cfg, dict) or set(cfg) != set(APPS):
+        sys.exit(f'site.json: "apps" must have exactly these keys: {", ".join(APPS)}')
+    for slug, c in cfg.items():
+        if not isinstance(c.get("ads"), bool):
+            sys.exit(f"site.json: apps.{slug}.ads must be true or false")
+        for key in APP_KEYS:
+            if not isinstance(c.get(key), str) or (not c[key] and key in APP_KEYS_NONEMPTY):
+                sys.exit(f"site.json: apps.{slug}.{key} is missing")
+    return cfg
+
+
+def set_support_email(address):
+    """Write a new SUPPORT_EMAIL into site.json, keeping the rest of the file byte for byte."""
+    address = address.strip()
+    if not re.fullmatch(r"[^@\s\"<>]+@[^@\s\"<>]+\.[^@\s\"<>]+", address):
+        sys.exit(f"not an email address: {address!r}")
+    path = HERE / "site.json"
+    text = path.read_text(encoding="utf-8")
+    new, n = EMAIL_KEY.subn(lambda m: m.group(1) + address + m.group(2), text)
+    if n != 1:
+        sys.exit('site.json: expected exactly one "SUPPORT_EMAIL" entry')
+    path.write_text(new, encoding="utf-8", newline="\n")
+    print(f"SUPPORT_EMAIL is now {address}. Next: python build.py")
+
+
+def check_ad_free(html, where):
+    low = html.lower()
+    for term in AD_ONLY_TERMS:
+        if term.lower() in low:
+            sys.exit(f'{where}: ad-free page contains "{term}" (wrap that text in {{{{#ads}}}}...{{{{/ads}}}})')
+
+
+def write(out, html):
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(html, encoding="utf-8", newline="\n")
+
+
 def main():
+    args = sys.argv[1:]
+    if args:
+        if len(args) == 2 and args[0] == "--support-email":
+            return set_support_email(args[1])
+        sys.exit("usage: python build.py [--support-email ADDRESS]")
+
     site = json.loads((HERE / "site.json").read_text(encoding="utf-8"))
+    apps_cfg = load_apps(site)
     layout = (SRC / "_layout.html").read_text(encoding="utf-8")
     pages = [p for p in SRC.rglob("*.html") if not p.name.startswith("_") and "_partials" not in p.parts]
+    written = []
     for path in sorted(pages):
         rel = path.relative_to(SRC)
         meta, body = parse(path)
@@ -131,23 +235,46 @@ def main():
         env = dict(site)
         env["root"] = "../" * depth
         app = meta.get("app", "")
+        if app:
+            flags = {"ads": apps_cfg[app]["ads"]}
+            # Every string in site.json "apps".<app> (LAST_UPDATED, PRO_SUMMARY, ...) becomes a
+            # placeholder for that app's pages; front matter can still override it.
+            env.update({k: v for k, v in apps_cfg[app].items() if isinstance(v, str)})
+        else:
+            flags = {"ads": any(c["ads"] for c in apps_cfg.values())}
         env["APP"] = site[APPS[app]["name_key"]] if app else "Apps"
         env["APP_SLUG"] = app
         env["APP_Q"] = quote(env["APP"])  # URL-encoded name for mailto subjects
         env["APP_URL"] = site["SITE_URL"] + (f"{app}/" if app else "")
+        env["CANONICAL"] = site["SITE_URL"] + rel.as_posix()
         support_links(env, app)
+        meta = {k: conditionals(v, flags, rel) for k, v in meta.items()}
         env.update({k: v for k, v in meta.items() if k not in ("app",)})
         env["title"] = fill(meta.get("title", ""), env, rel)
         env["description"] = fill(meta.get("description", ""), env, rel)
         env["NAV"] = nav_html(app, rel, env)
         env["SECTION"] = env["APP"]
         env["SECTION_HREF"] = "index.html"
-        env["BODY"] = fill(expand_partials(body), env, rel)
-        html = fill(expand_partials(layout), env, rel)
-        out = HERE / rel
-        out.parent.mkdir(parents=True, exist_ok=True)
-        out.write_text(html, encoding="utf-8", newline="\n")
+        env["BODY"] = fill(conditionals(expand_partials(body), flags, rel), env, rel)
+        html = fill(conditionals(expand_partials(layout), flags, rel), env, rel)
+        if app and not flags["ads"]:
+            check_ad_free(html, rel)
+        write(HERE / rel, html)
+        written.append((rel.as_posix(), html))
         print(f"built {rel.as_posix()}")
+        if app and rel.stem in ALIASED_PAGES:
+            # Same page one folder deeper: every relative link and asset gets one more "../".
+            alias = rel.parent / rel.stem / "index.html"
+            alias_html = RELATIVE_URL.sub(r"\1../", html)
+            write(HERE / alias, alias_html)
+            written.append((alias.as_posix(), alias_html))
+            print(f"built {alias.as_posix()} (same page as {rel.as_posix()})")
+
+    email = site["SUPPORT_EMAIL"]
+    missing = [name for name, html in written if email not in html]
+    if missing:
+        sys.exit(f"SUPPORT_EMAIL {email!r} missing from: {', '.join(missing)}")
+    print(f"SUPPORT_EMAIL {email!r} is on all {len(written)} pages")
 
 
 if __name__ == "__main__":

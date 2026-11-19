@@ -28,7 +28,7 @@ app: lumenwise
 <details id="ask-limit">
   <summary>Is there a limit on questions?</summary>
   <div>
-    <p>The free version includes a few questions each day, and you can choose to watch a short ad for a few more. {{APP}} Pro gives you unlimited questions with no ads.</p>
+    <p>{{#ads}}The free version includes a few questions each day, and you can choose to watch a short ad for a few more. {{APP}} Pro gives you unlimited questions with no ads.{{/ads}}{{^ads}}The free version includes 3 questions a day. {{APP}} Pro gives you unlimited questions.{{/ads}}</p>
   </div>
 </details>
 
@@ -42,7 +42,7 @@ app: lumenwise
 <details id="read-aloud">
   <summary>How does read-aloud work?</summary>
   <div>
-    <p>Read-aloud uses the voices built into iOS, on your iPhone, and keeps playing when you lock the screen. To get a better voice, download an enhanced voice in <span class="path"><code>Settings &gt; Accessibility &gt; Spoken Content &gt; Voices</code></span>.</p>
+    <p>Read-aloud uses the voices built into iOS, on your iPhone, and keeps playing when you lock the screen. To get a better voice, download an enhanced voice in <span class="path"><code>Settings &gt; Accessibility &gt; Spoken Content &gt; Voices</code></span>. Listening to any chapter is part of {{APP}} Pro; the verse of the day can be played for free.</p>
   </div>
 </details>
 <details id="streak">
@@ -56,7 +56,7 @@ app: lumenwise
 <details id="where">
   <summary>Where are my notes and prayers stored? Can the developer see them?</summary>
   <div>
-    <p>On your iPhone. There is no account and no server of ours, so we can't see your highlights, notes, prayers or questions. Ads in the free version never receive this information. Full details: <a href="privacy.html">privacy policy</a>.</p>
+    <p>On your iPhone. There is no account and no server of ours, so we can't see your highlights, notes, prayers or questions.{{#ads}} Ads in the free version never receive this information.{{/ads}} Full details: <a href="privacy.html">privacy policy</a>.</p>
   </div>
 </details>
 <details id="new-iphone">
@@ -74,7 +74,8 @@ app: lumenwise
 <details id="widget-titles">
   <summary>Will my prayers show on my Home Screen?</summary>
   <div>
-    <p>Not unless you want them to. Prayer widgets show neutral text unless you turn on "show prayer titles on widgets" in the Privacy section of {{APP}} Settings. It is off by default.</p>
+    <p>Widgets: not unless you want them to. Prayer widgets show neutral text unless you turn on "show prayer titles on widgets" in the Privacy section of {{APP}} Settings. It is off by default.</p>
+    <p>Notifications: prayer check-back reminders show the prayer's title on the Lock Screen and in Notification Center unless the prayer journal lock is on. To keep titles off the Lock Screen, turn on the journal lock, or turn off previews in <span class="path"><code>Settings &gt; Notifications &gt; {{APP}}</code></span>.</p>
   </div>
 </details>
 <details id="delete-data">
@@ -82,7 +83,7 @@ app: lumenwise
   <div>
     <ul>
       <li>Single items: delete highlights, notes, bookmarks, prayers or Ask conversations where they are listed.</li>
-      <li>Everything: use the delete-all-data option in the Privacy section of {{APP}} Settings and confirm. This erases your data, reminders and widget content on this iPhone. It can't be undone, so export first if you want a copy.</li>
+      <li>Everything: use the delete-all-data option in the Privacy section of {{APP}} Settings and confirm. This erases your highlights, notes, bookmarks, prayers, plans, Ask history, reminders and widget content on this iPhone. It can't be undone, so export first if you want a copy. Display and Ask preferences, such as translation, font and the faith tradition you picked for Ask, are kept until you change them or delete the app.</li>
       <li>Deleting the app also removes its data (but does not cancel a subscription).</li>
     </ul>
   </div>

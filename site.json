@@ -6,9 +6,60 @@
   "YEAR": "2026",
   "ADS_CONSENT_ITEM": "<li><strong>In-app consent manager (EEA, UK, Switzerland and US states with privacy laws).</strong> Where the law requires it, a consent screen (Google's User Messaging Platform, shown through AppLovin MAX) asks before any data is used for personalized ads, and lets you accept, reject or pick partners and purposes. You can reopen it at any time from <span class=\"path\"><code>{{APP}} Settings &gt; Ad Privacy Choices</code></span> to change or withdraw your consent, or to opt out of the \"sale\" or \"sharing\" of personal information for targeted advertising.</li>",
 
+  "EMAIL_RECEIVED": "your email address and what you write",
+  "REPLY_PROMISE": "We usually reply within 2 business days and always within 7 days, and answer privacy requests within the time the law requires (30 days under GDPR, 45 days under CCPA).",
+  "PRERELEASE_NOTE": "Pre-release draft, published before version 1.0 was released. It described an ad-supported free version that was never released.",
+  "V1_ROW": "Version 1.0, the first released version of {{APP}}: no ads and no tracking (see <a href=\"#ads\">No ads and no tracking</a>).",
+
+  "APP_DATA_WHERE": "on your device",
+  "APP_DATA_TRANSFERS": "Your app data is not transferred anywhere, because it never leaves your device.",
+
   "SWIPECLEAN_NAME": "Prunely",
   "QUITLINE_NAME": "Quitline",
   "LUMENWISE_NAME": "Lumenwise",
   "PAPERLARK_NAME": "Paperlark",
-  "FASTBLOOM_NAME": "Fastbloom"
+  "FASTBLOOM_NAME": "Fastbloom",
+
+  "apps": {
+    "swipeclean": {
+      "ads": false,
+      "LAST_UPDATED": "November 18, 2026",
+      "PRO_SUMMARY": "{{APP}} Pro removes the free delete limit (1 GB or 500 items), so you can delete as many photos and videos as you like. Everything else is free.",
+      "FAMILY_SHARING": "Both the yearly subscription and the lifetime purchase can be shared with up to five other family members through Apple's Family Sharing.",
+      "SETTINGS_PATH": "Settings",
+      "REFUND_IN_APP": "With Pro, you can also tap <strong>Request a refund</strong> in {{APP}} Settings, which opens Apple's refund form."
+    },
+    "quitline": {
+      "ads": false,
+      "LAST_UPDATED": "November 18, 2026",
+      "PRO_SUMMARY": "{{APP}} Pro adds taper plans, insights and risk-window heads-ups, your full journal history, deep-dive lessons, more than two habits and themes. The panic button, breathing, urge surfing, crisis help, check-ins, widgets, the Face ID lock, partner codes, export and delete stay free.",
+      "FAMILY_SHARING": "Both the yearly subscription and the lifetime purchase can be shared with up to five other family members through Apple's Family Sharing.",
+      "SETTINGS_PATH": "Me &gt; Settings",
+      "REFUND_IN_APP": ""
+    },
+    "lumenwise": {
+      "ads": false,
+      "LAST_UPDATED": "November 18, 2026",
+      "PRO_SUMMARY": "{{APP}} Pro adds unlimited Ask questions, every reading plan, the full highlight palette, export of notes and highlights, premium verse-card designs, listening to any chapter and reading themes. Reading, search, the prayer journal, the daily verse (including listening to it) and a selection of plans stay free.",
+      "FAMILY_SHARING": "Both the yearly subscription and the lifetime purchase can be shared with up to five other family members through Apple's Family Sharing.",
+      "SETTINGS_PATH": "Settings",
+      "REFUND_IN_APP": ""
+    },
+    "paperlark": {
+      "ads": false,
+      "LAST_UPDATED": "November 18, 2026",
+      "PRO_SUMMARY": "{{APP}} Pro adds AI summaries and questions (the free version includes 3 summaries), auto-filing, smart redaction, CSV export of receipts and tables, password-protected PDFs, and unlimited folders and saved signatures. Scanning, text recognition, search and export stay free, with no watermark.",
+      "FAMILY_SHARING": "The lifetime purchase can be shared with up to five other family members through Apple's Family Sharing. The yearly subscription is not shared.",
+      "SETTINGS_PATH": "Settings",
+      "REFUND_IN_APP": "With Pro, you can also tap <strong>Request a refund</strong> in {{APP}} Settings &gt; Your plan, which opens Apple's refund form."
+    },
+    "fastbloom": {
+      "ads": false,
+      "LAST_UPDATED": "November 18, 2026",
+      "PRO_SUMMARY": "{{APP}} Pro adds advanced fasting plans (36-hour, 5:2, alternate-day and custom schedules), the GLP-1 companion, the weekly recap and deeper stats, history older than 30 days, fasting buddies and themes. The timer with every everyday plan from 12:12 to OMAD, unlimited fasts, widgets, Live Activities, water and weight logs, the last 30 days of history, Learn and every safety resource stay free.",
+      "FAMILY_SHARING": "Both the yearly subscription and the lifetime purchase can be shared with up to five other family members through Apple's Family Sharing.",
+      "SETTINGS_PATH": "Settings",
+      "REFUND_IN_APP": "With Pro, you can also tap <strong>Request a refund</strong> in {{APP}} Settings &gt; Your plan, which opens Apple's refund form."
+    }
+  }
 }

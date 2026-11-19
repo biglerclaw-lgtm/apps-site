@@ -8,10 +8,37 @@ https://biglerclaw-lgtm.github.io/apps-site/
 - Page sources live in `src/` (shared bits in `src/_partials/`, page shell in `src/_layout.html`).
 - App names, the support email and dates live in `site.json`.
 - Rebuild after any change: `python build.py` (no dependencies), then commit the generated `.html` files.
+- Per-app switches live in `site.json` under `"apps"`: `"ads"` (true or false) and `"LAST_UPDATED"` (the
+  "Last updated" date on that app's privacy policy and terms; in the ad-free pages it is also the
+  "Effective" date of the 1.0 version). Each app also sets the wording the shared partials need:
+  `"PRO_SUMMARY"` (what Pro adds), `"FAMILY_SHARING"` (which purchases are family-shareable),
+  `"SETTINGS_PATH"` (how to reach the app's Settings) and `"REFUND_IN_APP"` (the in-app "Request a
+  refund" sentence, or "" if the app has none); the build fails if one is missing (`APP_KEYS` in
+  `build.py`). Template text that only applies to a
+  version with ads sits in `{{#ads}}...{{/ads}}`, the ad-free wording in `{{^ads}}...{{/ads}}`.
+  With `"ads": false` the build fails if an ad-only phrase (AppLovin, AdMob, IDFA, "Do not sell or share", "removes ads",
+  "rewarded" and more; the list is `AD_ONLY_TERMS` in `build.py`) is left on any page of that app.
+- Every app's privacy, terms and support page is also written to `<app>/<page>/index.html` (same content,
+  relative links adjusted, canonical link to the `.html` page), so `.../quitline/privacy`,
+  `.../quitline/privacy/` and `.../quitline/privacy.html` all open it. Never edit those copies by hand.
 
-## Before submission
+- All five apps are `"ads": false` for version 1.0 (no ad SDK, no tracking, no tracking prompt, no ad consent). To publish
+  pages for a version with ads, set that app's `"ads"` to `true`, bump its `"LAST_UPDATED"`, rebuild, and add a changelog row.
+- `APP_DATA_WHERE` and `APP_DATA_TRANSFERS` (defaults in `site.json`) describe where app data lives in the ad-free
+  "Your privacy rights" section; Fastbloom overrides both in its privacy front matter because of its iCloud copy of fasts.
 
-`SUPPORT_EMAIL` in `site.json` is the placeholder `SUPPORT_EMAIL_TBD`. Set the real address, rebuild, commit and push.
+## Before submission: the support email
+
+`SUPPORT_EMAIL` in `site.json` is the placeholder `SUPPORT_EMAIL_TBD`, and it is the only place the address lives.
+To set the real address on every page, run these two commands in this folder, then commit and push:
+
+```
+python build.py --support-email you@example.com
+python build.py
+```
+
+The first command replaces only the `SUPPORT_EMAIL` value in `site.json` (you can also edit that one line by hand).
+The second regenerates all 38 pages and fails if any page does not contain the address.
 While it has no `@`, `build.py` renders it as plain text and contact buttons link to the app's `support.html#contact`;
 never a `mailto:` link (App Review 1.5). Pages use `{{SUPPORT_LINK}}`, `{{SUPPORT_LINK_SUBJ}}` and `{{SUPPORT_HREF}}`, which become
 real `mailto:` links once the address is set.

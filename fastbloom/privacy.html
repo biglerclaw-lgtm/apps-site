@@ -5,7 +5,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Fastbloom Privacy Policy</title>
-  <meta name="description" content="How Fastbloom handles your data: fasts, weight, water and GLP-1 logs stay on your iPhone, optional Apple Health, on-device AI, no account, Apple purchases, and ads in the free version.">
+  <meta name="description" content="How Fastbloom handles your data: fasts, weight, water and GLP-1 logs stay on your iPhone, optional Apple Health, on-device AI, no account, Apple purchases, no ads and no tracking.">
+  <link rel="canonical" href="https://biglerclaw-lgtm.github.io/apps-site/fastbloom/privacy.html">
   <meta name="color-scheme" content="light dark">
   <meta name="theme-color" content="#f7f6f2" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#121417" media="(prefers-color-scheme: dark)">
@@ -30,10 +31,10 @@
 
   <main id="main" class="wrap">
 <h1>Fastbloom Privacy Policy</h1>
-<p class="meta">Effective October 13, 2026 &middot; Last updated October 14, 2026</p>
+<p class="meta">Effective November 18, 2026 (version 1.0) &middot; Last updated November 18, 2026</p>
 
 <div class="callout">
-  <p><strong>The short version.</strong> Your fasts, weight, water, notes and GLP-1 logs are stored <em>on your iPhone</em>. There is no account and we run no server, so we never have your data. Apple Health is optional and its data never leaves your phone. The weekly recap is written by Apple's on-device AI. Your own iCloud keeps a small copy of your fasts (start and end times, goal and plan name, nothing else) so a reinstall or a new iPhone never loses them; you can switch that off. Purchases go through Apple. The free version shows ads; the ad companies collect some device data to show them, never your fasting or health information, and Pro removes ads entirely.</p>
+  <p><strong>The short version.</strong> Your fasts, weight, water, notes and GLP-1 logs are stored <em>on your iPhone</em>. There is no account and we run no server, so we never have your data. Apple Health is optional, and its data never leaves your phone unless you export or share it yourself. The weekly recap is written by Apple's on-device AI. Your own iCloud keeps a small copy of your fasts (start and end times, goal and plan name, nothing else) so a reinstall or a new iPhone never loses them; you can switch that off. Purchases go through Apple. There are no ads and no tracking.</p>
 </div>
 
 <nav class="toc" aria-labelledby="toc-h">
@@ -49,7 +50,7 @@
     <li><a href="#permissions">Permissions</a></li>
     <li><a href="#network">Network connections</a></li>
     <li><a href="#purchases">Purchases</a></li>
-    <li><a href="#ads">Advertising</a></li>
+    <li><a href="#ads">No ads or tracking</a></li>
     <li><a href="#sensitive">Health and other sensitive information</a></li>
     <li><a href="#not">What we never do</a></li>
     <li><a href="#retention">Data retention</a></li>
@@ -74,7 +75,7 @@
   <li>GLP-1 logs: medication, dose and injection site, and any side effects you record;</li>
   <li>fasting-buddy snapshots you import from a share code (see <a href="#sharing">Things you choose to share</a>).</li>
 </ul>
-<p>Your preferences are kept in the app's settings on the device: for example your units and reminder choices, a cached note of whether Pro is active, and your "do not sell or share" choice. If you answer the optional <strong>safety check</strong> during onboarding (whether you are under 18, pregnant or breastfeeding, have a history of an eating disorder, or take diabetes medication), your answers are stored in the same on-device settings and used only to adjust which fasts and guidance the app offers you. They are never sent anywhere and never given to ad SDKs.</p>
+<p>Your preferences are kept in the app's settings on the device: for example your units and reminder choices, and a cached note of whether Pro is active. If you answer the optional <strong>safety check</strong> during onboarding (whether you are under 18, pregnant or breastfeeding, have a history of an eating disorder, or take diabetes medication), your answers are stored in the same on-device settings and used only to adjust which fasts and guidance the app offers you. They are never sent anywhere.</p>
 <p>We have no server for any of this and cannot see it. Like any app's data, it is included in your own device backups (iCloud Backup or a computer backup), which Apple and you control.</p>
 
 <h2 id="icloud">iCloud: a copy of your fasts</h2>
@@ -95,7 +96,7 @@
 <ul>
   <li><strong>Fastbloom writes</strong> the body mass (weight), water and protein that you log in the app.</li>
   <li><strong>Fastbloom reads</strong> body mass, water and protein, so your logs from other apps and devices show up, and <strong>dietary energy</strong> (food calories). Food energy is used for one thing only: if another app logs food while a fast is running, Fastbloom asks whether you broke your fast. It is not stored as a diet log or used for anything else.</li>
-  <li>Health data is processed on your iPhone. It is <strong>never uploaded</strong>, never sent to us, <strong>never used for advertising or marketing</strong>, and never shared with ad SDKs, data brokers or any other third party.</li>
+  <li>Health data is processed on your iPhone. Fastbloom <strong>never uploads it</strong>, and it leaves your phone only if you export or share it yourself (see <a href="#sharing">Things you choose to share</a>). It is never sent to us, <strong>never used for advertising or marketing</strong>, and never shared with data brokers or any other third party.</li>
   <li>Fastbloom does not read or write medications in Apple Health. GLP-1 logs are kept only inside Fastbloom.</li>
 </ul>
 
@@ -117,87 +118,44 @@
 <p>Fastbloom never sends anything on its own. These features only share what you choose, through the iOS share sheet:</p>
 <ul>
   <li><strong>Fast receipts</strong>: an image summarizing a fast, which you can share or save to Photos.</li>
-  <li><strong>Buddy share codes</strong>: a code you send to a friend so they can follow your fast. A code contains a display name you choose, a random code ID, your running fast's start time and goal, and your weekly goal progress. Nothing else. There is no server: the code travels only through the app or person you send it to, and we never see it. When you import a friend's code, that snapshot is stored on your iPhone only.</li>
+  <li><strong>Buddy share codes</strong>: a code you send to a friend so they can follow your fast. A code contains a display name you choose, a random code ID, your running fast's start time and goal, when your last fast ended, your weekly goal progress, and when the code was made. Nothing else. There is no server: the code travels only through the app or person you send it to, and we never see it. When you import a friend's code, that snapshot is stored on your iPhone only.</li>
+  <li><strong>Backup and spreadsheet export</strong> (<span class="path"><code>Fastbloom Settings &gt; Export and restore</code></span>): a full backup file and CSV spreadsheets of your fasts, notes, moods, weight, water, protein, waist and GLP-1 logs, including entries read from Apple Health. You choose where to save or send them, for example Files or iCloud Drive. Keep them somewhere safe.</li>
+  <li><strong>Doctor summary</strong> (GLP-1): your weight trend, doses, injection sites and side effects as text or a PDF, which can include weights read from Apple Health, shared through the share sheet to whoever you choose.</li>
 </ul>
 <p>Once you share something, the app or person you send it to handles it under their own privacy practices.</p>
 
 <h2 id="permissions">Permissions</h2>
 <p>All permissions are optional, and each is asked for only when you first use the feature that needs it. Fastbloom works without them.</p>
 <ul>
-  <li><strong>Notifications</strong>: when you reach your fasting goal, opt-in eating-window and break-fast reminders, and a reminder 2 days before a free trial turns into a paid subscription. All are scheduled locally on your iPhone. Fastbloom does not use push notifications or a notification server.</li>
+  <li><strong>Notifications</strong>: when you reach your fasting goal, an optional "fast ending soon" alert 30 minutes before it, safety check-ins at 24, 36 and 48 hours during long fasts, eating-window reminders, "did you break your fast?" prompts, a weekly "your recap is ready" notice, GLP-1 shot-day and water-and-protein reminders, and a reminder about 2 days before a free trial turns into a paid subscription. All are scheduled locally on your iPhone. Fastbloom does not use push notifications or a notification server.</li>
   <li><strong>Apple Health</strong> (read and write): see <a href="#health">Apple Health</a>.</li>
   <li><strong>Photos (add only)</strong>: to save a fast receipt or share card to your library. Fastbloom cannot see or read your photos.</li>
-  <li><strong>App Tracking Transparency</strong>: asked only in the free version, after a short explanation in the app, and never before you have completed your first fast. See <a href="#ads">Advertising</a>.</li>
   <li><strong>Live Activities</strong>: to show your running fast on the Lock Screen and Dynamic Island. You can turn them off in <span class="path"><code>Settings &gt; Fastbloom</code></span>.</li>
   <li><strong>Siri and Shortcuts</strong>: actions such as starting or ending a fast, run on your iPhone.</li>
 </ul>
 <p>Fastbloom does not ask for your camera, location, contacts or microphone.</p>
 
 <h2 id="network">Network connections</h2>
-<p>Fastbloom works offline. It connects to the internet only for Apple's App Store (prices, purchases, restores and subscription status), Apple's iCloud key-value storage for the copy of your fasts (handled by iOS, see <a href="#icloud">iCloud</a>), ads in the free version, and links you tap, such as helpline or source websites. Apart from that iCloud copy, fasting, logging, Apple Health and the weekly recap never use the network. You can check this yourself in iOS's App Privacy Report (<span class="path"><code>Settings &gt; Privacy &amp; Security &gt; App Privacy Report</code></span>).</p>
+<p>Fastbloom works offline. It connects to the internet only for Apple's App Store (prices, purchases, restores and subscription status), Apple's iCloud key-value storage for the copy of your fasts (handled by iOS, see <a href="#icloud">iCloud</a>), and links you tap, such as helpline or source websites. Apart from that iCloud copy, fasting, logging, Apple Health and the weekly recap never use the network. You can check this yourself in iOS's App Privacy Report (<span class="path"><code>Settings &gt; Privacy &amp; Security &gt; App Privacy Report</code></span>).</p>
 
 <h2 id="purchases">Purchases and subscriptions</h2>
-<p>Fastbloom Pro is sold through Apple's App Store using StoreKit. Apple handles the payment, your payment details, your Apple ID and your billing address. We never see your name, email address or payment information. The app only receives a signed confirmation from Apple saying which product is active (for example, "Yearly, renews on a date" or "Lifetime") so it can unlock Pro and switch off ads. That check happens on your device. Apple's handling of purchase data is covered by <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</p>
+<p>Fastbloom Pro is sold through Apple's App Store using StoreKit. Apple handles the payment, your payment details, your Apple ID and your billing address. We never see your name, email address or payment information. The app only receives a signed confirmation from Apple saying which product is active (for example, "Yearly, renews on a date" or "Lifetime") so it can unlock Pro. That check happens on your device. Apple's handling of purchase data is covered by <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</p>
 <p>App Store Connect gives us aggregated, non-identifying sales reports (for example, how many trials started in a country). Apple does not give us your identity.</p>
 
 <p>Fastbloom Pro is offered as <strong>Fastbloom Pro Yearly</strong> (an auto-renewing yearly subscription, US$24.99 per year in the US, with a 7-day free trial for eligible new subscribers) and <strong>Fastbloom Pro Lifetime</strong> (a one-time purchase, US$44.99 in the US). Prices in other countries are shown in the app. You can restore purchases and manage your subscription from the app's Settings.</p>
 
-<h2 id="ads">Advertising in the free version</h2>
-<p>The free version of Fastbloom shows ads. Buying Fastbloom Pro (a subscription or the lifetime purchase) removes all ads, and the ad SDK then stops requesting ads.</p>
-<p>Ads are delivered by <strong>AppLovin MAX</strong>, an ad mediation SDK built into the app. MAX may fill an ad slot from AppLovin itself or from other ad networks it mediates, such as <strong>Google AdMob</strong>. These companies, not us, receive and process the data described below. We do not receive it in a form that identifies you; we only see aggregated reports such as how many ads were shown and how much they earned.</p>
+<h2 id="ads">No ads and no tracking</h2>
+<p>This version of Fastbloom has <strong>no ads</strong>. It includes no advertising, analytics or tracking SDK, it never asks for permission to track you across other companies' apps and websites, and nothing you do in Fastbloom is used for advertising, by us or by anyone else. Fastbloom is paid for only by Fastbloom Pro, the optional yearly subscription and lifetime purchase.</p>
+<p>If a future version adds advertising, we will update this policy, its changelog and the App Store privacy label before that version is released, and the app will ask for your permission where the law or Apple requires it.</p>
 
-<h3 id="ads-data">What the ad SDKs may collect</h3>
-<div class="table-wrap">
-<table class="stack">
-  <thead><tr><th scope="col">Data</th><th scope="col">When</th><th scope="col">Used for</th></tr></thead>
-  <tbody>
-    <tr><td data-label="Data">Advertising identifier (IDFA)</td><td data-label="When"><strong>Only if you tap "Allow" on Apple's App Tracking Transparency prompt.</strong> If you choose "Ask App Not to Track", iOS gives the SDK an all-zeros identifier instead.</td><td data-label="Used for">Personalized ads, measuring ads across apps (tracking)</td></tr>
-    <tr><td data-label="Data">Identifier for Vendor (IDFV) and SDK-generated IDs</td><td data-label="When">Whenever an ad is requested</td><td data-label="Used for">Frequency capping, fraud prevention, reporting; not linked across companies' apps without your permission</td></tr>
-    <tr><td data-label="Data">IP address and approximate (coarse) location derived from it</td><td data-label="When">Whenever an ad is requested</td><td data-label="Used for">Delivering ads, picking the right language/region, legal compliance (for example, privacy rules by region), fraud prevention</td></tr>
-    <tr><td data-label="Data">Device and app information: device model, iOS version, language, time zone, screen size, network type, carrier, app name and version</td><td data-label="When">Whenever an ad is requested</td><td data-label="Used for">Showing ads that fit your device, troubleshooting, fraud prevention</td></tr>
-    <tr><td data-label="Data">Ad interaction data: which ads were shown, taps, video completions, rewarded-ad completions</td><td data-label="When">When you see or interact with an ad</td><td data-label="Used for">Ad delivery, measurement, billing between ad companies, rewarding you for a rewarded ad</td></tr>
-    <tr><td data-label="Data">Ad SDK diagnostics (crash and performance data about the ad SDK)</td><td data-label="When">If the ad SDK has a problem</td><td data-label="Used for">Keeping the ad SDK working</td></tr>
-  </tbody>
-</table>
-</div>
-<p>Ad SDKs never get access to your fasts, fasting plans, journal notes, mood, energy or hunger ratings, weight, waist, water or protein logs, GLP-1 medication, dose, injection-site or side-effect logs, your safety-check answers, buddy data or anything from Apple Health. That information stays on your iPhone (apart from the start and end times, goal and plan name of your fasts, which are also kept in your own iCloud as described below), is never shared with ad partners or anyone else, and is never used to choose which ads you see. As with any app that shows ads, an ad request does tell the ad network which app it came from (Fastbloom).</p>
-<p>The app does not request precise location for ads and does not give ad SDKs access to your contacts, camera, microphone or Health data.</p>
-
-<h3 id="ads-choices">Your ad choices</h3>
-<ul>
-  <li><strong>App Tracking Transparency (all users).</strong> The first time ads might be personalized, the app explains why and then shows Apple's prompt. Choose "Ask App Not to Track" and the ad SDKs cannot use your IDFA or track you across other companies' apps and websites; you will still see ads, but they are non-personalized or based on the content of the app. You can change this at any time in iOS <span class="path"><code>Settings &gt; Privacy &amp; Security &gt; Tracking</code></span> (per app, or turn off "Allow Apps to Request to Track" for every app).</li>
-  <li><strong>In-app consent manager (EEA, UK and Switzerland).</strong> Where the law requires it, a consent screen (Google's User Messaging Platform, shown through AppLovin MAX) asks before any data is used for personalized ads, and lets you accept, reject or pick partners and purposes. You can reopen it at any time from <span class="path"><code>Fastbloom Settings &gt; Ad Privacy Choices</code></span> to change or withdraw your consent.</li> <li><strong>US: Do not sell or share.</strong> Settings &gt; Ad Privacy Choices has a 'Do not sell or share my personal information' switch; it applies before ads start.</li>
-  <li><strong>Remove ads entirely</strong> by buying Fastbloom Pro. A subscription or lifetime purchase turns off all ads.</li>
-  <li><strong>Limit ad personalization at the partner.</strong> Google: <a href="https://myadcenter.google.com/">My Ad Center</a>.</li>
-</ul>
-
-<h3 id="ads-partners">Ad partners and their privacy policies</h3>
-<ul>
-  <li>AppLovin (MAX mediation and AppLovin ads): <a href="https://www.applovin.com/privacy/">applovin.com/privacy</a></li>
-  <li>Google AdMob: <a href="https://policies.google.com/privacy">Google Privacy Policy</a> and <a href="https://policies.google.com/technologies/partner-sites">How Google uses information from apps that use its services</a></li>
-</ul>
-<p>We may add or remove mediated ad networks over time. When we add one, we will list it here and update the changelog at the bottom of this page. The full, current list of partners and purposes is also shown in the consent screen where that screen applies.</p>
-
-<h3 id="ads-dns">"Do not sell or share my personal information"</h3>
-<p>Fastbloom Settings &gt; Ad Privacy Choices also has a <strong>"Do not sell or share my personal information"</strong> switch. When it is on, Fastbloom tells AppLovin, and through it the networks it mediates, not to sell or share your personal information for targeted advertising, as US state privacy laws allow. Your choice is stored on your device.</p>
-<h3 id="ads-when">When ads start, and where they appear</h3>
-<ul>
-  <li>The ad SDK starts only in the free version, and Apple's tracking prompt is never shown before you have completed your first fast of an hour or more, and never to someone who told the safety check they are under 18 (see <a href="#children">Children</a>). Where they apply, you see the tracking explanation, Apple's prompt and the consent screen before any personalized ads.</li>
-  <li>Your IDFA is used only if you choose "Allow" on Apple's tracking prompt. Otherwise ads are non-personalized.</li>
-  <li><strong>Banner ads appear only on the History and Learn lists.</strong> There is at most one full-screen ad per session, only after you log a completed fast, and never before your third fast. Watching a rewarded ad (to unlock one weekly recap or 7 extra days of history) is always your choice.</li>
-  <li><strong>Eating-disorder and crisis resources are always free and never shown next to ads.</strong></li>
-  <li><strong>With Pro</strong> (subscription or lifetime), the ad SDK is never started: no tracking prompt, no consent screen and no ads. If you buy Pro while the app is open, ads stop right away.</li>
-  <li>Versions of Fastbloom built without ad keys contain no ad SDK at all; they show no ads and no data is collected for advertising.</li>
-</ul>
-<p>If you see an inappropriate ad in Fastbloom, please tell us at <span class="email">SUPPORT_EMAIL_TBD</span>.</p>
 
 <h2 id="sensitive">Health and other sensitive information</h2>
-<p>Fasting patterns, weight, medications such as GLP-1s, side effects, eating-disorder history and pregnancy are health information, which many privacy laws treat as sensitive (for example "special category" data under the GDPR and "consumer health data" under some US state laws). That is why it never leaves your control: it stays on your iPhone (only the times, goal and plan name of your fasts are also copied to your own iCloud, which we cannot access), it is not sent to us, it is not shared with ad partners or anyone else, and it is not used for advertising, profiling or research. We do not collect, sell or share consumer health data.</p>
+<p>Fasting patterns, weight, medications such as GLP-1s, side effects, eating-disorder history and pregnancy are health information, which many privacy laws treat as sensitive (for example "special category" data under the GDPR and "consumer health data" under some US state laws). That is why it never leaves your control: it stays on your iPhone unless you export or share it yourself (only the times, goal and plan name of your fasts are also copied to your own iCloud, which we cannot access, and you can switch that off), it is not sent to us, it is not shared with anyone else, and it is not used for advertising, profiling or research. We do not collect, sell or share consumer health data.</p>
 
 <h2 id="not">What we never do</h2>
 <ul>
   <li>No account, sign-in or email address needed.</li>
-  <li>No server holding your data, no cloud AI, and no analytics, tracking or crash-reporting SDKs of our own. (Ad SDKs may report their own diagnostics, as described above.) The app's own privacy manifest declares no tracking, no tracking domains and no collected data.</li>
+  <li>No server holding your data, no cloud AI, no ads, and no advertising, analytics, tracking or crash-reporting SDKs. The app's privacy manifest declares no tracking, no tracking domains and no collected data.</li>
   <li>We never sell your data and never use your fasting, health or Apple Health information for advertising.</li>
   <li>Fastbloom does not use a CloudKit database, and it does not access your camera, location, contacts or microphone.</li>
 </ul>
@@ -208,7 +166,6 @@
   <li><strong>The iCloud copy of your fasts</strong> is kept in your iCloud until you switch it off in Export and restore (finished fasts) or use "Delete everything" (all of it). The running-fast part is replaced by your next fast.</li>
   <li><strong>The Keychain copy of a running fast</strong> stays on this iPhone, even after the app is deleted, until the fast ends or you use "Delete everything".</li>
   <li><strong>Data in Apple Health</strong> that Fastbloom wrote stays in the Health app until you delete it there.</li>
-  <li><strong>Ad data</strong> is retained by AppLovin, Google and other ad partners according to their policies linked above.</li>
   <li><strong>Purchase records</strong> are kept by Apple under Apple's policies.</li>
   <li><strong>Support emails</strong> are kept only as long as needed to help you and keep a record of the conversation, then deleted, normally within 24 months. Ask us to delete them sooner at any time.</li>
 </ul>
@@ -216,44 +173,41 @@
 <h2 id="delete">Exporting and deleting your data</h2>
 <ul>
   <li><strong>Delete single items</strong>: fasts, notes and log entries can be deleted where they are listed.</li>
-  <li><strong>Delete everything</strong>: Fastbloom Settings has a "Delete everything" option, with a confirmation. It erases your Fastbloom data and settings on this iPhone, the widget and Siri data in the App Group, the Keychain copy of a running fast, and the copy of your fasts (running and finished) in your iCloud. It can't be undone.</li>
+  <li><strong>Delete everything</strong>: Fastbloom Settings has a "Delete everything" option, with a confirmation. It erases your Fastbloom data and settings on this iPhone, the widget and Siri data in the App Group, the Keychain copy of a running fast, and the copy of your fasts (running and finished) in your iCloud. It can't be undone. Your purchase status and any free-trial reminder are kept so Pro and the reminder keep working; use Restore purchases, or cancel the trial in Apple's Subscriptions, to change those.</li>
   <li><strong>Deleting the app</strong> removes its database, settings and widget data. It does not remove the copy of your fasts in iCloud, and iOS may keep the Keychain copy of a running fast. To clear both, use "Delete everything" before deleting the app. Deleting the app does not cancel a subscription.</li>
   <li><strong>Apple Health</strong>: data Fastbloom wrote to Health is not removed by deleting the app. Delete it in the Health app (<span class="path"><code>Health &gt; Sharing &gt; Apps &gt; Fastbloom</code></span>, or the data type's "Show All Data" list), and revoke access in Health settings.</li>
-  <li><strong>Ad data</strong>: use <a href="#ads-choices">your ad choices</a> or contact the ad partner; email us and we'll help.</li>
 </ul>
 
 <h2 id="rights">Your privacy rights</h2>
-<p>Because Fastbloom has no account and no server, we do not hold a profile about you. Your app data is on your device, where you can view, export (where the app offers it) and delete it yourself. For data the ad partners collect, you can use the choices above or contact the partner directly. Whatever your location, you can email us and we will help.</p>
+<p>Because Fastbloom has no account, no server and no ads, we do not hold a profile about you. Your app data is on your device, apart from the small copy of your fasts in your own iCloud (see <a href="#icloud">iCloud</a>). You can view, export (where the app offers it) and delete it yourself. Whatever your location, you can email us and we will help.</p>
 
 <h3 id="gdpr">EEA, UK and Switzerland (GDPR / UK GDPR)</h3>
 <ul>
-  <li><strong>Who is responsible.</strong> We, the developer of Fastbloom, are the controller for the limited personal data we handle (for example, emails you send us, and the decision to integrate ad SDKs). AppLovin, Google and other ad partners act as independent controllers for the data they collect to deliver and measure ads.</li>
-  <li><strong>Legal bases.</strong> Personalized ads and the access to device identifiers they need: your <em>consent</em>, collected through the consent screen and Apple's tracking prompt. Showing non-personalized ads, frequency capping, fraud prevention and security: the <em>legitimate interests</em> of the developer of Fastbloom and the ad partners in funding a free app and keeping ads safe. Replying to your support email: our legitimate interest in helping you (or steps you ask for before a contract). Purchases: handled by Apple under Apple's terms.</li>
-  <li><strong>Your rights.</strong> Access, correction, deletion, restriction, objection (including to processing based on legitimate interests), data portability, and withdrawing consent at any time without affecting earlier processing. Withdraw ad consent in <span class="path"><code>Fastbloom Settings &gt; Ad Privacy Choices</code></span>; object or ask about anything else by emailing <span class="email">SUPPORT_EMAIL_TBD</span>.</li>
+  <li><strong>Who is responsible.</strong> We, the developer of Fastbloom, are the controller for the limited personal data we handle, which in practice means emails you send us. What you keep in the app stays on your device, apart from the small copy of your fasts in your own iCloud (see <a href="#icloud">iCloud</a>); we never receive it.</li>
+  <li><strong>Legal bases.</strong> Replying to your support email: our legitimate interest in helping you (or steps you ask for before a contract). Purchases: handled by Apple under Apple's terms.</li>
+  <li><strong>Your rights.</strong> Access, correction, deletion, restriction, objection and data portability, and, where processing is based on your consent, withdrawing it at any time without affecting earlier processing. Ask about any of them by emailing <span class="email">SUPPORT_EMAIL_TBD</span>.</li>
   <li><strong>Complaints.</strong> You can complain to your local data protection authority. We would appreciate the chance to fix things first.</li>
-  <li><strong>International transfers.</strong> Ad partners may process data in the United States and other countries. They rely on safeguards such as the EU Standard Contractual Clauses and, where they are certified, the EU-U.S. Data Privacy Framework; see their policies above.</li>
+  <li><strong>International transfers.</strong> Your app data is not transferred to us or to anyone else. The small copy of your fasts in your own iCloud is held by Apple under Apple's terms and may be stored outside your country. If you email us, your message is stored by the email service we use, which may be located outside your country.</li>
 </ul>
 
 <h3 id="ccpa">California and other US states (CCPA / CPRA and similar laws)</h3>
 <ul>
-  <li><strong>Categories collected in the last 12 months</strong> (by ad partners through the free version only): identifiers (IDFA with your permission, IDFV, SDK IDs, IP address); internet or other electronic network activity (ad impressions and taps); approximate geolocation derived from IP; device information. Inferences may be drawn by ad partners for personalized ads if you allow it. We do not collect sensitive personal information, and your in-app data is never shared with ad partners.</li>
-  <li><strong>Sources and purposes.</strong> Collected directly from your device by the ad SDKs, for the advertising, measurement, security and fraud-prevention purposes described above.</li>
-  <li><strong>"Sale" and "sharing".</strong> We do not sell personal information for money. Letting ad partners use identifiers for cross-context behavioral advertising may count as "selling" or "sharing" under California law. <strong>To opt out</strong>: choose "Ask App Not to Track", and/or open <span class="path"><code>Fastbloom Settings &gt; Ad Privacy Choices</code></span> and opt out of sale/sharing, or email us. You can also buy Pro to remove ads entirely.</li>
-  <li><strong>Your rights.</strong> To know/access, delete, correct, opt out of sale or sharing, and limit the use of sensitive personal information (we do not use any). We will not discriminate against you for using these rights; the free version stays the same whether or not you opt out. An authorized agent may make a request on your behalf with your written permission. Because we hold no account data, we may not be able to link ad-partner data to you; we will tell you which partner to contact and how.</li>
+  <li><strong>What we collect.</strong> The app itself collects no personal information: what you enter stays on your device, apart from the small copy of your fasts in your own iCloud (see <a href="#icloud">iCloud</a>), is never sent to us, and there is no advertising, analytics or tracking SDK. If you email us, we receive your email address and what you write. We use it only to reply.</li>
+  <li><strong>No selling or sharing.</strong> We never sell personal information and never share it for cross-context behavioral advertising. We do not use or disclose sensitive personal information.</li>
+  <li><strong>Your rights.</strong> To know/access, delete and correct the personal information we hold (in practice, your emails to us). We will not discriminate against you for using these rights. An authorized agent may make a request on your behalf with your written permission.</li>
   <li><strong>Retention.</strong> See <a href="#retention">Data retention</a>.</li>
-  <li><strong>Minors.</strong> We do not knowingly sell or share the personal information of consumers under 16.</li>
 </ul>
-<p>Residents of other US states with consumer privacy laws (for example Virginia, Colorado, Connecticut, Utah, Texas and Oregon) have similar rights to access, delete, correct and opt out of targeted advertising. Use the same steps above or email us. If we decline a request, you can appeal by replying to our answer with "Appeal" in the subject line.</p>
+<p>Residents of other US states with consumer privacy laws (for example Virginia, Colorado, Connecticut, Utah, Texas and Oregon) have similar rights. Email us to use them. If we decline a request, you can appeal by replying to our answer with "Appeal" in the subject line.</p>
 
 
 <h2 id="children">Children</h2>
-<p>Fastbloom is <strong>not directed at children</strong>, and we do not knowingly collect personal information from children under 13 (or the minimum age in your country). Fasting of 24 hours or longer is limited to adults who report none of the safety-check risk factors; if you tell the app you are under 18, it does not offer extended fasts. If you believe a child has provided personal information to us, for example by email, contact us and we will delete it. If you tell the app's safety check that you are under 18, the free version shows you no ads at all: the ad SDK is not started (or is stopped if it was running), Apple's tracking prompt is never shown, and "Do not sell or share" is turned on.</p>
+<p>Fastbloom is <strong>not directed at children</strong>, and we do not knowingly collect personal information from children under 13 (or the minimum age in your country). Fasting of 24 hours or longer is limited to adults who report none of the safety-check risk factors; if you tell the app you are under 18, it does not offer extended fasts. If you believe a child has provided personal information to us, for example by email, contact us and we will delete it.</p>
 
 <h2 id="security">Security</h2>
 <p>Your data is protected by iOS app sandboxing and Data Protection encryption, and Apple Health data is protected by iOS's own Health encryption and permissions. Because we don't operate a server, there is no developer-held database of your fasting or health data that could be breached. Keep your device passcode, your Apple ID and any images you share secure.</p>
 
 <h2 id="contact">Contact</h2>
-<p>Email <span class="email">SUPPORT_EMAIL_TBD</span> for questions, privacy requests or complaints. If you email us, we receive your email address and whatever you write, and use it only to reply; please don't include health details or other personal information we don't need. We aim to answer within 7 days, and privacy requests within the time the law requires (30 days under GDPR, 45 days under CCPA).</p>
+<p>Email <span class="email">SUPPORT_EMAIL_TBD</span> for questions, privacy requests or complaints. If you email us, we receive your email address and what you write. We use it only to reply; please don't include health details or other personal information we don't need. We usually reply within 2 business days and always within 7 days, and answer privacy requests within the time the law requires (30 days under GDPR, 45 days under CCPA).</p>
 
 <h2 id="changes">Changes and changelog</h2>
 <p>If we change how Fastbloom handles data, for example if we add more to the iCloud copy, we will update this page and the date at the top before the change takes effect, and for significant changes we will tell you in the app. The App Store privacy label is kept in line with this page.</p>
@@ -261,8 +215,9 @@
 <table class="stack">
   <thead><tr><th scope="col">Date</th><th scope="col">Change</th></tr></thead>
   <tbody>
-    <tr><td data-label="Date">October 14, 2026</td><td data-label="Change">Corrected the iCloud section: besides the running fast, the start and end times, goal and plan name of finished fasts are kept in your iCloud key-value storage (on by default, switch in Export and restore). Added the this-device-only Keychain copy of a running fast, which can outlive deleting the app until "Delete everything". Network, retention, advertising and sensitive-information sections updated to match. Children and advertising: an under-18 answer in the safety check turns off ads, the ad SDK and the tracking prompt.</td></tr>
-    <tr><td data-label="Date">October 13, 2026</td><td data-label="Change">First published version. Covers on-device storage, the iCloud key-value backup of a running fast, optional Apple Health read and write, the on-device weekly recap, widgets, Live Activities and Siri, buddy share codes, StoreKit purchases (Pro Yearly with a 7-day free trial, and Pro Lifetime), and ads in the free version through AppLovin MAX with Google AdMob mediated.</td></tr>
+    <tr><td data-label="Date">November 18, 2026</td><td data-label="Change">Version 1.0, the first released version of Fastbloom: no ads and no tracking (see <a href="#ads">No ads and no tracking</a>). Also covers backup and spreadsheet export, the GLP-1 doctor summary, every kind of notification, the full contents of a buddy code and what "Delete everything" keeps.</td></tr>
+    <tr><td data-label="Date">October 14, 2026</td><td data-label="Change">Pre-release draft corrected: besides the running fast, the start and end times, goal and plan name of finished fasts are kept in your iCloud key-value storage (on by default, switch in Export and restore), plus the this-device-only Keychain copy of a running fast.</td></tr>
+    <tr><td data-label="Date">October 13, 2026</td><td data-label="Change">Pre-release draft, published before version 1.0 was released. It described an ad-supported free version that was never released.</td></tr>
   </tbody>
 </table>
 </div>
