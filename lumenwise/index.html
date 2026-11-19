@@ -39,6 +39,26 @@
   <section class="card"><h2>Terms of Use</h2><p>Apple's Standard EULA, AI answers, Bible texts, subscription and trial terms.</p><div class="links"><a class="btn" href="terms.html">Read the terms</a></div></section>
   <section class="card"><h2>Contact</h2><p>A human reads every message.</p><div class="links"><a class="btn" href="support.html#contact">SUPPORT_EMAIL_TBD</a></div></section>
 </div>
+<h2 id="join">Invited to a reading plan?</h2>
+<div class="callout">
+  <p>Someone shared a Lumenwise reading plan with you. To join:</p>
+  <ol>
+    <li>Install <strong>Lumenwise</strong> from the App Store on your iPhone (search for "Lumenwise"). It's free to download.</li>
+    <li>Open Lumenwise, go to <strong>Plans &gt; Join with a code</strong> and enter the code from your invite<span id="invite-code" hidden></span>.</li>
+  </ol>
+  <p>Already have Lumenwise? Tap the Lumenwise link in your invite instead. Each person's reading stays on their own iPhone; there is no account and Lumenwise never sees who you invite.</p>
+</div>
+<script>
+  (function () {
+    try {
+      var code = new URLSearchParams(window.location.search).get("code");
+      if (!code || !/^[A-Za-z0-9-]{4,16}$/.test(code)) return;
+      var el = document.getElementById("invite-code");
+      el.textContent = ": " + code.toUpperCase();
+      el.hidden = false;
+    } catch (e) {}
+  })();
+</script>
 <p class="fine">Lumenwise is an independent app and is not affiliated with any church, denomination or Bible publisher. Bible texts: King James Version (1769) and World English Bible, public domain, from eBible.org. "World English Bible" is a trademark of eBible.org.</p>
 
   </main>

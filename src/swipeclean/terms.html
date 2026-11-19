@@ -4,7 +4,7 @@ description: Terms of Use for {{APP}}: Apple's Standard EULA plus app-specific t
 app: swipeclean
 -->
 <h1>{{APP}} Terms of Use</h1>
-<p class="meta">Effective {{EFFECTIVE_DATE}} &middot; Last updated {{LAST_UPDATED}}</p>
+<p class="meta">Effective {{#ads}}{{EFFECTIVE_DATE}}{{/ads}}{{^ads}}{{LAST_UPDATED}} (version 1.0){{/ads}} &middot; Last updated {{LAST_UPDATED}}</p>
 
 <div class="callout">
   <p><strong>In plain English:</strong> your use of {{APP}} is governed by Apple's standard app license, plus the few extra terms below. {{APP}} only deletes what you confirm, and deleted items wait 30 days in Recently Deleted. Subscriptions renew automatically until you cancel, and a free trial turns into a paid subscription unless you cancel at least 24 hours before it ends.</p>
@@ -43,7 +43,7 @@ app: swipeclean
 </ul>
 
 <h2 id="free">Free version{{#ads}} and ads{{/ads}}</h2>
-<p>The free version lets you swipe and sort without limit and delete up to a free allowance shown in the app. {{#ads}}It shows ads served by third-party ad networks through AppLovin MAX. We are not responsible for the content of third-party ads or for the websites or apps they link to; ad partners follow their own policies. Rewarded ads may unlock a small bonus described in the app (for example, extra free delete allowance); rewards have no cash value, cannot be transferred and may change.{{/ads}}{{^ads}}There are no ads, in the free version or in Pro.{{/ads}}</p>
+<p>{{^ads}}The free version includes unlimited swiping, album sorting, duplicates, similar shots and blurry photos, streaks, widgets and your Recap, and lets you delete up to 1 GB or 500 items in total, whichever comes first. {{/ads}}{{#ads}}The free version lets you swipe and sort without limit and delete up to a free allowance shown in the app. It shows ads served by third-party ad networks through AppLovin MAX. We are not responsible for the content of third-party ads or for the websites or apps they link to; ad partners follow their own policies. Rewarded ads may unlock a small bonus described in the app (for example, extra free delete allowance); rewards have no cash value, cannot be transferred and may change.{{/ads}}{{^ads}}There are no ads, in the free version or in Pro.{{/ads}}</p>
 
 {{> subs-terms}}
 
@@ -55,7 +55,7 @@ app: swipeclean
 
 <h2 id="changes">Changes</h2>
 <p>We may update these terms, for example when we add features. We will change the date at the top and, for significant changes, tell you in the app. Continuing to use {{APP}} after a change means you accept the updated terms. Changes never apply retroactively to purchases you already made.</p>
-<p><strong>Changelog</strong>: {{EFFECTIVE_DATE}}: first published version.{{^ads}} {{LAST_UPDATED}}: version 1.0 has no ads, so the terms for ads and ad rewards were removed.{{/ads}}</p>
+<p><strong>Changelog</strong>: {{#ads}}{{EFFECTIVE_DATE}}: first published version.{{/ads}}{{^ads}}{{EFFECTIVE_DATE}}: pre-release draft, published before version 1.0 was released. {{LAST_UPDATED}}: terms for version 1.0, the first released version.{{/ads}}</p>
 
 <h2 id="contact">Contact</h2>
 <p>The developer of {{APP}} &middot; {{SUPPORT_LINK}} &middot; <a href="support.html">{{APP}} Support</a></p>

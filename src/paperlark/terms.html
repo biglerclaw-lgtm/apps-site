@@ -6,7 +6,7 @@ EFFECTIVE_DATE: October 9, 2026
 EFFECTIVE_ISO: 2026-10-09
 -->
 <h1>{{APP}} Terms of Use</h1>
-<p class="meta">Effective {{EFFECTIVE_DATE}} &middot; Last updated {{LAST_UPDATED}}</p>
+<p class="meta">Effective {{#ads}}{{EFFECTIVE_DATE}}{{/ads}}{{^ads}}{{LAST_UPDATED}} (version 1.0){{/ads}} &middot; Last updated {{LAST_UPDATED}}</p>
 
 <div class="callout">
   <p><strong>In plain English:</strong> your use of {{APP}} is governed by Apple's standard app license, plus the extra terms below. Text recognition, extracted details, summaries and automatic redaction can make mistakes, so check anything important before you rely on it or share it. Subscriptions renew automatically until you cancel, and a free trial turns into a paid subscription unless you cancel at least 24 hours before it ends.</p>
@@ -58,7 +58,6 @@ EFFECTIVE_ISO: 2026-10-09
 <p>Scanning, text recognition, search and export are free, with no watermark. {{^ads}}There are no ads, in the free version or in Pro.{{/ads}}{{#ads}}The free version shows ads served by third-party ad networks through AppLovin MAX: banners only on the documents library list, and at most one full-screen ad per session after a completed export or share, never after your first export. Ads never appear in the camera and scanning screens, the editor, signing, redaction, the document assistant, onboarding or the Pro screen. We are not responsible for the content of third-party ads or the websites or apps they link to, although we ask our ad partners to block gambling, dating and mature ads where their controls allow it. Rewarded ads may unlock a small bonus described in the app (such as a one-time Pro export); rewards have no cash value, cannot be transferred and may change.{{/ads}}</p>
 
 {{> subs-terms}}
-<p>For {{APP}}, Pro is offered as a yearly subscription with a 7-day free trial for eligible new subscribers, and as a one-time lifetime purchase that is shareable through Family Sharing. The current price in your currency is shown in the app and in Apple's purchase sheet before you confirm.</p>
 
 <h2 id="your-data">Your documents</h2>
 <p>Your documents stay on your device; this version does not sync to iCloud. You are responsible for the documents you scan, import and share, for keeping your device, Apple ID and exported files secure, and for keeping backups. We cannot recover documents you delete or lose because we never have a copy. Don't rely on {{APP}} as the only copy of an original you are legally required to keep.</p>
@@ -71,7 +70,7 @@ EFFECTIVE_ISO: 2026-10-09
 
 <h2 id="changes">Changes</h2>
 <p>We may update these terms, for example when we add features. We will change the date at the top and, for significant changes, tell you in the app. Continuing to use {{APP}} after a change means you accept the updated terms. Changes never apply retroactively to purchases you already made.</p>
-<p><strong>Changelog</strong>: {{EFFECTIVE_DATE}}: first published version.{{^ads}} {{LAST_UPDATED}}: version 1.0 has no ads, so the terms for ads and ad rewards were removed.{{/ads}}</p>
+<p><strong>Changelog</strong>: {{#ads}}{{EFFECTIVE_DATE}}: first published version.{{/ads}}{{^ads}}{{EFFECTIVE_DATE}}: pre-release draft, published before version 1.0 was released. {{LAST_UPDATED}}: terms for version 1.0, the first released version.{{/ads}}</p>
 
 <h2 id="contact">Contact</h2>
 <p>The developer of {{APP}} &middot; {{SUPPORT_LINK}} &middot; <a href="support.html">{{APP}} Support</a></p>

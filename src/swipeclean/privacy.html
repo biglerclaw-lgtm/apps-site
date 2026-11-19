@@ -2,10 +2,11 @@
 title: {{APP}} Privacy Policy
 description: How {{APP}} handles your photos and data: on-device processing, no account, Apple purchases{{#ads}}, and ads in the free version{{/ads}}{{^ads}}, no ads and no tracking{{/ads}}.
 app: swipeclean
+EMAIL_RECEIVED: your email address, what you write, and the app and iOS version that {{APP}} adds to the draft when you use Contact us in the app (you can delete them before sending)
 APP_AD_PROMISE: Ad SDKs never get access to your photos, videos, albums, swipe decisions or cleanup statistics. Those stay on your iPhone and are never shared with ad partners, and they are not used to choose which ads you see.
 -->
 <h1>{{APP}} Privacy Policy</h1>
-<p class="meta">Effective {{EFFECTIVE_DATE}} &middot; Last updated {{LAST_UPDATED}}</p>
+<p class="meta">Effective {{#ads}}{{EFFECTIVE_DATE}}{{/ads}}{{^ads}}{{LAST_UPDATED}} (version 1.0){{/ads}} &middot; Last updated {{LAST_UPDATED}}</p>
 
 <div class="callout">
   <p><strong>The short version.</strong> {{APP}} looks at your photo library <em>on your iPhone</em> and never uploads your photos. There is no account and we run no server for the app. Purchases go through Apple. {{#ads}}The free version shows ads, and the ad companies collect some device data to show them; you control tracking with Apple's prompt and the in-app privacy choices, and Pro removes ads entirely.{{/ads}}{{^ads}}There are no ads and no tracking.{{/ads}}</p>
@@ -44,6 +45,7 @@ APP_AD_PROMISE: Ad SDKs never get access to your photos, videos, albums, swipe d
   <li>when <strong>you</strong> confirm, delete items, mark favorites or add items to albums in the Photos app.</li>
 </ul>
 <p><strong>All of this happens on your iPhone.</strong> Image analysis (finding similar or blurry photos) uses Apple's on-device frameworks. Your photos, videos, their contents and their metadata (dates, locations, faces) are never uploaded to us or anyone else{{#ads}}, and are never given to ad SDKs{{/ads}}.</p>
+<p><strong>Sharing your Recap.</strong> If you share your Recap card, {{APP}} creates an image of your stats, plus one favorite photo if you choose to include it (off by default), and iOS's share sheet sends it only where you share it.</p>
 <p>If you choose <em>Limited Access</em>, {{APP}} only sees the photos you select. You can change access at any time in <span class="path"><code>Settings &gt; Privacy &amp; Security &gt; Photos &gt; {{APP}}</code></span>.</p>
 <p>When you delete items, iOS shows its own confirmation, then moves them to the Photos app's <strong>Recently Deleted</strong> album, where they stay for up to 30 days before iOS removes them for good. {{APP}} never deletes anything without that confirmation.</p>
 
@@ -76,7 +78,7 @@ APP_AD_PROMISE: Ad SDKs never get access to your photos, videos, albums, swipe d
 <p>You can check this yourself with iOS's App Privacy Report (<span class="path"><code>Settings &gt; Privacy &amp; Security &gt; App Privacy Report</code></span>).</p>
 
 <h2 id="notifications">Notifications and widgets</h2>
-<p>Reminders (daily tidy, trial-end reminder) are local notifications scheduled on your iPhone; they are not sent through any server. Widgets and Live Activities show totals such as space cleaned and your streak, read from your device.</p>
+<p>Reminders (daily tidy, trial-end reminder) are local notifications scheduled on your iPhone; they are not sent through any server. Widgets and Live Activities show totals such as space cleaned and your streak, read from your device. A Live Activity also shows the name of the deck you are tidying (for example an album or place name) on your Lock Screen. You can turn it off in <span class="path"><code>{{APP}} Settings &gt; Live Activity during a tidy</code></span>.</p>
 
 {{> purchases-privacy}}
 
@@ -119,7 +121,7 @@ APP_AD_PROMISE: Ad SDKs never get access to your photos, videos, albums, swipe d
 <p>Your app data is protected by iOS app sandboxing and Data Protection encryption on your device. Because we don't operate a server or collect your data, there is no developer-held database of your information that could be breached. No method of storage is perfect, so keep your device passcode and Apple ID secure.</p>
 
 <h2 id="contact">Contact</h2>
-<p>Email {{SUPPORT_LINK}} for questions, privacy requests or complaints. If you email us, we receive your email address and whatever you write, and use it only to reply. We aim to answer within 7 days, and privacy requests within the time the law requires (30 days under GDPR, 45 days under CCPA).</p>
+<p>Email {{SUPPORT_LINK}} for questions, privacy requests or complaints. If you email us, we receive {{EMAIL_RECEIVED}}. We use it only to reply. {{REPLY_PROMISE}}</p>
 
 <h2 id="changes">Changes and changelog</h2>
 <p>If we change how {{APP}} handles data, we will update this page and the date at the top before the change takes effect, and for significant changes we will tell you in the app. The App Store privacy label is kept in line with this page.</p>
@@ -128,9 +130,12 @@ APP_AD_PROMISE: Ad SDKs never get access to your photos, videos, albums, swipe d
   <thead><tr><th scope="col">Date</th><th scope="col">Change</th></tr></thead>
   <tbody>
 {{^ads}}
-    <tr><td data-label="Date">{{LAST_UPDATED}}</td><td data-label="Change">Version 1.0 has no ads and no tracking. The advertising, tracking-prompt and ad-choices sections are replaced by <a href="#ads">No ads and no tracking</a>, privacy rights and retention no longer describe advertising data, and {{APP}} Pro is described as unlocking unlimited cleaning only.</td></tr>
+    <tr><td data-label="Date">{{LAST_UPDATED}}</td><td data-label="Change">{{V1_ROW}} Also covers sharing your Recap card, the deck name in Live Activities and what the in-app Contact us draft includes.</td></tr>
+    <tr><td data-label="Date">{{EFFECTIVE_DATE}}</td><td data-label="Change">{{PRERELEASE_NOTE}}</td></tr>
 {{/ads}}
-    <tr><td data-label="Date">{{EFFECTIVE_DATE}}</td><td data-label="Change">First published version. Covers on-device photo processing, StoreKit purchases (Pro subscription with free trial, and lifetime), and {{#ads}}ads in the free version through AppLovin MAX with mediated networks such as Google AdMob{{/ads}}{{^ads}}advertising in the free version, which version 1.0 does not have (see the row above){{/ads}}.</td></tr>
+{{#ads}}
+    <tr><td data-label="Date">{{EFFECTIVE_DATE}}</td><td data-label="Change">First published version. Covers on-device photo processing, StoreKit purchases (Pro subscription with free trial, and lifetime), and ads in the free version through AppLovin MAX with mediated networks such as Google AdMob.</td></tr>
+{{/ads}}
   </tbody>
 </table>
 </div>

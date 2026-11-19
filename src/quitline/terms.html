@@ -4,7 +4,7 @@ description: Terms of Use for {{APP}}: Apple's Standard EULA plus app-specific t
 app: quitline
 -->
 <h1>{{APP}} Terms of Use</h1>
-<p class="meta">Effective {{EFFECTIVE_DATE}} &middot; Last updated {{LAST_UPDATED}}</p>
+<p class="meta">Effective {{#ads}}{{EFFECTIVE_DATE}}{{/ads}}{{^ads}}{{LAST_UPDATED}} (version 1.0){{/ads}} &middot; Last updated {{LAST_UPDATED}}</p>
 
 <div class="callout">
   <p><strong>In plain English:</strong> your use of {{APP}} is governed by Apple's standard app license, plus the extra terms below. {{APP}} is a self-help tool, not medical treatment or a crisis service. Subscriptions renew automatically until you cancel, and a free trial turns into a paid subscription unless you cancel at least 24 hours before it ends.</p>
@@ -40,7 +40,7 @@ app: quitline
   <li>{{APP}} is a general self-help, education and tracking tool for people who want to stop or cut down vaping, smoking, gambling, drinking or social media use. <strong>It is not a medical device and does not diagnose, treat, cure or prevent any disease or condition.</strong></li>
   <li>Lessons, health and recovery timelines, money estimates and insights are general information. They are not personal medical, psychological, financial or legal advice, and individual results vary. Sources are cited in the app where relevant.</li>
   <li><strong>Talk to a qualified healthcare professional</strong> before quitting or changing your use of a substance if you have a medical condition, are pregnant, take medication, or are considering nicotine replacement or other medicines. <strong>Stopping heavy daily drinking suddenly can be dangerous; talk to a doctor first.</strong></li>
-  <li>{{APP}} is <strong>not a crisis or emergency service</strong> and nobody monitors what you enter. Crisis lines listed in the app are independent services; we are not affiliated with them and is not responsible for their services.</li>
+  <li>{{APP}} is <strong>not a crisis or emergency service</strong> and nobody monitors what you enter. Crisis lines listed in the app are independent services; we are not affiliated with them and are not responsible for their services.</li>
   <li>{{APP}} is an independent app and is not affiliated with, or endorsed by, any government or public quitline service.</li>
 </ul>
 
@@ -63,7 +63,7 @@ app: quitline
 
 <h2 id="changes">Changes</h2>
 <p>We may update these terms, for example when we add features. We will change the date at the top and, for significant changes, tell you in the app. Continuing to use {{APP}} after a change means you accept the updated terms. Changes never apply retroactively to purchases you already made.</p>
-<p><strong>Changelog</strong>: {{EFFECTIVE_DATE}}: first published version.{{^ads}} {{LAST_UPDATED}}: version 1.0 has no ads, so the terms for ads and ad rewards were removed.{{/ads}}</p>
+<p><strong>Changelog</strong>: {{#ads}}{{EFFECTIVE_DATE}}: first published version.{{/ads}}{{^ads}}{{EFFECTIVE_DATE}}: pre-release draft, published before version 1.0 was released. {{LAST_UPDATED}}: terms for version 1.0, the first released version.{{/ads}}</p>
 
 <h2 id="contact">Contact</h2>
 <p>The developer of {{APP}} &middot; {{SUPPORT_LINK}} &middot; <a href="support.html">{{APP}} Support</a></p>

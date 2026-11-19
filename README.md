@@ -9,7 +9,12 @@ https://biglerclaw-lgtm.github.io/apps-site/
 - App names, the support email and dates live in `site.json`.
 - Rebuild after any change: `python build.py` (no dependencies), then commit the generated `.html` files.
 - Per-app switches live in `site.json` under `"apps"`: `"ads"` (true or false) and `"LAST_UPDATED"` (the
-  "Last updated" date on that app's privacy policy and terms). Template text that only applies to a
+  "Last updated" date on that app's privacy policy and terms; in the ad-free pages it is also the
+  "Effective" date of the 1.0 version). Each app also sets the wording the shared partials need:
+  `"PRO_SUMMARY"` (what Pro adds), `"FAMILY_SHARING"` (which purchases are family-shareable),
+  `"SETTINGS_PATH"` (how to reach the app's Settings) and `"REFUND_IN_APP"` (the in-app "Request a
+  refund" sentence, or "" if the app has none); the build fails if one is missing (`APP_KEYS` in
+  `build.py`). Template text that only applies to a
   version with ads sits in `{{#ads}}...{{/ads}}`, the ad-free wording in `{{^ads}}...{{/ads}}`.
   With `"ads": false` the build fails if an ad-only phrase (AppLovin, AdMob, IDFA, "Do not sell or share", "removes ads",
   "rewarded" and more; the list is `AD_ONLY_TERMS` in `build.py`) is left on any page of that app.

@@ -46,6 +46,15 @@ APPS = {
     "fastbloom": {"name_key": "FASTBLOOM_NAME"},
 }
 
+# Per-app strings every app must define in site.json "apps" (used by the shared partials):
+#   LAST_UPDATED    date of the current version of the app's pages
+#   PRO_SUMMARY     what Pro adds, in one or two sentences (terms #pro, support #ads-faq)
+#   FAMILY_SHARING  which purchases Family Sharing covers (terms #billing)
+#   SETTINGS_PATH   how to reach the app's Settings, e.g. "Settings" or "Me &gt; Settings"
+#   REFUND_IN_APP   sentence about an in-app "Request a refund" button, or "" if the app has none
+APP_KEYS = ("LAST_UPDATED", "PRO_SUMMARY", "FAMILY_SHARING", "SETTINGS_PATH", "REFUND_IN_APP")
+APP_KEYS_NONEMPTY = ("LAST_UPDATED", "PRO_SUMMARY", "FAMILY_SHARING", "SETTINGS_PATH")
+
 # App pages that also get an extensionless copy at <app>/<page>/index.html (App Store Connect URLs).
 ALIASED_PAGES = ("privacy", "terms", "support")
 
@@ -167,15 +176,17 @@ def support_links(env, app):
 
 
 def load_apps(site):
-    """site.json "apps": per-app switches and dates, e.g. {"quitline": {"ads": false, "LAST_UPDATED": "..."}}."""
+    """site.json "apps": per-app switch, dates and wording (APP_KEYS), e.g.
+    {"quitline": {"ads": false, "LAST_UPDATED": "...", "PRO_SUMMARY": "...", ...}}."""
     cfg = site.pop("apps", None)
     if not isinstance(cfg, dict) or set(cfg) != set(APPS):
         sys.exit(f'site.json: "apps" must have exactly these keys: {", ".join(APPS)}')
     for slug, c in cfg.items():
         if not isinstance(c.get("ads"), bool):
             sys.exit(f"site.json: apps.{slug}.ads must be true or false")
-        if not isinstance(c.get("LAST_UPDATED"), str) or not c["LAST_UPDATED"]:
-            sys.exit(f"site.json: apps.{slug}.LAST_UPDATED is missing")
+        for key in APP_KEYS:
+            if not isinstance(c.get(key), str) or (not c[key] and key in APP_KEYS_NONEMPTY):
+                sys.exit(f"site.json: apps.{slug}.{key} is missing")
     return cfg
 
 
@@ -226,7 +237,9 @@ def main():
         app = meta.get("app", "")
         if app:
             flags = {"ads": apps_cfg[app]["ads"]}
-            env["LAST_UPDATED"] = apps_cfg[app]["LAST_UPDATED"]
+            # Every string in site.json "apps".<app> (LAST_UPDATED, PRO_SUMMARY, ...) becomes a
+            # placeholder for that app's pages; front matter can still override it.
+            env.update({k: v for k, v in apps_cfg[app].items() if isinstance(v, str)})
         else:
             flags = {"ads": any(c["ads"] for c in apps_cfg.values())}
         env["APP"] = site[APPS[app]["name_key"]] if app else "Apps"
