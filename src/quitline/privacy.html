@@ -1,14 +1,14 @@
 <!--
 title: {{APP}} Privacy Policy
-description: How {{APP}} handles your data: your quit journey stays on your device, no account, optional iCloud sync, Apple purchases{{#ads}}, and ads in the free version{{/ads}}{{^ads}}, no ads and no tracking{{/ads}}.
+description: How {{APP}} handles your data: your quit journey stays on your device, no account, no iCloud sync, Apple purchases{{#ads}}, and ads in the free version{{/ads}}{{^ads}}, no ads and no tracking{{/ads}}.
 app: quitline
-APP_AD_PROMISE: Ad SDKs never get access to your habits, quit dates, check-ins, moods, cravings, slips, journal, reasons, photos, support contacts or any other health and wellness information you enter. That information stays on your device (and in your own iCloud, if you turn on sync), is never shared with ad partners, and is never used to choose which ads you see. As with any app that shows ads, an ad request does tell the ad network which app it came from ({{APP}}). Ads never appear on the panic, breathing, urge-surfing or crisis-help screens.
+APP_AD_PROMISE: Ad SDKs never get access to your habits, quit dates, check-ins, moods, cravings, slips, journal, reasons, photos, support contacts or any other health and wellness information you enter. That information stays on your device, is never shared with ad partners, and is never used to choose which ads you see. As with any app that shows ads, an ad request does tell the ad network which app it came from ({{APP}}). Ads never appear on the panic, breathing, urge-surfing or crisis-help screens.
 -->
 <h1>{{APP}} Privacy Policy</h1>
 <p class="meta">Effective {{EFFECTIVE_DATE}} &middot; Last updated {{LAST_UPDATED}}</p>
 
 <div class="callout">
-  <p><strong>The short version.</strong> Your quit journey (habits, check-ins, journal, slips, reasons) is stored <em>on your iPhone</em>. There is no account and we run no server, so we never have your data. You can sync it through your own iCloud if you choose. Purchases go through Apple. {{#ads}}The free version shows ads; the ad companies collect some device data to show them, never your health or journal data, and Pro removes ads entirely.{{/ads}}{{^ads}}There are no ads and no tracking.{{/ads}}</p>
+  <p><strong>The short version.</strong> Your quit journey (habits, check-ins, journal, slips, reasons) is stored <em>on your iPhone</em>. There is no account and we run no server, so we never have your data. Nothing is synced to iCloud or anywhere else. Purchases go through Apple. {{#ads}}The free version shows ads; the ad companies collect some device data to show them, never your health or journal data, and Pro removes ads entirely.{{/ads}}{{^ads}}There are no ads and no tracking.{{/ads}}</p>
 </div>
 
 <nav class="toc" aria-labelledby="toc-h">
@@ -16,7 +16,7 @@ APP_AD_PROMISE: Ad SDKs never get access to your habits, quit dates, check-ins, 
   <ol>
     <li><a href="#who">Who we are</a></li>
     <li><a href="#on-device">Your data stays on your device</a></li>
-    <li><a href="#icloud">Optional iCloud sync</a></li>
+    <li><a href="#icloud">No iCloud sync</a></li>
     <li><a href="#sharing">Things you choose to share</a></li>
     <li><a href="#permissions">Permissions</a></li>
     <li><a href="#network">Network connections</a></li>
@@ -49,8 +49,8 @@ APP_AD_PROMISE: Ad SDKs never get access to your habits, quit dates, check-ins, 
 </ul>
 <p>We have no server for this data and cannot see it. Patterns such as your hardest hours are calculated on your iPhone. It is included in your own device backups (iCloud Backup or a computer backup), which Apple and you control.</p>
 
-<h2 id="icloud">Optional iCloud sync</h2>
-<p>Where the app offers it, you can turn on <strong>iCloud sync</strong> in {{APP}} Settings to keep your data in step across your own devices. It is <strong>off unless you turn it on</strong>. When on, your {{APP}} data is stored in the private iCloud database of <em>your</em> Apple ID using Apple's CloudKit. Only your devices signed in to that Apple ID can read it; we cannot access it. Apple's handling of iCloud data is covered by the <a href="https://www.apple.com/legal/privacy/">Apple Privacy Policy</a> and the iCloud terms. You can turn sync off at any time; see <a href="#delete">deleting your data</a> for removing the iCloud copy.</p>
+<h2 id="icloud">No iCloud sync</h2>
+<p>This version of {{APP}} has <strong>no iCloud sync</strong>: it does not use iCloud or CloudKit, and your data is not kept in step across devices. The only copies are the one on your iPhone, your own device backups (iCloud Backup or a computer backup, which Apple and you control), and any export file you make. To move to a new iPhone, restore a backup or use Export on the old phone and "Restore from a {{APP}} export" on the new one. If a future version adds optional iCloud sync, we will describe it here and update the changelog before that version is released.</p>
 
 <h2 id="sharing">Things you choose to share</h2>
 <p>{{APP}} never sends anything on its own. These features only share what you choose, through iOS's own share sheet, Messages or Phone app:</p>
@@ -73,7 +73,7 @@ APP_AD_PROMISE: Ad SDKs never get access to your habits, quit dates, check-ins, 
 <p>Widgets and Live Activities show neutral text such as "Day 42", never what you're quitting, and you can hide {{APP}}'s content in the app switcher.</p>
 
 <h2 id="network">Network connections</h2>
-<p>{{APP}} works offline. It connects to the internet only for: Apple's App Store (prices, purchases, restores, subscription status); iCloud sync, if you turn it on (through Apple); {{^ads}}and {{/ads}}links you tap, such as helpline websites{{#ads}}; and ads in the free version{{/ads}}. You can check this yourself in iOS's App Privacy Report (<span class="path"><code>Settings &gt; Privacy &amp; Security &gt; App Privacy Report</code></span>).</p>
+<p>{{APP}} works offline. It connects to the internet only for: Apple's App Store (prices, purchases, restores, subscription status); {{^ads}}and {{/ads}}links you tap, such as helpline websites{{#ads}}; and ads in the free version{{/ads}}. You can check this yourself in iOS's App Privacy Report (<span class="path"><code>Settings &gt; Privacy &amp; Security &gt; App Privacy Report</code></span>).</p>
 
 {{> purchases-privacy}}
 
@@ -83,7 +83,7 @@ APP_AD_PROMISE: Ad SDKs never get access to your habits, quit dates, check-ins, 
 {{/ads}}
 
 <h2 id="health">Health information</h2>
-<p>Information about smoking, vaping, drinking, gambling, mood and cravings can be sensitive. That is why it never leaves your control: it stays on your device (or your own iCloud), it is not shared with {{#ads}}ad partners or {{/ads}}anyone else, and it is not used for advertising, profiling or research. {{APP}} does not read from or write to Apple Health. We do not collect "consumer health data" as defined by laws such as Washington's My Health My Data Act.</p>
+<p>Information about smoking, vaping, drinking, gambling, mood and cravings can be sensitive. That is why it never leaves your control: it stays on your device, it is not shared with {{#ads}}ad partners or {{/ads}}anyone else, and it is not used for advertising, profiling or research. {{APP}} does not read from or write to Apple Health. We do not collect "consumer health data" as defined by laws such as Washington's My Health My Data Act.</p>
 
 <h2 id="not">What we never do</h2>
 <ul>
@@ -95,7 +95,6 @@ APP_AD_PROMISE: Ad SDKs never get access to your habits, quit dates, check-ins, 
 <h2 id="retention">Data retention</h2>
 <ul>
   <li><strong>On-device data</strong> is kept until you delete it (individual entries, Delete everything, or deleting the app). We keep no copy.</li>
-  <li><strong>iCloud sync data</strong> (if you turned it on) stays in your iCloud until you delete it.</li>
 {{#ads}}
   <li><strong>Ad data</strong> is retained by AppLovin, Google and other ad partners according to their policies linked above.</li>
 {{/ads}}
@@ -106,8 +105,7 @@ APP_AD_PROMISE: Ad SDKs never get access to your habits, quit dates, check-ins, 
 <h2 id="delete">Exporting and deleting your data</h2>
 <ul>
   <li><strong>Export</strong>: {{APP}} <span class="path"><code>Me &gt; Settings &gt; Your data &gt; Export</code></span> creates a file with everything you've entered.</li>
-  <li><strong>Delete everything</strong>: <span class="path"><code>Me &gt; Settings &gt; Your data &gt; Delete everything</code></span> (type DELETE to confirm). This erases all your {{APP}} data, scheduled reminders and widget content on this device, and, with iCloud sync on, from your iCloud too.</li>
-  <li><strong>iCloud copy</strong>: you can also remove it in iOS <span class="path"><code>Settings &gt; [your name] &gt; iCloud &gt; Manage Account Storage</code></span> (select {{APP}} and delete its data, where listed).</li>
+  <li><strong>Delete everything</strong>: <span class="path"><code>Me &gt; Settings &gt; Your data &gt; Delete everything</code></span> (type DELETE to confirm). This erases all your {{APP}} data, scheduled reminders and widget content on this device. Copies in your own device backups and export files are yours to delete.</li>
   <li><strong>Deleting the app</strong> removes its on-device data. It does not cancel a subscription.</li>
 {{#ads}}
   <li><strong>Ad data</strong>: use <a href="#ads-choices">your ad choices</a> or contact the ad partner; email us and we'll help.</li>
@@ -134,7 +132,8 @@ APP_AD_PROMISE: Ad SDKs never get access to your habits, quit dates, check-ins, 
 {{^ads}}
     <tr><td data-label="Date">{{LAST_UPDATED}}</td><td data-label="Change">Version 1.0 has no ads and no tracking. The advertising, tracking-prompt and ad-choices sections are replaced by <a href="#ads">No ads and no tracking</a>, and privacy rights and retention no longer describe advertising data.</td></tr>
 {{/ads}}
-    <tr><td data-label="Date">{{EFFECTIVE_DATE}}</td><td data-label="Change">First published version. Covers on-device storage, optional iCloud sync, StoreKit purchases (Pro subscription with free trial, and lifetime), and {{#ads}}ads in the free version through AppLovin MAX with mediated networks such as Google AdMob{{/ads}}{{^ads}}advertising in the free version, which version 1.0 does not have (see the row above){{/ads}}.</td></tr>
+    <tr><td data-label="Date">{{LAST_UPDATED}}</td><td data-label="Change">Optional iCloud sync, which version 1.0 does not have, is removed throughout: see <a href="#icloud">No iCloud sync</a>. Your data stays on your iPhone and in your own device backups.</td></tr>
+    <tr><td data-label="Date">{{EFFECTIVE_DATE}}</td><td data-label="Change">First published version. Covers on-device storage, optional iCloud sync (not in version 1.0, see above), StoreKit purchases (Pro subscription with free trial, and lifetime), and {{#ads}}ads in the free version through AppLovin MAX with mediated networks such as Google AdMob{{/ads}}{{^ads}}advertising in the free version, which version 1.0 does not have (see above){{/ads}}.</td></tr>
   </tbody>
 </table>
 </div>

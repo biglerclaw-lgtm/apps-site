@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Quitline Privacy Policy</title>
-  <meta name="description" content="How Quitline handles your data: your quit journey stays on your device, no account, optional iCloud sync, Apple purchases, no ads and no tracking.">
+  <meta name="description" content="How Quitline handles your data: your quit journey stays on your device, no account, no iCloud sync, Apple purchases, no ads and no tracking.">
   <link rel="canonical" href="https://biglerclaw-lgtm.github.io/apps-site/quitline/privacy.html">
   <meta name="color-scheme" content="light dark">
   <meta name="theme-color" content="#f7f6f2" media="(prefers-color-scheme: light)">
@@ -34,7 +34,7 @@
 <p class="meta">Effective October 8, 2026 &middot; Last updated November 18, 2026</p>
 
 <div class="callout">
-  <p><strong>The short version.</strong> Your quit journey (habits, check-ins, journal, slips, reasons) is stored <em>on your iPhone</em>. There is no account and we run no server, so we never have your data. You can sync it through your own iCloud if you choose. Purchases go through Apple. There are no ads and no tracking.</p>
+  <p><strong>The short version.</strong> Your quit journey (habits, check-ins, journal, slips, reasons) is stored <em>on your iPhone</em>. There is no account and we run no server, so we never have your data. Nothing is synced to iCloud or anywhere else. Purchases go through Apple. There are no ads and no tracking.</p>
 </div>
 
 <nav class="toc" aria-labelledby="toc-h">
@@ -42,7 +42,7 @@
   <ol>
     <li><a href="#who">Who we are</a></li>
     <li><a href="#on-device">Your data stays on your device</a></li>
-    <li><a href="#icloud">Optional iCloud sync</a></li>
+    <li><a href="#icloud">No iCloud sync</a></li>
     <li><a href="#sharing">Things you choose to share</a></li>
     <li><a href="#permissions">Permissions</a></li>
     <li><a href="#network">Network connections</a></li>
@@ -75,8 +75,8 @@
 </ul>
 <p>We have no server for this data and cannot see it. Patterns such as your hardest hours are calculated on your iPhone. It is included in your own device backups (iCloud Backup or a computer backup), which Apple and you control.</p>
 
-<h2 id="icloud">Optional iCloud sync</h2>
-<p>Where the app offers it, you can turn on <strong>iCloud sync</strong> in Quitline Settings to keep your data in step across your own devices. It is <strong>off unless you turn it on</strong>. When on, your Quitline data is stored in the private iCloud database of <em>your</em> Apple ID using Apple's CloudKit. Only your devices signed in to that Apple ID can read it; we cannot access it. Apple's handling of iCloud data is covered by the <a href="https://www.apple.com/legal/privacy/">Apple Privacy Policy</a> and the iCloud terms. You can turn sync off at any time; see <a href="#delete">deleting your data</a> for removing the iCloud copy.</p>
+<h2 id="icloud">No iCloud sync</h2>
+<p>This version of Quitline has <strong>no iCloud sync</strong>: it does not use iCloud or CloudKit, and your data is not kept in step across devices. The only copies are the one on your iPhone, your own device backups (iCloud Backup or a computer backup, which Apple and you control), and any export file you make. To move to a new iPhone, restore a backup or use Export on the old phone and "Restore from a Quitline export" on the new one. If a future version adds optional iCloud sync, we will describe it here and update the changelog before that version is released.</p>
 
 <h2 id="sharing">Things you choose to share</h2>
 <p>Quitline never sends anything on its own. These features only share what you choose, through iOS's own share sheet, Messages or Phone app:</p>
@@ -96,7 +96,7 @@
 <p>Widgets and Live Activities show neutral text such as "Day 42", never what you're quitting, and you can hide Quitline's content in the app switcher.</p>
 
 <h2 id="network">Network connections</h2>
-<p>Quitline works offline. It connects to the internet only for: Apple's App Store (prices, purchases, restores, subscription status); iCloud sync, if you turn it on (through Apple); and links you tap, such as helpline websites. You can check this yourself in iOS's App Privacy Report (<span class="path"><code>Settings &gt; Privacy &amp; Security &gt; App Privacy Report</code></span>).</p>
+<p>Quitline works offline. It connects to the internet only for: Apple's App Store (prices, purchases, restores, subscription status); and links you tap, such as helpline websites. You can check this yourself in iOS's App Privacy Report (<span class="path"><code>Settings &gt; Privacy &amp; Security &gt; App Privacy Report</code></span>).</p>
 
 <h2 id="purchases">Purchases and subscriptions</h2>
 <p>Quitline Pro is sold through Apple's App Store using StoreKit. Apple handles the payment, your payment details, your Apple ID and your billing address. We never see your name, email address or payment information. The app only receives a signed confirmation from Apple saying which product is active (for example, "Yearly, renews on a date" or "Lifetime") so it can unlock Pro. That check happens on your device. Apple's handling of purchase data is covered by <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</p>
@@ -109,7 +109,7 @@
 
 
 <h2 id="health">Health information</h2>
-<p>Information about smoking, vaping, drinking, gambling, mood and cravings can be sensitive. That is why it never leaves your control: it stays on your device (or your own iCloud), it is not shared with anyone else, and it is not used for advertising, profiling or research. Quitline does not read from or write to Apple Health. We do not collect "consumer health data" as defined by laws such as Washington's My Health My Data Act.</p>
+<p>Information about smoking, vaping, drinking, gambling, mood and cravings can be sensitive. That is why it never leaves your control: it stays on your device, it is not shared with anyone else, and it is not used for advertising, profiling or research. Quitline does not read from or write to Apple Health. We do not collect "consumer health data" as defined by laws such as Washington's My Health My Data Act.</p>
 
 <h2 id="not">What we never do</h2>
 <ul>
@@ -121,7 +121,6 @@
 <h2 id="retention">Data retention</h2>
 <ul>
   <li><strong>On-device data</strong> is kept until you delete it (individual entries, Delete everything, or deleting the app). We keep no copy.</li>
-  <li><strong>iCloud sync data</strong> (if you turned it on) stays in your iCloud until you delete it.</li>
   <li><strong>Purchase records</strong> are kept by Apple under Apple's policies.</li>
   <li><strong>Support emails</strong> are kept only as long as needed to help you and keep a record of the conversation, then deleted, normally within 24 months. Ask us to delete them sooner at any time.</li>
 </ul>
@@ -129,8 +128,7 @@
 <h2 id="delete">Exporting and deleting your data</h2>
 <ul>
   <li><strong>Export</strong>: Quitline <span class="path"><code>Me &gt; Settings &gt; Your data &gt; Export</code></span> creates a file with everything you've entered.</li>
-  <li><strong>Delete everything</strong>: <span class="path"><code>Me &gt; Settings &gt; Your data &gt; Delete everything</code></span> (type DELETE to confirm). This erases all your Quitline data, scheduled reminders and widget content on this device, and, with iCloud sync on, from your iCloud too.</li>
-  <li><strong>iCloud copy</strong>: you can also remove it in iOS <span class="path"><code>Settings &gt; [your name] &gt; iCloud &gt; Manage Account Storage</code></span> (select Quitline and delete its data, where listed).</li>
+  <li><strong>Delete everything</strong>: <span class="path"><code>Me &gt; Settings &gt; Your data &gt; Delete everything</code></span> (type DELETE to confirm). This erases all your Quitline data, scheduled reminders and widget content on this device. Copies in your own device backups and export files are yours to delete.</li>
   <li><strong>Deleting the app</strong> removes its on-device data. It does not cancel a subscription.</li>
 </ul>
 
@@ -172,7 +170,8 @@
   <thead><tr><th scope="col">Date</th><th scope="col">Change</th></tr></thead>
   <tbody>
     <tr><td data-label="Date">November 18, 2026</td><td data-label="Change">Version 1.0 has no ads and no tracking. The advertising, tracking-prompt and ad-choices sections are replaced by <a href="#ads">No ads and no tracking</a>, and privacy rights and retention no longer describe advertising data.</td></tr>
-    <tr><td data-label="Date">October 8, 2026</td><td data-label="Change">First published version. Covers on-device storage, optional iCloud sync, StoreKit purchases (Pro subscription with free trial, and lifetime), and advertising in the free version, which version 1.0 does not have (see the row above).</td></tr>
+    <tr><td data-label="Date">November 18, 2026</td><td data-label="Change">Optional iCloud sync, which version 1.0 does not have, is removed throughout: see <a href="#icloud">No iCloud sync</a>. Your data stays on your iPhone and in your own device backups.</td></tr>
+    <tr><td data-label="Date">October 8, 2026</td><td data-label="Change">First published version. Covers on-device storage, optional iCloud sync (not in version 1.0, see above), StoreKit purchases (Pro subscription with free trial, and lifetime), and advertising in the free version, which version 1.0 does not have (see above).</td></tr>
   </tbody>
 </table>
 </div>
